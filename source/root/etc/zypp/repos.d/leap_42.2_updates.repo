@@ -1,0 +1,7 @@
+[leap_42.2_updates]
+name=leap_42.2_updates
+baseurl=http://download.opensuse.org/update/leap/42.2/oss/
+type=rpm-md
+enabled=1
+autorefresh=1
+gpgcheck=1

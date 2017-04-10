@@ -13,7 +13,7 @@
         <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
       </oemconfig>
     </type>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -29,6 +29,7 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='grub'/>
     <package name='patterns-openSUSE-gnome'/>
     <package name='patterns-openSUSE-gnome_utilities'/>
     <package name='patterns-openSUSE-minimal_base'/>
@@ -74,10 +75,10 @@
     <package name='glibc-locale'/>
     <package name='module-init-tools'/>
   </packages>
-  <repository type='rpm-md'>
-    <source path='http://download.opensuse.org/repositories/openSUSE:/Leap:/42.1/standard/'/>
+  <repository type='yast2'>
+    <source path='http://download.opensuse.org/distribution/leap/42.2/repo/oss/'/>
   </repository>
   <repository type='rpm-md'>
-    <source path='http://download.opensuse.org/update/leap/42.1/oss/'/>
+    <source path='http://download.opensuse.org/update/leap/42.2/oss/'/>
   </repository>
 </image>

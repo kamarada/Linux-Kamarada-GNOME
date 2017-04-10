@@ -17,7 +17,7 @@
             <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
           </oemconfig>
         </type>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -32,13 +32,14 @@
       <users group="users">
         <user name="tux" pwd="$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/" home="/home/tux" shell="/bin/bash"/>
       </users>
-      <repository type="rpm-md">
-        <source path="http://download.opensuse.org/repositories/openSUSE:/Leap:/42.1/standard/"/>
+      <repository type="yast2">
+        <source path="http://download.opensuse.org/distribution/leap/42.2/repo/oss/"/>
       </repository>
       <repository type="rpm-md">
-        <source path="http://download.opensuse.org/update/leap/42.1/oss/"/>
+        <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="grub"/>
         <package name="patterns-openSUSE-gnome"/>
         <package name="patterns-openSUSE-gnome_utilities"/>
         <package name="patterns-openSUSE-minimal_base"/>
@@ -89,7 +90,7 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>
@@ -106,18 +107,18 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>1580</estimated_size>
+    <estimated_size>1610</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
     <check_supportability>false</check_supportability>
-    <repository type="rpm-md">
-      <source path="http://download.opensuse.org/repositories/openSUSE:/Leap:/42.1/standard/" internal="false"/>
-      <name>openSUSE Leap 42.1 OSS</name>
+    <repository type="yast2">
+      <source path="http://download.opensuse.org/distribution/leap/42.2/repo/oss/" internal="false"/>
+      <name>openSUSE Leap 42.2 OSS</name>
     </repository>
     <repository type="rpm-md">
-      <source path="http://download.opensuse.org/update/leap/42.1/oss/" internal="false"/>
-      <name>openSUSE Leap 42.1 Updates</name>
+      <source path="http://download.opensuse.org/update/leap/42.2/oss/" internal="false"/>
+      <name>leap 42.2 updates</name>
     </repository>
     <network config="dhcp">
     </network>
