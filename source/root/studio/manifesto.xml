@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <studio_uuid>8466bd24-fd59-11df-9f90-475ae2f5345b</studio_uuid>
+  <appliance_uuid>5013ca60-1d93-11e7-86b5-4fbb28ae4d82</appliance_uuid>
+  <config>
+    <image name="Linux_Kamarada_42.2_GNOME" displayname="Linux_Kamarada_42.2_GNOME" schemaversion="5.2">
+      <description type="system">
+        <author>Projeto Linux Kamarada</author>
+        <contact>studio-devel@suse.de</contact>
+        <specification>openSUSE Leap 42.1 GNOME</specification>
+      </description>
+      <preferences>
+        <type checkprebuilt="true" boot="oemboot/suse-leap42.1" fsnocheck="true" filesystem="ext3" bootloader="grub2" image="oem">
+          <oemconfig>
+            <oem-swap>true</oem-swap>
+            <oem-swapsize>512</oem-swapsize>
+            <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
+          </oemconfig>
+        </type>
+        <version>0.0.1</version>
+        <packagemanager>ensconce</packagemanager>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <rpm-force>false</rpm-force>
+        <boot-theme>studio</boot-theme>
+        <timezone>UTC</timezone>
+        <hwclock>localtime</hwclock>
+        <locale>en_US</locale>
+      </preferences>
+      <users group="root">
+        <user name="root" pwd="$1$PCm0KQGq$IK0rSYli0zQSUNZv77CNH." home="/root" shell="/bin/bash"/>
+      </users>
+      <users group="users">
+        <user name="tux" pwd="$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/" home="/home/tux" shell="/bin/bash"/>
+      </users>
+      <repository type="rpm-md">
+        <source path="http://download.opensuse.org/repositories/openSUSE:/Leap:/42.1/standard/"/>
+      </repository>
+      <repository type="rpm-md">
+        <source path="http://download.opensuse.org/update/leap/42.1/oss/"/>
+      </repository>
+      <packages type="image" patternType="onlyRequired">
+        <package name="patterns-openSUSE-gnome"/>
+        <package name="patterns-openSUSE-gnome_utilities"/>
+        <package name="patterns-openSUSE-minimal_base"/>
+        <package name="gnome-power-manager"/>
+        <package name="gnome-terminal"/>
+        <package name="gtk3-branding-openSUSE"/>
+        <package name="gvfs-backends"/>
+        <package name="libgnomesu"/>
+        <package name="gnote"/>
+        <package name="yast2-control-center-gnome"/>
+        <package name="sax3"/>
+        <package name="x11-tools"/>
+        <package name="xorg-x11"/>
+        <package name="xorg-x11-driver-input"/>
+        <package name="xorg-x11-driver-video"/>
+        <package name="xorg-x11-fonts"/>
+        <package name="grub2-branding-openSUSE"/>
+        <package name="gfxboot-branding-openSUSE"/>
+        <package name="yast2-x11"/>
+        <package name="SuSEfirewall2"/>
+        <package name="less"/>
+        <package name="yast2-firstboot"/>
+        <package name="e2fsprogs"/>
+        <package name="branding-openSUSE"/>
+        <package name="patterns-openSUSE-base"/>
+        <package name="grub2"/>
+        <package name="iputils"/>
+        <package name="kernel-default"/>
+        <package name="plymouth"/>
+        <package name="syslog-ng"/>
+        <package name="vim"/>
+        <package name="zypper"/>
+        <package name="timezone"/>
+        <package name="gsettings-backend-dconf"/>
+        <package name="glibc"/>
+        <package name="glibc-locale"/>
+        <archive name="plymouth.tar" bootinclude="true"/>
+        <package name="gfxboot-devel" bootinclude="true"/>
+        <archive name="gdm.tar"/>
+      </packages>
+      <packages type="bootstrap">
+        <package name="filesystem"/>
+        <package name="glibc-locale"/>
+        <package name="module-init-tools"/>
+      </packages>
+    </image>
+  </config>
+  <extra_config name="Linux_Kamarada_42.2_GNOME">
+    <appliance_id>1703402</appliance_id>
+    <arch>x86_64</arch>
+    <version>0.0.1</version>
+    <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
+    <background>ee/74452ca646d75e5516fe5db8836e76</background>
+    <base_system>Leap_42.1</base_system>
+    <image_type>oem</image_type>
+    <time_zone>UTC</time_zone>
+    <region>Global</region>
+    <default_runlevel>5</default_runlevel>
+    <install_recommended>false</install_recommended>
+    <xen_host>false</xen_host>
+    <exclude_docs>false</exclude_docs>
+    <disable_branding>false</disable_branding>
+    <template>openSUSE Leap 42.1, GNOME desktop</template>
+    <locale>
+      <language>en_US.UTF-8</language>
+      <keytable>us.map.gz</keytable>
+    </locale>
+    <estimated_size>1580</estimated_size>
+    <size_offset>0</size_offset>
+    <non_interactive/>
+    <oem_disk_size>16G</oem_disk_size>
+    <check_supportability>false</check_supportability>
+    <repository type="rpm-md">
+      <source path="http://download.opensuse.org/repositories/openSUSE:/Leap:/42.1/standard/" internal="false"/>
+      <name>openSUSE Leap 42.1 OSS</name>
+    </repository>
+    <repository type="rpm-md">
+      <source path="http://download.opensuse.org/update/leap/42.1/oss/" internal="false"/>
+      <name>openSUSE Leap 42.1 Updates</name>
+    </repository>
+    <network config="dhcp">
+    </network>
+    <startup_programs>
+    </startup_programs>
+    <overlay_files remove="">
+    </overlay_files>
+    <firewall>
+      <firewall_enabled>yes</firewall_enabled>
+      <firewall_ssh>opened</firewall_ssh>
+      <firewall_http>opened</firewall_http>
+      <firewall_webyast>closed</firewall_webyast>
+    </firewall>
+    <webyast enabled="false" version="">
+    </webyast>
+    <x_keyboard model="microsoftpro" layout="us" variant="" keycode="xfree86" LA="" RA="" SL="" RC="" OPT=""/>
+    <enable_root_firstboot>false</enable_root_firstboot>
+    <window_manager>gnome</window_manager>
+    <display_manager>gdm</display_manager>
+  </extra_config>
+</manifest>
