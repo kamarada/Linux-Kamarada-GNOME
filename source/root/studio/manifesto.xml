@@ -17,7 +17,7 @@
             <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
           </oemconfig>
         </type>
-        <version>0.0.2</version>
+        <version>0.0.4</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -39,6 +39,8 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="patterns-openSUSE-x11"/>
+        <package name="gdm"/>
         <package name="grub"/>
         <package name="patterns-openSUSE-gnome"/>
         <package name="patterns-openSUSE-gnome_utilities"/>
@@ -90,7 +92,7 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.2</version>
+    <version>0.0.4</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>

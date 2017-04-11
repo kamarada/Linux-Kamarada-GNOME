@@ -13,7 +13,7 @@
         <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
       </oemconfig>
     </type>
-    <version>0.0.2</version>
+    <version>0.0.4</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -29,6 +29,8 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='patterns-openSUSE-x11'/>
+    <package name='gdm'/>
     <package name='grub'/>
     <package name='patterns-openSUSE-gnome'/>
     <package name='patterns-openSUSE-gnome_utilities'/>
