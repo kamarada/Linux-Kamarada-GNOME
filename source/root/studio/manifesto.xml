@@ -17,7 +17,7 @@
             <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
           </oemconfig>
         </type>
-        <version>0.0.4</version>
+        <version>0.0.5</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -39,12 +39,42 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="patterns-openSUSE-gnome_multimedia_opt"/>
+        <package name="patterns-openSUSE-yast2_basis"/>
+        <package name="patterns-openSUSE-x11_opt"/>
+        <package name="patterns-openSUSE-sw_management_gnome"/>
+        <package name="patterns-openSUSE-sw_management"/>
+        <package name="patterns-openSUSE-office_opt"/>
+        <package name="patterns-openSUSE-office"/>
+        <package name="patterns-openSUSE-multimedia_opt"/>
+        <package name="patterns-openSUSE-non_oss_opt"/>
+        <package name="patterns-openSUSE-non_oss"/>
+        <package name="patterns-openSUSE-multimedia"/>
+        <package name="patterns-openSUSE-imaging_opt"/>
+        <package name="patterns-openSUSE-imaging"/>
+        <package name="patterns-openSUSE-gnome_yast"/>
+        <package name="patterns-openSUSE-gnome_office_opt"/>
+        <package name="patterns-openSUSE-gnome_office"/>
+        <package name="patterns-openSUSE-gnome_multimedia"/>
+        <package name="patterns-openSUSE-gnome_internet"/>
+        <package name="patterns-openSUSE-gnome_imaging_opt"/>
+        <package name="patterns-openSUSE-gnome_imaging"/>
+        <package name="patterns-openSUSE-gnome_games"/>
+        <package name="patterns-openSUSE-gnome_basis_opt"/>
+        <package name="patterns-openSUSE-gnome_basis"/>
+        <package name="patterns-openSUSE-gnome_admin"/>
+        <package name="patterns-openSUSE-games"/>
+        <package name="patterns-openSUSE-fonts_opt"/>
+        <package name="patterns-openSUSE-fonts"/>
+        <package name="patterns-openSUSE-enhanced_base_opt"/>
+        <package name="patterns-openSUSE-enhanced_base"/>
+        <package name="patterns-openSUSE-apparmor_opt"/>
+        <package name="patterns-openSUSE-apparmor"/>
         <package name="patterns-openSUSE-x11"/>
         <package name="gdm"/>
         <package name="grub"/>
         <package name="patterns-openSUSE-gnome"/>
         <package name="patterns-openSUSE-gnome_utilities"/>
-        <package name="patterns-openSUSE-minimal_base"/>
         <package name="gnome-power-manager"/>
         <package name="gnome-terminal"/>
         <package name="gtk3-branding-openSUSE"/>
@@ -92,7 +122,7 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>
@@ -109,7 +139,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>1610</estimated_size>
+    <estimated_size>1680</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>

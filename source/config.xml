@@ -13,7 +13,7 @@
         <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
       </oemconfig>
     </type>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -29,12 +29,42 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='patterns-openSUSE-gnome_multimedia_opt'/>
+    <package name='patterns-openSUSE-yast2_basis'/>
+    <package name='patterns-openSUSE-x11_opt'/>
+    <package name='patterns-openSUSE-sw_management_gnome'/>
+    <package name='patterns-openSUSE-sw_management'/>
+    <package name='patterns-openSUSE-office_opt'/>
+    <package name='patterns-openSUSE-office'/>
+    <package name='patterns-openSUSE-multimedia_opt'/>
+    <package name='patterns-openSUSE-non_oss_opt'/>
+    <package name='patterns-openSUSE-non_oss'/>
+    <package name='patterns-openSUSE-multimedia'/>
+    <package name='patterns-openSUSE-imaging_opt'/>
+    <package name='patterns-openSUSE-imaging'/>
+    <package name='patterns-openSUSE-gnome_yast'/>
+    <package name='patterns-openSUSE-gnome_office_opt'/>
+    <package name='patterns-openSUSE-gnome_office'/>
+    <package name='patterns-openSUSE-gnome_multimedia'/>
+    <package name='patterns-openSUSE-gnome_internet'/>
+    <package name='patterns-openSUSE-gnome_imaging_opt'/>
+    <package name='patterns-openSUSE-gnome_imaging'/>
+    <package name='patterns-openSUSE-gnome_games'/>
+    <package name='patterns-openSUSE-gnome_basis_opt'/>
+    <package name='patterns-openSUSE-gnome_basis'/>
+    <package name='patterns-openSUSE-gnome_admin'/>
+    <package name='patterns-openSUSE-games'/>
+    <package name='patterns-openSUSE-fonts_opt'/>
+    <package name='patterns-openSUSE-fonts'/>
+    <package name='patterns-openSUSE-enhanced_base_opt'/>
+    <package name='patterns-openSUSE-enhanced_base'/>
+    <package name='patterns-openSUSE-apparmor_opt'/>
+    <package name='patterns-openSUSE-apparmor'/>
     <package name='patterns-openSUSE-x11'/>
     <package name='gdm'/>
     <package name='grub'/>
     <package name='patterns-openSUSE-gnome'/>
     <package name='patterns-openSUSE-gnome_utilities'/>
-    <package name='patterns-openSUSE-minimal_base'/>
     <package name='gnome-power-manager'/>
     <package name='gnome-terminal'/>
     <package name='gtk3-branding-openSUSE'/>
