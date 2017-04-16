@@ -39,6 +39,15 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="swell-foop"/>
+        <package name="gnome-sudoku"/>
+        <package name="quadrapassel"/>
+        <package name="gnome-mines"/>
+        <package name="gnome-mahjongg"/>
+        <package name="lightsoff"/>
+        <package name="iagno"/>
+        <package name="gnome-chess"/>
+        <package name="aisleriot"/>
         <package name="gnome-weather"/>
         <package name="gedit"/>
         <package name="bijiben"/>
@@ -147,7 +156,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>1810</estimated_size>
+    <estimated_size>1850</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
