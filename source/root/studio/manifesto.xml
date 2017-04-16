@@ -39,6 +39,12 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="yast2"/>
+        <package name="xterm"/>
+        <package name="gnome-software"/>
+        <package name="gnome-nettool"/>
+        <package name="gnome-disk-utility"/>
+        <package name="deja-dup"/>
         <package name="system-config-printer"/>
         <package name="alacarte"/>
         <package name="java-1_8_0-openjdk-plugin"/>
@@ -180,7 +186,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>2980</estimated_size>
+    <estimated_size>3000</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
