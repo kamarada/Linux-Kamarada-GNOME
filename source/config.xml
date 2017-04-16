@@ -29,6 +29,14 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='gnome-weather'/>
+    <package name='gedit'/>
+    <package name='bijiben'/>
+    <package name='gnome-maps'/>
+    <package name='nautilus'/>
+    <package name='tracker-gui'/>
+    <package name='gnome-clocks'/>
+    <package name='gnome-calculator'/>
     <package name='patterns-openSUSE-gnome_multimedia_opt'/>
     <package name='patterns-openSUSE-yast2_basis'/>
     <package name='patterns-openSUSE-x11_opt'/>

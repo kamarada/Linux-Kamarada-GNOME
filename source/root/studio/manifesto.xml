@@ -39,6 +39,14 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="gnome-weather"/>
+        <package name="gedit"/>
+        <package name="bijiben"/>
+        <package name="gnome-maps"/>
+        <package name="nautilus"/>
+        <package name="tracker-gui"/>
+        <package name="gnome-clocks"/>
+        <package name="gnome-calculator"/>
         <package name="patterns-openSUSE-gnome_multimedia_opt"/>
         <package name="patterns-openSUSE-yast2_basis"/>
         <package name="patterns-openSUSE-x11_opt"/>
@@ -139,7 +147,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>1680</estimated_size>
+    <estimated_size>1810</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
