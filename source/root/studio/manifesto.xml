@@ -39,6 +39,12 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="libreoffice-base"/>
+        <package name="libreoffice-impress"/>
+        <package name="libreoffice-calc"/>
+        <package name="libreoffice-writer"/>
+        <package name="libreoffice"/>
+        <package name="gnome-dictionary"/>
         <package name="transmission-gtk"/>
         <package name="polari"/>
         <package name="liferea"/>
@@ -167,7 +173,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>2740</estimated_size>
+    <estimated_size>2930</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>

@@ -29,6 +29,12 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='libreoffice-base'/>
+    <package name='libreoffice-impress'/>
+    <package name='libreoffice-calc'/>
+    <package name='libreoffice-writer'/>
+    <package name='libreoffice'/>
+    <package name='gnome-dictionary'/>
     <package name='transmission-gtk'/>
     <package name='polari'/>
     <package name='liferea'/>
