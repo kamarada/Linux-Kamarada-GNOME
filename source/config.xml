@@ -29,6 +29,15 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='gnome-system-monitor'/>
+    <package name='vinagre'/>
+    <package name='seahorse'/>
+    <package name='eog'/>
+    <package name='gucharmap'/>
+    <package name='gnome-font-viewer'/>
+    <package name='evince'/>
+    <package name='baobab'/>
+    <package name='file-roller'/>
     <package name='yast2'/>
     <package name='xterm'/>
     <package name='gnome-software'/>
