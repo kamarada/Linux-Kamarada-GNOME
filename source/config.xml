@@ -13,7 +13,7 @@
         <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
       </oemconfig>
     </type>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
