@@ -29,6 +29,9 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='system-config-printer'/>
+    <package name='alacarte'/>
+    <package name='java-1_8_0-openjdk-plugin'/>
     <package name='totem'/>
     <package name='gnome-music'/>
     <package name='cheese'/>

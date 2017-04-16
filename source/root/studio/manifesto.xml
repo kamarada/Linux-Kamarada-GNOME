@@ -39,6 +39,9 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="system-config-printer"/>
+        <package name="alacarte"/>
+        <package name="java-1_8_0-openjdk-plugin"/>
         <package name="totem"/>
         <package name="gnome-music"/>
         <package name="cheese"/>
@@ -177,7 +180,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>2970</estimated_size>
+    <estimated_size>2980</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
