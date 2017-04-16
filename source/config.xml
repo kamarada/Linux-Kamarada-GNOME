@@ -29,6 +29,12 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='transmission-gtk'/>
+    <package name='polari'/>
+    <package name='liferea'/>
+    <package name='MozillaFirefox'/>
+    <package name='evolution'/>
+    <package name='empathy'/>
     <package name='simple-scan'/>
     <package name='shotwell'/>
     <package name='libreoffice-draw'/>
