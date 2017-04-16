@@ -29,6 +29,11 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='simple-scan'/>
+    <package name='shotwell'/>
+    <package name='libreoffice-draw'/>
+    <package name='inkscape'/>
+    <package name='gimp'/>
     <package name='swell-foop'/>
     <package name='gnome-sudoku'/>
     <package name='quadrapassel'/>
