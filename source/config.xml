@@ -29,6 +29,10 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='totem'/>
+    <package name='gnome-music'/>
+    <package name='cheese'/>
+    <package name='brasero'/>
     <package name='libreoffice-base'/>
     <package name='libreoffice-impress'/>
     <package name='libreoffice-calc'/>
