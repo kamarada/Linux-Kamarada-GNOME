@@ -17,7 +17,7 @@
             <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
           </oemconfig>
         </type>
-        <version>0.0.8</version>
+        <version>0.0.9</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -39,6 +39,14 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="gnome-bluetooth"/>
+        <package name="patterns-openSUSE-gnome_laptop"/>
+        <package name="wpa_supplicant"/>
+        <package name="wireless-regdb"/>
+        <package name="pcmciautils"/>
+        <package name="iw"/>
+        <package name="crda"/>
+        <package name="patterns-openSUSE-laptop"/>
         <package name="xf86-video-vmware"/>
         <package name="xf86-input-vmmouse"/>
         <package name="virtualbox-guest-tools"/>
@@ -184,7 +192,7 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.8</version>
+    <version>0.0.9</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>

@@ -13,7 +13,7 @@
         <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
       </oemconfig>
     </type>
-    <version>0.0.8</version>
+    <version>0.0.9</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -29,6 +29,14 @@
     <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='gnome-bluetooth'/>
+    <package name='patterns-openSUSE-gnome_laptop'/>
+    <package name='wpa_supplicant'/>
+    <package name='wireless-regdb'/>
+    <package name='pcmciautils'/>
+    <package name='iw'/>
+    <package name='crda'/>
+    <package name='patterns-openSUSE-laptop'/>
     <package name='xf86-video-vmware'/>
     <package name='xf86-input-vmmouse'/>
     <package name='virtualbox-guest-tools'/>
