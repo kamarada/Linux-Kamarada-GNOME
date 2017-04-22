@@ -70,6 +70,20 @@ baseUpdateSysConfig /etc/sysconfig/windowmanager DEFAULT_WM gnome
 test -d /studio || mkdir /studio
 cp /image/.profile /studio/profile
 cp /image/config.xml /studio/config.xml
+chown root:root /studio/build-custom
+chmod 755 /studio/build-custom
+# run custom build_script after build
+if ! /studio/build-custom; then
+    cat <<EOF
+
+*********************************
+/studio/build-custom failed!
+*********************************
+
+EOF
+
+    exit 1
+fi
 rm -rf /studio/overlay-tmp
 true
 

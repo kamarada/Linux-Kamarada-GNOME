@@ -13,7 +13,7 @@
         <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
       </oemconfig>
     </type>
-    <version>0.0.9</version>
+    <version>0.0.12</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -23,12 +23,12 @@
     <locale>en_US</locale>
   </preferences>
   <users group='root'>
-    <user name='root' pwd='$1$PCm0KQGq$IK0rSYli0zQSUNZv77CNH.' home='/root' shell='/bin/bash'/>
-  </users>
-  <users group='users'>
-    <user name='tux' pwd='$1$N6qLmuqQ$FgoEjNT6RlRMoRc0D8H2a/' home='/home/tux' shell='/bin/bash'/>
+    <user name='root' pwd='$1$3wfUzS2u$DbEX84KpsFRsz03wbGOPd1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='xdg-utils'/>
+    <package name='yast2-sudo'/>
+    <package name='sudo'/>
     <package name='gnome-bluetooth'/>
     <package name='patterns-openSUSE-gnome_laptop'/>
     <package name='wpa_supplicant'/>

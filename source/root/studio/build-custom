@@ -1,0 +1,40 @@
+#!/bin/bash -e
+#
+# This script is executed at the end of appliance creation.  Here you can do
+# one-time actions to modify your appliance before it is ever used, like
+# removing files and directories to make it smaller, creating symlinks,
+# generating indexes, etc.
+#
+# The 'kiwi_type' variable will contain the format of the appliance
+# (oem = disk image, vmx = VMware, iso = CD/DVD, xen = Xen).
+#
+
+# read in some variables
+. /studio/profile
+
+# read in KIWI utility functions
+. /.kconfig
+
+#======================================
+# /etc/sudoers hack to fix #297695
+# (Installation Live DVD: no need to ask for password of root)
+# https://bugzilla.novell.com/show_bug.cgi?id=297695
+#--------------------------------------
+sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
+chmod 0440 /etc/sudoers
+
+# Create LiveDVD user linux
+/usr/sbin/useradd -m -u 999 linux -c "LiveDVD User" -p ""
+
+# delete passwords
+passwd -d root
+passwd -d linux
+# empty password is ok
+pam-config -a --nullok
+
+# bug 544314, we only want to disable the bit in common-auth-pc
+# https://bugzilla.novell.com/show_bug.cgi?id=544314
+sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
+
+# Automatically log in user linux
+baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
