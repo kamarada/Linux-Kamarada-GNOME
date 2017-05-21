@@ -38,3 +38,18 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 
 # Automatically log in user linux
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
+
+# Official repositories
+# (as found in http://download.opensuse.org/distribution/leap/42.2/repo/oss/control.xml)
+
+rm /etc/zypp/repos.d/*.repo
+zypper addrepo -f -K -n "openSUSE-Leap-42.2-Update" http://download.opensuse.org/update/leap/42.2/oss/ repo-update
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Update-Non-Oss" http://download.opensuse.org/update/leap/42.2/non-oss/ repo-update-non-oss
+zypper addrepo -f -K -n "openSUSE-Leap-42.2-Oss" http://download.opensuse.org/distribution/leap/42.2/repo/oss/ repo-oss
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Non-Oss" http://download.opensuse.org/distribution/leap/42.2/repo/non-oss/ repo-non-oss
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Debug" http://download.opensuse.org/debug/distribution/leap/42.2/repo/oss/ repo-debug
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Debug-Non-Oss" http://download.opensuse.org/debug/distribution/leap/42.2/repo/non-oss/ repo-debug-non-oss
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Update-Debug" http://download.opensuse.org/debug/update/leap/42.2/oss repo-debug-update
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Update-Debug-Non-Oss" http://download.opensuse.org/debug/update/leap/42.2/non-oss/ repo-debug-update-non-oss
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Source" http://download.opensuse.org/source/distribution/leap/42.2/repo/oss/ repo-source
+zypper addrepo -d -K -n "openSUSE-Leap-42.2-Source-Non-Oss" http://download.opensuse.org/source/distribution/leap/42.2/repo/non-oss/ repo-source-non-oss
