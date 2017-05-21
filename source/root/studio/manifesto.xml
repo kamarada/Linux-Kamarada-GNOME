@@ -230,8 +230,8 @@
     </overlay_files>
     <firewall>
       <firewall_enabled>yes</firewall_enabled>
-      <firewall_ssh>opened</firewall_ssh>
-      <firewall_http>opened</firewall_http>
+      <firewall_ssh>closed</firewall_ssh>
+      <firewall_http>closed</firewall_http>
       <firewall_webyast>closed</firewall_webyast>
     </firewall>
     <webyast enabled="false" version="">
