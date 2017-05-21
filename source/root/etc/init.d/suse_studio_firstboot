@@ -2,7 +2,7 @@
 # only on first boot so it deletes itself after running.
 
 # How is the network configured?
-NETWORK_CONFIG=dhcp
+NETWORK_CONFIG=network_manager
 
 # Always use DHCP when in Testdrive.
 setup_dhcp() {

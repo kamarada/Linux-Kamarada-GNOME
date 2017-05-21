@@ -36,6 +36,7 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="NetworkManager"/>
         <package name="xdg-utils"/>
         <package name="yast2-sudo"/>
         <package name="sudo"/>
@@ -209,7 +210,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>3060</estimated_size>
+    <estimated_size>3070</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
@@ -222,7 +223,7 @@
       <source path="http://download.opensuse.org/update/leap/42.2/oss/" internal="false"/>
       <name>leap 42.2 updates</name>
     </repository>
-    <network config="dhcp">
+    <network config="network_manager">
     </network>
     <startup_programs>
     </startup_programs>

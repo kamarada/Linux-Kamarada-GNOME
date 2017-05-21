@@ -61,7 +61,7 @@ sed --in-place -e 's/# solver.onlyRequires.*/solver.onlyRequires = true/' /etc/z
 echo '** Update sysconfig entries...'
 baseUpdateSysConfig /etc/sysconfig/keyboard KEYTABLE us.map.gz
 baseUpdateSysConfig /etc/sysconfig/network/config FIREWALL yes
-baseUpdateSysConfig /etc/init.d/suse_studio_firstboot NETWORKMANAGER no
+baseUpdateSysConfig /etc/init.d/suse_studio_firstboot NETWORKMANAGER yes
 baseUpdateSysConfig /etc/sysconfig/console CONSOLE_FONT lat9w-16.psfu
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER gdm
 baseUpdateSysConfig /etc/sysconfig/windowmanager DEFAULT_WM gnome
