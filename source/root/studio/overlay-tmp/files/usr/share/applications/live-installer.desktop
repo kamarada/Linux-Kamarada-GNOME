@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Installation
+Comment=Install the system from online repositories
+Icon=yast-live-install
+Categories=Settings;System;
+Exec=xdg-su -c "/usr/bin/start-install.sh"
+StartupNotify=true

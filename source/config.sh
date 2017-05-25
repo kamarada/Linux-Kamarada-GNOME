@@ -66,6 +66,23 @@ baseUpdateSysConfig /etc/sysconfig/console CONSOLE_FONT lat9w-16.psfu
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER gdm
 baseUpdateSysConfig /etc/sysconfig/windowmanager DEFAULT_WM gnome
 
+
+#======================================
+# Setting up overlay files 
+#--------------------------------------
+echo '** Setting up overlay files...'
+mkdir -p /
+mv /studio/overlay-tmp/files///license.tar.gz //license.tar.gz
+chown root:root //license.tar.gz
+chmod 644 //license.tar.gz
+mkdir -p /usr/share/applications/
+mv /studio/overlay-tmp/files//usr/share/applications//live-installer.desktop /usr/share/applications//live-installer.desktop
+chown root:root /usr/share/applications//live-installer.desktop
+chmod 644 /usr/share/applications//live-installer.desktop
+mkdir -p /usr/bin/
+mv /studio/overlay-tmp/files//usr/bin//start-install.sh /usr/bin//start-install.sh
+chown root:root /usr/bin//start-install.sh
+chmod 755 /usr/bin//start-install.sh
 test -d /studio || mkdir /studio
 cp /image/.profile /studio/profile
 cp /image/config.xml /studio/config.xml

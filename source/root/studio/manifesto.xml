@@ -17,7 +17,7 @@
             <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
           </oemconfig>
         </type>
-        <version>0.0.12</version>
+        <version>0.0.13</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -193,7 +193,7 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.12</version>
+    <version>0.0.13</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>
@@ -228,6 +228,9 @@
     <startup_programs>
     </startup_programs>
     <overlay_files remove="">
+      <file name="license.tar.gz" path="/" owner="root" group="root" perms="644" type="archive" md5="79d0b114e2fa7b2dd6f86ba9f5a5814a" extract_archive="false"/>
+      <file name="live-installer.desktop" path="/usr/share/applications/" owner="root" group="root" perms="644" type="file" md5="6c845a2b2729e0a67a9d22f215658913"/>
+      <file name="start-install.sh" path="/usr/bin/" owner="root" group="root" perms="755" type="file" md5="565f9f0de504b63cf3833dba57b162cc"/>
     </overlay_files>
     <firewall>
       <firewall_enabled>yes</firewall_enabled>
