@@ -6,14 +6,21 @@
     <specification>openSUSE Leap 42.1 GNOME</specification>
   </description>
   <preferences>
-    <type checkprebuilt='true' boot='oemboot/suse-leap42.1' fsnocheck='true' filesystem='ext3' bootloader='grub2' image='oem'>
-      <oemconfig>
-        <oem-swap>true</oem-swap>
-        <oem-swapsize>512</oem-swapsize>
-        <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
-      </oemconfig>
+    <type checkprebuilt='true' boot='isoboot/suse-leap42.1' fsnocheck='true' bootloader='grub2' firmware='uefi' flags='overlay' hybrid='true' image='iso'>
+      <split>
+        <temporary>
+          <file name='/var'/>
+          <file name='/var/*'/>
+          <file name='/etc'/>
+          <file name='/etc/*'/>
+          <file name='/tmp'/>
+          <file name='/tmp/*'/>
+          <file name='/home'/>
+          <file name='/home/*'/>
+        </temporary>
+      </split>
     </type>
-    <version>0.0.13</version>
+    <version>0.0.14</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -26,6 +33,8 @@
     <user name='root' pwd='$1$3wfUzS2u$DbEX84KpsFRsz03wbGOPd1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='shim' bootinclude='true'/>
+    <package name='grub2-x86_64-efi'/>
     <package name='NetworkManager'/>
     <package name='xdg-utils'/>
     <package name='yast2-sudo'/>
@@ -169,6 +178,9 @@
     <package name='gsettings-backend-dconf'/>
     <package name='glibc'/>
     <package name='glibc-locale'/>
+    <package name='yast2-live-installer'/>
+    <package name='yast2-users'/>
+    <package name='btrfsprogs'/>
     <archive name='plymouth.tar' bootinclude='true'/>
     <package name='gfxboot-devel' bootinclude='true'/>
     <archive name='gdm.tar'/>

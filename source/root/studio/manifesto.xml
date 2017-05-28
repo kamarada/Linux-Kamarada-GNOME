@@ -10,14 +10,21 @@
         <specification>openSUSE Leap 42.1 GNOME</specification>
       </description>
       <preferences>
-        <type checkprebuilt="true" boot="oemboot/suse-leap42.1" fsnocheck="true" filesystem="ext3" bootloader="grub2" image="oem">
-          <oemconfig>
-            <oem-swap>true</oem-swap>
-            <oem-swapsize>512</oem-swapsize>
-            <oem-boot-title>Linux Kamarada 42.2 GNOME</oem-boot-title>
-          </oemconfig>
+        <type checkprebuilt="true" boot="isoboot/suse-leap42.1" fsnocheck="true" bootloader="grub2" firmware="uefi" flags="overlay" hybrid="true" image="iso">
+          <split>
+            <temporary>
+              <file name="/var"/>
+              <file name="/var/*"/>
+              <file name="/etc"/>
+              <file name="/etc/*"/>
+              <file name="/tmp"/>
+              <file name="/tmp/*"/>
+              <file name="/home"/>
+              <file name="/home/*"/>
+            </temporary>
+          </split>
         </type>
-        <version>0.0.13</version>
+        <version>0.0.14</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -36,6 +43,8 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="shim" bootinclude="true"/>
+        <package name="grub2-x86_64-efi"/>
         <package name="NetworkManager"/>
         <package name="xdg-utils"/>
         <package name="yast2-sudo"/>
@@ -179,6 +188,9 @@
         <package name="gsettings-backend-dconf"/>
         <package name="glibc"/>
         <package name="glibc-locale"/>
+        <package name="yast2-live-installer"/>
+        <package name="yast2-users"/>
+        <package name="btrfsprogs"/>
         <archive name="plymouth.tar" bootinclude="true"/>
         <package name="gfxboot-devel" bootinclude="true"/>
         <archive name="gdm.tar"/>
@@ -193,11 +205,11 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.13</version>
+    <version>0.0.14</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>
-    <image_type>oem</image_type>
+    <image_type>iso</image_type>
     <time_zone>UTC</time_zone>
     <region>Global</region>
     <default_runlevel>5</default_runlevel>
@@ -210,7 +222,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>3070</estimated_size>
+    <estimated_size>3100</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
