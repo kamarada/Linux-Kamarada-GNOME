@@ -20,7 +20,7 @@
         </temporary>
       </split>
     </type>
-    <version>0.0.14</version>
+    <version>0.0.15</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>

@@ -53,3 +53,10 @@ zypper addrepo -d -K -n "openSUSE-Leap-42.2-Update-Debug" http://download.opensu
 zypper addrepo -d -K -n "openSUSE-Leap-42.2-Update-Debug-Non-Oss" http://download.opensuse.org/debug/update/leap/42.2/non-oss/ repo-debug-update-non-oss
 zypper addrepo -d -K -n "openSUSE-Leap-42.2-Source" http://download.opensuse.org/source/distribution/leap/42.2/repo/oss/ repo-source
 zypper addrepo -d -K -n "openSUSE-Leap-42.2-Source-Non-Oss" http://download.opensuse.org/source/distribution/leap/42.2/repo/non-oss/ repo-source-non-oss
+
+# openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
+# https://bugzilla.opensuse.org/show_bug.cgi?id=984330
+
+# Linux Kamarada issue #1 unable to ping
+# https://github.com/kamarada/kiwi-config-Kamarada/issues/1
+sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
