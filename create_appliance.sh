@@ -134,6 +134,9 @@ rm -rf build/root
 
 run_cmd "$kiwi --build $src/ -d $dst"
 mv $image_file image/$new_image_name
+cd image
+sha256sum *.iso > $new_image_name.sha256
+cd ..
 
 # And we're done!
 qemu_options='-snapshot'
