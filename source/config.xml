@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<image name='Linux_Kamarada_42.2_GNOME' displayname='Linux_Kamarada_42.2_GNOME' schemaversion='5.2'>
+<image name='Linux-Kamarada-42.2-GNOME-Live' displayname='Linux_Kamarada_42.2_GNOME_Live' schemaversion='5.2'>
   <description type='system'>
     <author>Projeto Linux Kamarada</author>
-    <contact>studio-devel@suse.de</contact>
-    <specification>openSUSE Leap 42.1 GNOME</specification>
+    <contact>linuxkamarada@gmail.com</contact>
+    <specification>Linux Kamarada 42.2 GNOME Live</specification>
   </description>
   <preferences>
-    <type checkprebuilt='true' boot='isoboot/suse-leap42.1' fsnocheck='true' bootloader='grub2' firmware='uefi' flags='overlay' hybrid='true' image='iso' hybridpersistent='true' hybridpersistent_filesystem='ext4' kernelcmdline='splash' volid='openSUSE Leap 42.2 GNOME Live'>
+    <type checkprebuilt='true' boot='isoboot/suse-leap42.1' fsnocheck='true' bootloader='grub2' firmware='uefi' flags='overlay' hybrid='true' image='iso' hybridpersistent='true' hybridpersistent_filesystem='ext4' kernelcmdline='splash' volid='Linux Kamarada 42.2 GNOME Live'>
       <split>
         <temporary>
           <file name='/var'/>
@@ -20,7 +20,7 @@
         </temporary>
       </split>
     </type>
-    <version>0.0.15</version>
+    <version>42.2.0</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>

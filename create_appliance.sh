@@ -9,7 +9,8 @@
 # Contact: feedback@susestudio.com
 # ============================================================================
 
-image_file='image/Linux_Kamarada_42.2_GNOME.x86_64-0.0.15.iso'
+image_file='image/Linux-Kamarada-42.2-GNOME-Live.x86_64-42.2.0.iso'
+new_image_name="Linux-Kamarada-42.2-GNOME-Live.x86_64-$(date +%Y%m%d).iso"
 image_arch='x86_64'
 schema_ver='5.2'
 base_system='Leap_42.1'
@@ -132,6 +133,7 @@ echo "** Creating appliance..."
 rm -rf build/root
 
 run_cmd "$kiwi --build $src/ -d $dst"
+mv $image_file image/$new_image_name
 
 # And we're done!
 qemu_options='-snapshot'
@@ -139,9 +141,9 @@ qemu_options='-snapshot'
 [[ "$uefi_enabled" = "true" ]] && qemu_options="$qemu_options -bios /usr/share/qemu-ovmf/bios/bios.bin"
 
 echo
-echo "** Appliance created successfully! ($image_file)"
+echo "** Appliance created successfully! (image/$new_image_file)"
 echo "To boot the image using qemu-kvm, run the following command:"
-echo "  qemu-kvm -m 512 $qemu_options $image_file &"
+echo "  qemu-kvm -m 512 $qemu_options image/$new_image_file &"
 echo
 if [ "$uefi_enabled" = "true" ]
 then
