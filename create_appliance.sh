@@ -9,7 +9,7 @@
 # Contact: feedback@susestudio.com
 # ============================================================================
 
-image_file='image/Linux_Kamarada_42.2_GNOME.x86_64-0.0.16.iso'
+image_file='image/Linux_Kamarada_42.2_GNOME.x86_64-0.0.18.iso'
 image_arch='x86_64'
 schema_ver='5.2'
 base_system='Leap_42.1'

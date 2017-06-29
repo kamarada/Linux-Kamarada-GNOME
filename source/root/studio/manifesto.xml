@@ -24,7 +24,7 @@
             </temporary>
           </split>
         </type>
-        <version>0.0.16</version>
+        <version>0.0.18</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -43,6 +43,8 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="libreoffice-gtk3"/>
+        <package name="libreoffice-gnome"/>
         <package name="wallpaper-branding-openSUSE"/>
         <package name="yast2-branding-openSUSE"/>
         <package name="systemd-presets-branding-openSUSE"/>
@@ -221,7 +223,7 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.16</version>
+    <version>0.0.18</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>
