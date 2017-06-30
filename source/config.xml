@@ -33,6 +33,24 @@
     <user name='root' pwd='$1$3wfUzS2u$DbEX84KpsFRsz03wbGOPd1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='libreoffice-gtk3'/>
+    <package name='libreoffice-gnome'/>
+    <package name='wallpaper-branding-openSUSE'/>
+    <package name='yast2-branding-openSUSE'/>
+    <package name='systemd-presets-branding-openSUSE'/>
+    <package name='plymouth-branding-openSUSE'/>
+    <package name='PackageKit-branding-openSUSE'/>
+    <package name='NetworkManager-branding-openSUSE'/>
+    <package name='MozillaFirefox-branding-openSUSE'/>
+    <package name='libsocialweb-branding-openSUSE'/>
+    <package name='libreoffice-branding-upstream'/>
+    <package name='libpurple-branding-openSUSE'/>
+    <package name='hicolor-icon-theme-branding-openSUSE'/>
+    <package name='gtk2-branding-openSUSE'/>
+    <package name='gnome-menus-branding-openSUSE'/>
+    <package name='gio-branding-openSUSE'/>
+    <package name='gdm-branding-openSUSE'/>
+    <package name='gconf2-branding-openSUSE'/>
     <package name='shim' bootinclude='true'/>
     <package name='grub2-x86_64-efi'/>
     <package name='NetworkManager'/>
