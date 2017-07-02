@@ -43,6 +43,7 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="gparted"/>
         <package name="joe"/>
         <package name="nano"/>
         <package name="libreoffice-gtk3"/>
@@ -242,7 +243,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>3130</estimated_size>
+    <estimated_size>3150</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
