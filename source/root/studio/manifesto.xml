@@ -43,6 +43,7 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="joe"/>
         <package name="nano"/>
         <package name="libreoffice-gtk3"/>
         <package name="libreoffice-gnome"/>
