@@ -33,6 +33,7 @@
     <user name='root' pwd='$1$3wfUzS2u$DbEX84KpsFRsz03wbGOPd1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='guake'/>
     <package name='vlc'/>
     <package name='wine-gecko'/>
     <package name='wine'/>
