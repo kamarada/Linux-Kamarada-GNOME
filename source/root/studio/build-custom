@@ -56,6 +56,7 @@ zypper addrepo -d -K -n "openSUSE-Leap-42.2-Source-Non-Oss" http://download.open
 
 # Other repositories
 zypper addrepo -f -K -n "Printing" http://download.opensuse.org/repositories/Printing/openSUSE_Leap_42.2/ printing
+zypper addrepo -f -K -n "Wine" http://download.opensuse.org/repositories/Emulators/openSUSE_Leap_42.2/ wine
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
 # https://bugzilla.opensuse.org/show_bug.cgi?id=984330

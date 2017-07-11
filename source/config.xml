@@ -226,4 +226,8 @@
   <repository type='rpm-md'>
     <source path='http://download.opensuse.org/repositories/Printing/openSUSE_Leap_42.2/'/>
   </repository>
+  <!-- Wine -->
+  <repository type='rpm-md'>
+    <source path='http://download.opensuse.org/repositories/Emulators/openSUSE_Leap_42.2/'/>
+  </repository>
 </image>
