@@ -43,6 +43,12 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="gnome-tweak-tool"/>
+        <package name="gnome-screenshot"/>
+        <package name="gnome-packagekit"/>
+        <package name="gnome-online-accounts"/>
+        <package name="gnome-color-manager"/>
+        <package name="gnome-documents"/>
         <package name="libreoffice-icon-theme-tango"/>
         <package name="libreoffice-templates-presentation-layouts"/>
         <package name="libreoffice-templates-labels-a4"/>
@@ -274,7 +280,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>4180</estimated_size>
+    <estimated_size>4260</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>

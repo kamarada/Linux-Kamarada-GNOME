@@ -33,6 +33,12 @@
     <user name='root' pwd='$1$3wfUzS2u$DbEX84KpsFRsz03wbGOPd1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='gnome-tweak-tool'/>
+    <package name='gnome-screenshot'/>
+    <package name='gnome-packagekit'/>
+    <package name='gnome-online-accounts'/>
+    <package name='gnome-color-manager'/>
+    <package name='gnome-documents'/>
     <package name='libreoffice-icon-theme-tango'/>
     <package name='libreoffice-templates-presentation-layouts'/>
     <package name='libreoffice-templates-labels-a4'/>
