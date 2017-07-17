@@ -24,7 +24,7 @@
             </temporary>
           </split>
         </type>
-        <version>0.0.19</version>
+        <version>0.0.20</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -43,6 +43,25 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="yast2-vpn"/>
+        <package name="yast2-vm"/>
+        <package name="yast2-sound"/>
+        <package name="yast2-snapper"/>
+        <package name="yast2-scanner"/>
+        <package name="yast2-samba-server"/>
+        <package name="yast2-samba-client"/>
+        <package name="yast2-printer"/>
+        <package name="yast2-ntp-client"/>
+        <package name="yast2-nis-client"/>
+        <package name="yast2-nfs-client"/>
+        <package name="yast2-metapackage-handler"/>
+        <package name="yast2-journal"/>
+        <package name="yast2-iscsi-client"/>
+        <package name="yast2-inetd"/>
+        <package name="yast2-fonts"/>
+        <package name="yast2-auth-client"/>
+        <package name="yast2-apparmor"/>
+        <package name="yast2-add-on"/>
         <package name="guake"/>
         <package name="vlc"/>
         <package name="wine-gecko"/>
@@ -231,7 +250,7 @@
   <extra_config name="Linux_Kamarada_42.2_GNOME">
     <appliance_id>1703402</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.19</version>
+    <version>0.0.20</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>
@@ -248,7 +267,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>4060</estimated_size>
+    <estimated_size>4130</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>

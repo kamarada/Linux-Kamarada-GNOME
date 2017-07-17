@@ -20,7 +20,7 @@
         </temporary>
       </split>
     </type>
-    <version>0.0.19</version>
+    <version>0.0.20</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -33,6 +33,25 @@
     <user name='root' pwd='$1$3wfUzS2u$DbEX84KpsFRsz03wbGOPd1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='yast2-vpn'/>
+    <package name='yast2-vm'/>
+    <package name='yast2-sound'/>
+    <package name='yast2-snapper'/>
+    <package name='yast2-scanner'/>
+    <package name='yast2-samba-server'/>
+    <package name='yast2-samba-client'/>
+    <package name='yast2-printer'/>
+    <package name='yast2-ntp-client'/>
+    <package name='yast2-nis-client'/>
+    <package name='yast2-nfs-client'/>
+    <package name='yast2-metapackage-handler'/>
+    <package name='yast2-journal'/>
+    <package name='yast2-iscsi-client'/>
+    <package name='yast2-inetd'/>
+    <package name='yast2-fonts'/>
+    <package name='yast2-auth-client'/>
+    <package name='yast2-apparmor'/>
+    <package name='yast2-add-on'/>
     <package name='guake'/>
     <package name='vlc'/>
     <package name='wine-gecko'/>
