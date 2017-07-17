@@ -33,6 +33,10 @@
     <user name='root' pwd='$1$3wfUzS2u$DbEX84KpsFRsz03wbGOPd1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='libreoffice-templates-presentation-layouts'/>
+    <package name='libreoffice-templates-labels-a4'/>
+    <package name='libreoffice-templates-labels-letter'/>
+    <package name='libreoffice-templates-en'/>
     <package name='xdg-user-dirs-gtk'/>
     <package name='xdg-user-dirs'/>
     <package name='yast2-vpn'/>

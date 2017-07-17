@@ -43,6 +43,10 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="libreoffice-templates-presentation-layouts"/>
+        <package name="libreoffice-templates-labels-a4"/>
+        <package name="libreoffice-templates-labels-letter"/>
+        <package name="libreoffice-templates-en"/>
         <package name="xdg-user-dirs-gtk"/>
         <package name="xdg-user-dirs"/>
         <package name="yast2-vpn"/>
@@ -269,7 +273,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>4140</estimated_size>
+    <estimated_size>4170</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
