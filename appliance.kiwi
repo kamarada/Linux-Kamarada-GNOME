@@ -34,6 +34,11 @@
     </repository>
     <packages type="image">
         <package name="patterns-kamarada-gnome"/>
+        <package name="branding-openSUSE"/>
+        <package name="gdm-branding-openSUSE"/>
+        <package name="gtk2-branding-openSUSE"/>
+        <package name="gtk3-branding-openSUSE"/>
+        <package name="hicolor-icon-theme-branding-openSUSE"/>
         <package name="MozillaFirefox-branding-openSUSE"/>
       
         <package name="dracut-kiwi-live"/>
