@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<constraints>
+    <hardware>
+        <disk>
+            <!-- OSError: [Errno 28] No space left on device -->
+            <size unit="G">30</size>
+        </disk>
+    </hardware>
+</constraints>
