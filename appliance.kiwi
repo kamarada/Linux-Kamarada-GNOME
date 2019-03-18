@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="Linux Kamarada 15.0 GNOME Live" name="Linux-Kamarada-15.0-GNOME-Live" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.1 GNOME Live" name="Linux-Kamarada-15.1-GNOME-Live" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -14,8 +14,8 @@
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>true</rpm-excludedocs>
         <timezone>Europe/Berlin</timezone>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.0_GNOME_Live"/>
-        <version>15.0.2018040401</version>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.1_GNOME_Live"/>
+        <version>15.1</version>
     </preferences>
     <users>
         <user name="root" groups="root" home="/root"/>
@@ -24,13 +24,13 @@
         <source path="obs://Virtualization:Appliances:Builder/Factory"/>
     </repository>
     <repository type="rpm-md" alias="kamarada" imageinclude="true" priority="2">
-        <source path="obs://home:kamarada:15.0:dev/openSUSE_Leap_15.0"/>
+        <source path="obs://home:kamarada:15.1:dev/openSUSE_Leap_15.1"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.0/standard"/>
+        <source path="obs://openSUSE:Leap:15.1/standard"/>
     </repository>
     <repository alias="repo-update" imageinclude="true" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.0:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.1:Update/standard"/>
     </repository>
     <packages type="image">
         <package name="patterns-kamarada-gnome"/>
