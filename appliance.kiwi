@@ -87,6 +87,8 @@
         <package name="filesystem"/>
         <package name="glibc-locale"/>
         <package name="openSUSE-release"/>
+        <!-- have choice for product_flavor(openSUSE) needed by openSUSE-release -->
+        <package name="openSUSE-release-ftp"/>
         <package name="udev"/>
     </packages>
 </image>
