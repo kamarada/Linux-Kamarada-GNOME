@@ -44,6 +44,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#3 - GUI - Accessories - Calculator -->
         <package name="gnome-calculator-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#4 - GUI - Accessories - Text editor -->
+        <package name="gedit-lang"/>
+
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
         <package name="gtk2-branding-openSUSE"/>
