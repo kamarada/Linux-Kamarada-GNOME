@@ -41,6 +41,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#2 - GUI - Accessories - File manager -->
         <package name="nautilus-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#3 - GUI - Accessories - Calculator -->
+        <package name="gnome-calculator-lang"/>
+
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
         <package name="gtk2-branding-openSUSE"/>
