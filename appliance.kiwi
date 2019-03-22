@@ -34,6 +34,10 @@
     </repository>
     <packages type="image">
         <package name="patterns-kamarada-gnome"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#1 - GUI - System - Terminal -->
+        <package name="gnome-terminal-lang"/>
+
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
         <package name="gtk2-branding-openSUSE"/>
