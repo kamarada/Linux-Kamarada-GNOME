@@ -50,6 +50,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#6 - GUI - Sound & Video - Media player -->
         <package name="vlc-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#7 - GUI - Utilities - Archive manager -->
+        <package name="file-roller-lang"/>
+
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
         <package name="gtk2-branding-openSUSE"/>
