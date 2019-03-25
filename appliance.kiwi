@@ -53,6 +53,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#7 - GUI - Utilities - Archive manager -->
         <package name="file-roller-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#9 - GUI - Utilities - System monitor -->
+        <package name="gnome-system-monitor-lang"/>
+
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
         <package name="gtk2-branding-openSUSE"/>
