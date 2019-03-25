@@ -52,7 +52,7 @@
         <package name="gtk2-branding-openSUSE"/>
         <package name="gtk3-branding-openSUSE"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
-        <package name="MozillaFirefox-branding-openSUSE"/>
+        <!--<package name="MozillaFirefox-branding-openSUSE"/>-->
       
         <package name="dracut-kiwi-live"/>
       	<!-- KiwiKernelLookupError: No kernel found in /usr/src/packages/KIWI-iso/build/image-root/boot -->
