@@ -47,6 +47,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#4 - GUI - Accessories - Text editor -->
         <package name="gedit-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#6 - GUI - Sound & Video - Media player -->
+        <package name="vlc-lang"/>
+
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
         <package name="gtk2-branding-openSUSE"/>
