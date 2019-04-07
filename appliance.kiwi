@@ -62,6 +62,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#11 - GUI - Internet - E-mail client -->
         <package name="evolution-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#12 - GUI - Office - Calendar -->
+        <package name="gnome-calendar-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
