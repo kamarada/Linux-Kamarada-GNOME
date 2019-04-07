@@ -65,6 +65,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#12 - GUI - Office - Calendar -->
         <package name="gnome-calendar-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#13 - GUI - Office - Address book -->
+        <package name="gnome-contacts-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
