@@ -68,6 +68,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#13 - GUI - Office - Address book -->
         <package name="gnome-contacts-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#15 - GUI - Utilities - Document viewer -->
+        <package name="evince-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
