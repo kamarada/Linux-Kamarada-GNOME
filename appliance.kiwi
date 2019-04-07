@@ -59,6 +59,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#10 - GUI - Utilities - Screenshot -->
         <package name="gnome-screenshot-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#11 - GUI - Internet - E-mail client -->
+        <package name="evolution-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
