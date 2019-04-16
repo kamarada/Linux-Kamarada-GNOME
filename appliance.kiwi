@@ -77,6 +77,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#17 - GUI - Utilities - Image viewer -->
         <package name="eog-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#19 - GUI - Sound & Video - Webcam application -->
+        <package name="cheese-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
