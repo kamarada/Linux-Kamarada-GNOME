@@ -85,7 +85,7 @@
       	<!-- https://groups.google.com/forum/#!topic/kiwi-images/BP24w2iEHXU -->
       	<!-- https://build.opensuse.org/package/view_file/openSUSE:Leap:15.0:Images/livecd-leap-gnome/pre-checkin.sh?expand=1 -->
       	<!-- https://github.com/openSUSE/obs-build/issues/420 -->
-      	<ignore name="libzypp-plugin-appdata"/>
+      	<!--<ignore name="libzypp-plugin-appdata"/>-->
       
       	<!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
