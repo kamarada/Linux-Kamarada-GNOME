@@ -80,6 +80,20 @@
         <!-- kamarada/Linux-Kamarada-GNOME#19 - GUI - Sound & Video - Webcam application -->
         <package name="cheese-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#20 - GUI - GNOME core apps -->
+        <package name="baobab-lang"/>
+        <package name="gnome-characters-lang"/>
+        <package name="gnome-clocks-lang"/>
+        <package name="gnome-disk-utility-lang"/>
+        <package name="gnome-documents-lang"/>
+        <package name="gnome-font-viewer-lang"/>
+        <package name="gnome-logs-lang"/>
+        <package name="gnome-photos-lang"/>
+        <package name="gnome-software-lang"/>
+        <package name="gnome-todo-lang"/>
+        <package name="gnome-weather-lang"/>
+        <package name="yelp-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
