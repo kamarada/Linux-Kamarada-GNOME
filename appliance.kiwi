@@ -100,6 +100,10 @@
         <!-- kamarada/Linux-Kamarada-GNOME#22 - GUI - Utilities - Tweaks -->
         <package name="gnome-tweak-tool-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Aisleriot -->
+        <package name="aisleriot"/>
+        <package name="aisleriot-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
