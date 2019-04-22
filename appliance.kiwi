@@ -94,6 +94,9 @@
         <package name="gnome-weather-lang"/>
         <package name="yelp-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#21 - GUI - Accessories - Notes -->
+        <package name="bijiben-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
@@ -103,7 +106,7 @@
         <package name="gtk3-branding-openSUSE"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
         <!--<package name="MozillaFirefox-branding-openSUSE"/>-->
-      
+
         <package name="dracut-kiwi-live"/>
       	<!-- KiwiKernelLookupError: No kernel found in /usr/src/packages/KIWI-iso/build/image-root/boot -->
       	<!--<package name="kernel-default"/>-->
@@ -112,7 +115,7 @@
       	<!-- https://build.opensuse.org/package/view_file/openSUSE:Leap:15.0:Images/livecd-leap-gnome/pre-checkin.sh?expand=1 -->
       	<!-- https://github.com/openSUSE/obs-build/issues/420 -->
       	<!--<ignore name="libzypp-plugin-appdata"/>-->
-      
+
       	<!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
 
