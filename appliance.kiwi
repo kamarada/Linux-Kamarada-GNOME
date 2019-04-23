@@ -120,6 +120,10 @@
         <package name="gnome-sudoku"/>
         <package name="gnome-sudoku-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
+        <package name="quadrapassel"/>
+        <package name="quadrapassel-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
