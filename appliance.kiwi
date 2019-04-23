@@ -112,6 +112,10 @@
         <package name="gnome-mines"/>
         <package name="gnome-mines-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
+        <package name="gnome-sudoku"/>
+        <package name="gnome-sudoku-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
