@@ -128,6 +128,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#24 - Firewall -->
         <package name="firewalld-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#25 - GUI - System - Partition manager -->
+        <package name="gparted-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
