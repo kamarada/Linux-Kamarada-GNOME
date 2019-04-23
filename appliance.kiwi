@@ -107,6 +107,7 @@
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
         <package name="gnome-chess"/>
         <package name="gnome-chess-lang"/>
+        <package name="gnuchess"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
         <package name="gnome-mahjongg"/>
