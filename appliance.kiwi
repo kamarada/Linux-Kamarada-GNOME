@@ -104,6 +104,10 @@
         <package name="aisleriot"/>
         <package name="aisleriot-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
+        <package name="gnome-mahjongg"/>
+        <package name="gnome-mahjongg-lang"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
         <package name="gnome-mines"/>
         <package name="gnome-mines-lang"/>
