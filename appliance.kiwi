@@ -125,6 +125,9 @@
         <package name="quadrapassel"/>
         <package name="quadrapassel-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#24 - Firewall -->
+        <package name="firewalld-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
