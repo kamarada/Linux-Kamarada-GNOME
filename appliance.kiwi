@@ -134,6 +134,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#26 - GUI - System - Package updater -->
         <package name="gnome-packagekit-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager -->
+        <package name="seahorse-lang"/>
+
         <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
