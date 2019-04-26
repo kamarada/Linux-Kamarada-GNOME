@@ -143,8 +143,11 @@
         <!-- kamarada/Linux-Kamarada-GNOME#30 - GUI - Internet - BitTorrent client -->
         <package name="transmission-gtk-lang"/>
 
-        <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
+        <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
+
+        <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
+        <package name="cdda2wav"/>
 
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
