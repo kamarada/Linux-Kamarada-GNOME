@@ -28,8 +28,9 @@ suseImportBuildKey
 
 # Activate services
 suseRemoveService wicked
+suseRemoveService SuSEfirewall2
 suseInsertService NetworkManager
-suseInsertService SuSEfirewall2
+suseInsertService firewalld
 
 # Setup default target, multi-user GUI
 baseSetRunlevel 5
