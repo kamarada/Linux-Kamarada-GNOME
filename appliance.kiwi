@@ -152,6 +152,9 @@
         <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
         <package name="cdda2wav"/>
 
+        <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
+        <package name="cdrecord"/>
+
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
         <package name="gtk2-branding-openSUSE"/>
