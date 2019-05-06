@@ -149,6 +149,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#33 - GUI - System - Power statistics -->
         <package name="gnome-power-manager-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#35 - GUI - Utilities - Remote desktop client -->
+        <package name="vinagre-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
