@@ -146,6 +146,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#32 - GUI - Office - PDFsam -->
         <package name="pdfsam-basic"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#33 - GUI - System - Power statistics -->
+        <package name="gnome-power-manager-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
