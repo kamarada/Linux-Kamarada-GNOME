@@ -152,6 +152,11 @@
         <!-- kamarada/Linux-Kamarada-GNOME#35 - GUI - Utilities - Remote desktop client -->
         <package name="vinagre-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#36 - GUI - Artwork for 15.1 -->
+        <package name="gio-branding-kamarada"/>
+        <package name="gtk2-branding-kamarada"/>
+        <package name="gtk3-branding-kamarada"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#37 - CLI - Text editor - GNU nano -->
         <package name="nano-lang"/>
 
