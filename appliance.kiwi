@@ -18,7 +18,7 @@
         <version>15.1</version>
     </preferences>
     <users>
-        <user name="root" groups="root" home="/root"/>
+        <user name="root" groups="root" password="" home="/root"/>
     </users>
     <repository type="rpm-md" alias="kiwi-next-generation" priority="1">
         <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.1"/>
