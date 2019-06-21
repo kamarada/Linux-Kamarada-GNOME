@@ -169,6 +169,10 @@
         <package name="yast2-trans-pt"/>
         <package name="yast2-trans-pt_BR"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#39 - XDG user directories -->
+        <package name="xdg-user-dirs-lang"/>
+        <package name="xdg-user-dirs-gtk-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
