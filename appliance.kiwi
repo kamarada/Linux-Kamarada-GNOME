@@ -68,6 +68,10 @@
         <!-- kamarada/Linux-Kamarada-GNOME#13 - GUI - Office - Address book -->
         <package name="gnome-contacts-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
+        <package name="libreoffice-l10n-en"/>
+        <package name="libreoffice-l10n-pt_BR"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#15 - GUI - Utilities - Document viewer -->
         <package name="evince-lang"/>
 
