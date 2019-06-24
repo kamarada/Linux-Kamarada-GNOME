@@ -86,6 +86,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#17 - GUI - Utilities - Image viewer -->
         <package name="eog-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#18 - GUI - Sound & Video - Sound recorder -->
+        <package name="gnome-sound-recorder-lang"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#19 - GUI - Sound & Video - Webcam application -->
         <package name="cheese-lang"/>
 
