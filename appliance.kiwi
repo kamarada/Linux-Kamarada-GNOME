@@ -71,6 +71,11 @@
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-l10n-en"/>
         <package name="libreoffice-l10n-pt_BR"/>
+        <package name="myspell-en"/>
+        <package name="myspell-en_US"/>
+        <package name="myspell-lightproof-en"/>
+        <package name="myspell-lightproof-pt_BR"/>
+        <package name="myspell-pt_BR"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#15 - GUI - Utilities - Document viewer -->
         <package name="evince-lang"/>
