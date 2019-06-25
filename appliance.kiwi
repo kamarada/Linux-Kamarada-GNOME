@@ -190,6 +190,9 @@
         <package name="gtk3-lang"/>
         <package name="translation-update-pt_BR"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
+        <package name="hplip"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
