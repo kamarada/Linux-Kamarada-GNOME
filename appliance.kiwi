@@ -193,6 +193,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
         <package name="hplip"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#42 - Bluetooth support -->
+        <package name="gnome-bluetooth-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
