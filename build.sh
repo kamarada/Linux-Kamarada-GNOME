@@ -1,8 +1,18 @@
 #!/bin/bash
-BASEDIR=$(dirname $(realpath "$0")) # https://stackoverflow.com/a/55472432/1657502
+
 USERNAME=$(whoami)
-sudo rm -rf /tmp/myimage
-sudo kiwi-ng --type iso system build --description $BASEDIR --target-dir /tmp/myimage
-sudo chmod 777 /tmp/myimage/Linux-Kamarada*
-sudo chown $USERNAME /tmp/myimage/Linux-Kamarada*
-sudo mv /tmp/myimage/Linux-Kamarada* $BASEDIR
+THIS_SCRIPT=$(realpath "$0")
+
+if [[ $UID -gt 0 ]] ; then
+    sudo sh $THIS_SCRIPT $USERNAME # https://askubuntu.com/a/719582/560233
+    exit
+fi
+
+USERNAME=$1
+BASEDIR=$(dirname $THIS_SCRIPT) # https://stackoverflow.com/a/55472432/1657502
+
+rm -rf /tmp/myimage
+kiwi-ng --type iso system build --description $BASEDIR --target-dir /tmp/myimage
+chmod 777 /tmp/myimage/Linux-Kamarada*
+chown $USERNAME /tmp/myimage/Linux-Kamarada*
+mv /tmp/myimage/Linux-Kamarada* $BASEDIR
