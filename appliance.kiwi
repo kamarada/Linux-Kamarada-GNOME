@@ -7,7 +7,7 @@
     </description>
     <preferences>
         <bootloader-theme>openSUSE</bootloader-theme>
-        <bootsplash-theme>openSUSE</bootsplash-theme>
+        <bootsplash-theme>Kamarada</bootsplash-theme>
         <keytable>us</keytable>
         <locale>en_US</locale>
         <packagemanager>zypper</packagemanager>
