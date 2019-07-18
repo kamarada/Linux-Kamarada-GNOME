@@ -168,6 +168,7 @@
         <package name="gio-branding-kamarada"/>
         <package name="gtk2-branding-kamarada"/>
         <package name="gtk3-branding-kamarada"/>
+        <package name="plymouth-branding-kamarada"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#37 - CLI - Text editor - GNU nano -->
         <package name="nano-lang"/>
