@@ -86,6 +86,11 @@ sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g
 # SuSEconfig
 suseConfig
 
+# YaST Firstboot
+baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada.xml"
+baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_WELCOME_DIR "/usr/share/firstboot/"
+touch /var/lib/YaST2/reconfig_system
+
 #======================================
 # Umount kernel filesystems
 #--------------------------------------
