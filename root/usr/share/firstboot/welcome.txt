@@ -1,3 +1,11 @@
+<p><b>Bem vindo!</b></p>
+
+<p>Há algumas ações que precisam ser executadas antes que seu sistema esteja pronto para uso. Este assistente o orientará por algumas configurações básicas. Você deverá selecionar seu Idioma e Layout de Teclado, ler o Contrato de Licença e, por fim, configurar seu Relógio e Fuso Horário. Então, você será direcionado ao Ambiente de Trabalho.</p>
+
+<p>Clique em <b>Avançar</b> para continuar.</p>
+
+<hr>
+
 <p><b>Welcome!</b></p>
 
 <p>There are a few steps to take before your system is ready to use. This wizard will now guide you through some basic configuration. You will be asked to inform your Language and Keyboard Layout, read the License and, finally, set the Time and Date. Then, you will be redirected to the Desktop Environment.</p>
@@ -5,11 +13,3 @@
 <p>Please note that, to reduce the Live media size, not all translations were included. Translations to your language may be downloaded, if necessary.</p>
 
 <p>Click <b>Next</b> to continue.</p>
-
-<hr>
-
-<p><b>Bem vindo!</b></p>
-
-<p>Há algumas ações que precisam ser executadas antes que seu sistema esteja pronto para uso. Este assistente o orientará por algumas configurações básicas. Você deverá selecionar seu Idioma e Layout de Teclado, ler o Contrato de Licença e, por fim, configurar seu Relógio e Fuso Horário. Então, você será direcionado ao Ambiente de Trabalho.</p>
-
-<p>Clique em <b>Avançar</b> para continuar.</p>
