@@ -244,6 +244,11 @@
         <!-- YaST Firstboot -->
         <package name="yast2-firstboot"/>
 
+        <!-- YaST Firstboot asks to install those packages -->
+        <package name="libmariadb3"/>
+        <package name="star-rmt"/>
+        <package name="libQt5Sql5-mysql"/>
+
         <!-- Check Installation Media -->
         <package name="checkmedia"/>
 
