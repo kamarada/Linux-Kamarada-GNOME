@@ -190,6 +190,7 @@
         <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
         <package name="gtk2-lang"/>
         <package name="gtk3-lang"/>
+        <package name="translation-update-en"/>
         <package name="translation-update-pt_BR"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
@@ -210,6 +211,9 @@
 
         <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
         <package name="cdrecord"/>
+
+        <package name="ucode-amd"/>
+        <package name="ucode-intel"/>
 
         <package name="branding-openSUSE"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
