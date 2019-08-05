@@ -207,6 +207,9 @@
         <package name="wine-32bit"/>
         <package name="wine-gecko"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#45 - GUI - Internet - Instant messaging client -->
+        <package name="libpurple-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
