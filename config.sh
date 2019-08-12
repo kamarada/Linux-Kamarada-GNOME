@@ -62,18 +62,12 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
 # Official repositories
-# (as found in http://download.opensuse.org/distribution/leap/15.1/repo/oss/control.xml)
 rm /etc/zypp/repos.d/*.repo
-zypper addrepo -f -K -n "Main Update Repository" http://download.opensuse.org/update/leap/15.1/oss/ repo-update
-zypper addrepo -f -K -n "Update Repository (Non-Oss)" http://download.opensuse.org/update/leap/15.1/non-oss/ repo-update-non-oss
-zypper addrepo -f -K -n "Main Repository" http://download.opensuse.org/distribution/leap/15.1/repo/oss/ repo-oss
-zypper addrepo -f -K -n "Non-OSS Repository" http://download.opensuse.org/distribution/leap/15.1/repo/non-oss/ repo-non-oss
-zypper addrepo -d -K -n "Debug Repository" http://download.opensuse.org/debug/distribution/leap/15.1/repo/oss/ repo-debug
-zypper addrepo -d -K -n "Debug Repository (Non-OSS)" http://download.opensuse.org/debug/distribution/leap/15.1/repo/non-oss/ repo-debug-non-oss
-zypper addrepo -d -K -n "Update Repository (Debug)" http://download.opensuse.org/debug/update/leap/15.1/oss repo-debug-update
-zypper addrepo -d -K -n "Update Repository (Debug, Non-OSS)" http://download.opensuse.org/debug/update/leap/15.1/non-oss/ repo-debug-update-non-oss
-zypper addrepo -d -K -n "Source Repository" http://download.opensuse.org/source/distribution/leap/15.1/repo/oss/ repo-source
-zypper addrepo -d -K -n "Source Repository (Non-OSS)" http://download.opensuse.org/source/distribution/leap/15.1/repo/non-oss/ repo-source-non-oss
+
+# Add repos from /etc/YaST2/control.xml
+add-yast-repos
+zypper --non-interactive rm -u live-add-yast-repos
+
 zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.1:/dev/openSUSE_Leap_15.1/ kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag

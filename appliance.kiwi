@@ -226,6 +226,8 @@
         <package name="branding-openSUSE"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
 
+      	<package name="live-add-yast-repos"/>
+
       	<!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
 
