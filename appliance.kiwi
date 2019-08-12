@@ -206,6 +206,7 @@
         <!-- kamarada/Linux-Kamarada-GNOME#44 - Wine -->
         <package name="wine-32bit"/>
         <package name="wine-gecko"/>
+        <package name="wine-mono"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#45 - GUI - Internet - Instant messaging client -->
         <package name="libpurple-lang"/>
