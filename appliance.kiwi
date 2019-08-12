@@ -225,15 +225,6 @@
 
         <package name="branding-openSUSE"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
-        <!--<package name="MozillaFirefox-branding-openSUSE"/>-->
-
-      	<!-- KiwiKernelLookupError: No kernel found in /usr/src/packages/KIWI-iso/build/image-root/boot -->
-      	<!--<package name="kernel-default"/>-->
-      	<!-- warning: %post(libzypp-plugin-appdata-1.0.1+git.20180327-lp150.1.1.noarch) scriptlet failed, exit status 6 -->
-      	<!-- https://groups.google.com/forum/#!topic/kiwi-images/BP24w2iEHXU -->
-      	<!-- https://build.opensuse.org/package/view_file/openSUSE:Leap:15.0:Images/livecd-leap-gnome/pre-checkin.sh?expand=1 -->
-      	<!-- https://github.com/openSUSE/obs-build/issues/420 -->
-      	<!--<ignore name="libzypp-plugin-appdata"/>-->
 
       	<!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
@@ -269,11 +260,6 @@
         <!-- KiwiIsoLoaderError: No isolinux loader %s found -->
         <package name="syslinux"/>
     </packages>
-  	<!-- Those are not found this way, I don't know why: -->
-    <!--<packages type="iso">
-        <package name="gfxboot-branding-openSUSE"/>
-        <package name="dracut-kiwi-live"/>
-    </packages>-->
     <packages type="bootstrap">
         <package name="ca-certificates"/>
         <package name="cracklib-dict-full"/>
