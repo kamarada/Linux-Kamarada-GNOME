@@ -67,6 +67,11 @@ rm /etc/zypp/repos.d/*.repo
 # Add repos from /etc/YaST2/control.xml
 add-yast-repos
 zypper --non-interactive rm -u live-add-yast-repos
+# Enable autorefresh for some repos
+zypper mr -r repo-oss
+zypper mr -r repo-non-oss
+zypper mr -r repo-update
+zypper mr -r repo-update-non-oss
 
 zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.1:/dev/openSUSE_Leap_15.1/ kamarada
 
