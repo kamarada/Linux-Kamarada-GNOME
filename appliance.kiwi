@@ -227,6 +227,7 @@
         <package name="hicolor-icon-theme-branding-openSUSE"/>
 
       	<package name="live-add-yast-repos"/>
+      	<package name="live-langset-data"/>
 
       	<!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
@@ -256,8 +257,8 @@
         <package name="grub2-x86_64-efi" arch="x86_64"/>
 
         <!-- Bootsplash and graphics boot related packages -->
-        <package name="gfxboot-branding-openSUSE"/>
-        <package name="grub2-branding-openSUSE"/>
+        <package name="gfxboot-branding-openSUSE" bootinclude="true" bootdelete="true"/>
+        <package name="grub2-branding-openSUSE" bootinclude="true"/>
         <package name="dracut-kiwi-live"/>
         <!-- KiwiIsoLoaderError: No isolinux loader %s found -->
         <package name="syslinux"/>
