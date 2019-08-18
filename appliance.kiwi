@@ -190,11 +190,14 @@
         <package name="xdg-user-dirs-gtk-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
+        <package name="desktop-translations"/>
         <package name="gnome-shell-extension-dash-to-dock-lang"/>
         <package name="gnome-shell-extension-topicons-plus-lang"/>
         <package name="gtk2-lang"/>
         <package name="gtk3-lang"/>
         <package name="translation-update-en"/>
+        <package name="translation-update-en_US"/>
+        <package name="translation-update-pt"/>
         <package name="translation-update-pt_BR"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
