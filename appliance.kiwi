@@ -6,7 +6,7 @@
         <specification>Linux Kamarada Live system</specification>
     </description>
     <preferences>
-        <bootloader-theme>openSUSE</bootloader-theme>
+        <bootloader-theme>Kamarada</bootloader-theme>
         <bootsplash-theme>Kamarada</bootsplash-theme>
         <keytable>us</keytable>
         <locale>en_US</locale>
