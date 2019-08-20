@@ -70,6 +70,7 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-branding-upstream"/>
+        <package name="libreoffice-icon-theme-papirus"/>
         <package name="libreoffice-l10n-en"/>
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-en"/>
