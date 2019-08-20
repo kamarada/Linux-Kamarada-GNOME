@@ -224,6 +224,9 @@
         <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
         <package name="cdrecord"/>
 
+        <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
+        <package name="paper-icon-theme-cursors"/>
+
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
 
