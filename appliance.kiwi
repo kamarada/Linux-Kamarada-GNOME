@@ -216,6 +216,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#45 - GUI - Internet - Instant messaging client -->
         <package name="libpurple-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
+        <package name="liblinphone-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
