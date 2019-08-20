@@ -236,6 +236,7 @@
 
         <package name="branding-openSUSE"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
+        <package name="fifth-leg-font"/>
 
       	<package name="live-add-yast-repos"/>
       	<package name="live-langset-data"/>
