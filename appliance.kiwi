@@ -241,6 +241,10 @@
       	<package name="live-add-yast-repos"/>
       	<package name="live-langset-data"/>
 
+      	<!-- Calamares installer -->
+      	<package name="calamares"/>
+      	<package name="calamares-branding-kamarada"/>
+
       	<!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
 
