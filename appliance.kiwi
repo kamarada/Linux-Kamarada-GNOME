@@ -273,7 +273,7 @@
         <package name="grub2-x86_64-efi" arch="x86_64"/>
 
         <!-- Bootsplash and graphics boot related packages -->
-        <package name="gfxboot-branding-kamarada" bootinclude="true" bootdelete="true"/>
+        <!--<package name="gfxboot-branding-kamarada" bootinclude="true" bootdelete="true"/>-->
         <package name="grub2-branding-kamarada" bootinclude="true"/>
         <package name="dracut-kiwi-live"/>
         <!-- KiwiIsoLoaderError: No isolinux loader %s found -->
