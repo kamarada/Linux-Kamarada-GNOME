@@ -83,8 +83,11 @@ zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositori
 # https://github.com/kamarada/kiwi-config-Kamarada/issues/1
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
-# SuSEconfig
-suseConfig
+# suseConfig has been kept for compatibility on latest KIWI
+baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
+baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
+ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
 
 # YaST Firstboot
 baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada.xml"
