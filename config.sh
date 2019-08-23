@@ -84,15 +84,26 @@ zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositori
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
 # suseConfig has been kept for compatibility on latest KIWI
-baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
-baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
-ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
-baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
+if [[ "$kiwi_profiles" == *"pt-BR"* ]];
+then
+    #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
+    echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
+    baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
+    baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
+    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+    #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
+    echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
+else
+    baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
+    baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
+    ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+    baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
 
-# YaST Firstboot
-baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada.xml"
-baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_WELCOME_DIR "/usr/share/firstboot/"
-touch /var/lib/YaST2/reconfig_system
+    # YaST Firstboot
+    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada.xml"
+    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_WELCOME_DIR "/usr/share/firstboot/"
+    touch /var/lib/YaST2/reconfig_system
+fi
 
 #======================================
 # Umount kernel filesystems
