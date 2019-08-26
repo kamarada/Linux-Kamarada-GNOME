@@ -90,14 +90,17 @@ then
     echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
     baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
+    baseUpdateSysConfig /etc/sysconfig/language INSTALLED_LANGUAGES "pt_BR"
     ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
     echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
 else
-    baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
+    #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
+    echo "YAST_KEYBOARD=\"english-us,pc104\"" >> /etc/sysconfig/keyboard
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
     ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
-    baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
+    #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
+    echo "DEFAULT_TIMEZONE=\"US/Eastern\"" >> /etc/sysconfig/clock
 
     # YaST Firstboot
     baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada.xml"
