@@ -149,6 +149,17 @@
 
         <!-- KiwiIsoLoaderError: No isolinux loader %s found -->
         <package name="syslinux"/>
+
+        <!-- OBS don't find them if I use <packages type="iso"> -->
+        <package name="dracut-kiwi-live"/>
+
+        <!-- Check Installation Media -->
+        <package name="checkmedia"/>
+
+        <!-- Calamares installer -->
+      	<package name="calamares"/>
+      	<package name="calamares-branding-kamarada"/>
+        <!-- </packages> -->
     </packages>
 
     <packages type="image" profiles="en-US">
@@ -321,16 +332,5 @@
         <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
         <package name="translation-update-pt"/>
         <package name="translation-update-pt_BR"/>
-    </packages>
-
-    <packages type="iso">
-        <package name="dracut-kiwi-live"/>
-
-        <!-- Check Installation Media -->
-        <package name="checkmedia"/>
-
-        <!-- Calamares installer -->
-      	<package name="calamares"/>
-      	<package name="calamares-branding-kamarada"/>
     </packages>
 </image>

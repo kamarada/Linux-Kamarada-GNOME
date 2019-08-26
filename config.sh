@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
 #======================================
 # Functions...
@@ -31,7 +32,6 @@ suseRemoveService wicked
 suseRemoveService SuSEfirewall2
 suseInsertService NetworkManager
 suseInsertService firewalld
-suseInsertService langset
 
 # Setup default target, multi-user GUI
 baseSetRunlevel 5
