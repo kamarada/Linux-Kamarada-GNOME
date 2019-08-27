@@ -88,15 +88,20 @@ if [[ "$kiwi_profiles" == *"pt-BR"* ]];
 then
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
     echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
+    #localectl set-keymap br
+    sed -i -e 's/@KEYMAP_GOES_HERE@/br/g' /etc/vconsole.conf
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
     baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
     baseUpdateSysConfig /etc/sysconfig/language INSTALLED_LANGUAGES "pt_BR"
     ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
     echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
+    echo "pt_BR" > /var/lib/zypp/RequestedLocales
 else
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
     echo "YAST_KEYBOARD=\"english-us,pc104\"" >> /etc/sysconfig/keyboard
+    #localectl set-keymap us
+    sed -i -e 's/@KEYMAP_GOES_HERE@/us/g' /etc/vconsole.conf
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
     ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
