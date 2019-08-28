@@ -119,6 +119,12 @@ else
     touch /var/lib/YaST2/reconfig_system
 fi
 
+# Remove generated files (boo#1098535)
+rm -rf /var/cache/zypp/* /var/lib/zypp/AnonymousUniqueId /var/lib/systemd/random-seed
+
+# Remove netronome firmware (part of kernel-firmware): this sums up to 125MB
+rm -rf /lib/firmware/netronome/
+
 #======================================
 # Umount kernel filesystems
 #--------------------------------------
