@@ -97,6 +97,12 @@ then
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
     echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
     echo "pt_BR" > /var/lib/zypp/RequestedLocales
+
+    # Locale clean up
+    mkdir /usr/share/locale_keep
+    mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
+    rm -rf /usr/share/locale
+    mv /usr/share/locale_keep /usr/share/locale
 else
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
     echo "YAST_KEYBOARD=\"english-us,pc104\"" >> /etc/sysconfig/keyboard
