@@ -119,11 +119,14 @@ else
     touch /var/lib/YaST2/reconfig_system
 fi
 
+# Disable journal write to disk in live mode, bug 950999
+echo "Storage=volatile" >> /etc/systemd/journald.conf
+
 # Remove generated files (boo#1098535)
 rm -rf /var/cache/zypp/* /var/lib/zypp/AnonymousUniqueId /var/lib/systemd/random-seed
 
-# Remove netronome firmware (part of kernel-firmware): this sums up to 125MB
-rm -rf /lib/firmware/netronome/
+# Save 165MB by removing this, not very useful for lives
+rm -rf /lib/firmware/{liquidio,netronome}
 
 #======================================
 # Umount kernel filesystems
