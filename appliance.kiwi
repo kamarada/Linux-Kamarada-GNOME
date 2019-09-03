@@ -162,7 +162,7 @@
         <!-- </packages> -->
     </packages>
 
-    <packages type="image" profiles="en-US">
+    <packages type="image" profiles="en-US,pt-BR">
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-l10n-en"/>
         <package name="myspell-en"/>
