@@ -116,7 +116,7 @@ else
     echo "DEFAULT_TIMEZONE=\"US/Eastern\"" >> /etc/sysconfig/clock
 
     # YaST Firstboot
-    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada.xml"
+    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada-live.xml"
     baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_WELCOME_DIR "/usr/share/firstboot/"
     touch /var/lib/YaST2/reconfig_system
 fi
