@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-04 02:30+0000\n"
 "PO-Revision-Date: 2019-04-09 16:49+0000\n"
-"Last-Translator: Samanta Magalhaes <samanta@texttrans.com>\n"
+"Last-Translator: Antônio Vinícius Menezes Medeiros <linuxkamarada@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
 "yast-installation/master/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -640,12 +640,12 @@ msgstr ""
 #. congratulation text 3/4
 #: src/lib/installation/clients/inst_congratulate.rb:169
 msgid "<p>Visit us at %1.</p>"
-msgstr "<p>Nos visite em %1.</p>"
+msgstr "<p>Visite o <i>site</i> do projeto em https://kamarada.github.io/.</p>"
 
 #. congratulation text 4/4
 #: src/lib/installation/clients/inst_congratulate.rb:172
 msgid "<p>Have a lot of fun!<br>Your SUSE Development Team</p>"
-msgstr "<p>Divirta-se!<br>Seu time de desenvolvimento SuSE</p>"
+msgstr "<p>Divirta-se!</p><p>&nbsp;</p><p>Antônio Vinícius Menezes Medeiros<br>Projeto Linux Kamarada</p>"
 
 #. help 1/4 for dialog "Congratulation Dialog"
 #: src/lib/installation/clients/inst_congratulate.rb:196

@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-04 02:30+0000\n"
 "PO-Revision-Date: 2008-05-16 13:44+0200\n"
-"Last-Translator: proofreader <i18n@suse.de>\n"
+"Last-Translator: Antônio Vinícius Menezes Medeiros <linuxkamarada@gmail.com>\n"
 "Language-Team: English <i18n@suse.de>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -533,12 +533,12 @@ msgstr ""
 #. congratulation text 3/4
 #: src/lib/installation/clients/inst_congratulate.rb:169
 msgid "<p>Visit us at %1.</p>"
-msgstr ""
+msgstr "<p>Visit us at https://kamarada.github.io/.</p>"
 
 #. congratulation text 4/4
 #: src/lib/installation/clients/inst_congratulate.rb:172
 msgid "<p>Have a lot of fun!<br>Your SUSE Development Team</p>"
-msgstr ""
+msgstr "<p>Have a lot of fun!</p><p>&nbsp;</p><p>Antônio Vinícius Menezes Medeiros<br>The Linux Kamarada Project</p>"
 
 #. help 1/4 for dialog "Congratulation Dialog"
 #: src/lib/installation/clients/inst_congratulate.rb:196
