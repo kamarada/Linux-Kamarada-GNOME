@@ -316,6 +316,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
         <package name="liblinphone-lang"/>
+
+        <!-- Utilities for managing processes: pstree, killall and fuser -->
+        <package name="psmisc-lang"/>
     </packages>
 
     <!-- Translations for Brazilian Portuguese (pt_BR) -->
