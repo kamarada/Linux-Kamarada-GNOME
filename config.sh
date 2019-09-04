@@ -24,6 +24,8 @@ baseMount
 # Setup baseproduct link
 suseSetupProduct
 
+hostnamectl set-hostname kamarada-pc
+
 # Add missing gpg keys to rpm
 suseImportBuildKey
 
