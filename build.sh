@@ -13,7 +13,7 @@ USERNAME=$1
 BASEDIR=$(dirname $THIS_SCRIPT) # https://stackoverflow.com/a/55472432/1657502
 
 rm -rf /tmp/myimage
-kiwi-ng --type iso --profile=pt-BR system build --description $BASEDIR --target-dir /tmp/myimage
+kiwi-ng --type iso --profile=pt_BR system build --description $BASEDIR --target-dir /tmp/myimage
 chmod 777 /tmp/myimage/Linux-Kamarada*
 chown $USERNAME /tmp/myimage/Linux-Kamarada*
 mv /tmp/myimage/Linux-Kamarada* $BASEDIR

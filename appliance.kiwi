@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- OBS-Profiles: @BUILD_FLAVOR@ -->
-<image displayname="Linux Kamarada 15.1" name="Linux-Kamarada-15.1" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.1" name="Linux_Kamarada_15.1" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
         <specification>Linux Kamarada Live system</specification>
     </description>
     <profiles>
-        <profile name="en-US" description="Linux Kamarada without translations" arch="x86_64"/>
-        <profile name="pt-BR" description="Linux Kamarada with translations for Brazilian Portuguese" arch="x86_64"/>
+        <profile name="en_US" description="Linux Kamarada without translations" arch="x86_64"/>
+        <profile name="pt_BR" description="Linux Kamarada with translations for Brazilian Portuguese" arch="x86_64"/>
     </profiles>
     <preferences>
         <bootloader-theme>Kamarada</bootloader-theme>
@@ -19,10 +19,10 @@
         <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.1"/>
         <version>15.1</version>
     </preferences>
-    <preferences profiles="en-US">
+    <preferences profiles="en_US">
         <locale>en_US</locale>
     </preferences>
-    <preferences profiles="pt-BR">
+    <preferences profiles="pt_BR">
         <locale>pt_BR</locale>
     </preferences>
     <users>
@@ -162,7 +162,7 @@
         <!-- </packages> -->
     </packages>
 
-    <packages type="image" profiles="en-US,pt-BR">
+    <packages type="image" profiles="en_US,pt_BR">
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-l10n-en"/>
         <package name="myspell-en"/>
@@ -179,7 +179,7 @@
     </packages>
 
     <!-- Common translations -->
-    <packages type="image" profiles="pt-BR">
+    <packages type="image" profiles="pt_BR">
         <!-- kamarada/Linux-Kamarada-GNOME#1 - GUI - System - Terminal -->
         <package name="gnome-terminal-lang"/>
 
@@ -322,7 +322,7 @@
     </packages>
 
     <!-- Translations for Brazilian Portuguese (pt_BR) -->
-    <packages type="image" profiles="pt-BR">
+    <packages type="image" profiles="pt_BR">
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-lightproof-pt_BR"/>
