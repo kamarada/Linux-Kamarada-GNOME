@@ -76,7 +76,7 @@ zypper mr -r repo-non-oss
 zypper mr -r repo-update
 zypper mr -r repo-update-non-oss
 
-zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.1:/dev/openSUSE_Leap_15.1/ kamarada
+zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.1/openSUSE_Leap_15.1/ kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
 # https://bugzilla.opensuse.org/show_bug.cgi?id=984330

@@ -32,7 +32,7 @@
         <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.1"/>
     </repository>
     <repository type="rpm-md" alias="kamarada" imageinclude="true" priority="2">
-        <source path="obs://home:kamarada:15.1:dev/openSUSE_Leap_15.1"/>
+        <source path="obs://home:kamarada:15.1/openSUSE_Leap_15.1"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" type="rpm-md">
         <source path="obs://openSUSE:Leap:15.1/standard"/>
