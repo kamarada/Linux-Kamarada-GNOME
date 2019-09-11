@@ -86,7 +86,7 @@ zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositori
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
 # suseConfig has been kept for compatibility on latest KIWI
-if [[ "$kiwi_profiles" == *"pt-BR"* ]];
+if [[ "$kiwi_profiles" == *"pt_BR"* ]];
 then
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
     echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
