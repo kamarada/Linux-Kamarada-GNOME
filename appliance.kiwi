@@ -317,6 +317,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
         <package name="liblinphone-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#48 - Time synchronization with NTP -->
+        <package name="util-linux-lang"/>
+
         <!-- Utilities for managing processes: pstree, killall and fuser -->
         <package name="psmisc-lang"/>
     </packages>

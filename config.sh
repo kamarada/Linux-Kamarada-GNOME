@@ -98,6 +98,8 @@ then
     ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
     echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
+    sed -i 's/2.opensuse.pool.ntp.org/pool.ntp.br/g' /etc/chrony.conf
+    sed -i 's/UTC/LOCAL/g' /etc/adjtime
     echo "pt_BR" > /var/lib/zypp/RequestedLocales
 
     # Locale clean up
