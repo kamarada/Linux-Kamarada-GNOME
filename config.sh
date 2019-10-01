@@ -35,6 +35,7 @@ suseRemoveService SuSEfirewall2
 suseInsertService NetworkManager
 suseInsertService firewalld
 suseInsertService chronyd
+suseInsertService pcscd
 
 # Setup default target, multi-user GUI
 baseSetRunlevel 5
