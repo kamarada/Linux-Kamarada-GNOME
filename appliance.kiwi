@@ -15,7 +15,7 @@
         <bootsplash-theme>Kamarada</bootsplash-theme>
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
-        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-excludedocs>false</rpm-excludedocs>
         <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.1"/>
         <version>15.1</version>
     </preferences>
