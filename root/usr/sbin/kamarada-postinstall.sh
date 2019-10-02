@@ -30,4 +30,7 @@ touch /var/lib/YaST2/reconfig_system
 # Enable journal write to disk
 sed -i '/Storage=volatile/d' /etc/systemd/journald.conf
 
+# kamarada/Linux-Kamarada-GNOME#49 - dracut: dracut module 'kiwi-live' cannot be found or installed.
+rm /etc/dracut.conf.d/02-livecd.conf
+
 exit 0

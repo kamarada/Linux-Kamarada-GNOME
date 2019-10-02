@@ -34,6 +34,8 @@ suseRemoveService wicked
 suseRemoveService SuSEfirewall2
 suseInsertService NetworkManager
 suseInsertService firewalld
+suseInsertService chronyd
+suseInsertService pcscd
 
 # Setup default target, multi-user GUI
 baseSetRunlevel 5
@@ -95,9 +97,13 @@ then
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
     baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
     baseUpdateSysConfig /etc/sysconfig/language INSTALLED_LANGUAGES "pt_BR"
+    #timedatectl set-timezone America/Sao_Paulo
     ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
     echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
+    sed -i 's/2.opensuse.pool.ntp.org/pool.ntp.br/g' /etc/chrony.conf
+    #sed -i 's/UTC/LOCAL/g' /etc/adjtime
+    #timedatectl set-local-rtc 1
     echo "pt_BR" > /var/lib/zypp/RequestedLocales
 
     # Locale clean up
@@ -111,9 +117,11 @@ else
     #localectl set-keymap us
     sed -i -e 's/@KEYMAP_GOES_HERE@/us/g' /etc/vconsole.conf
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
+    #timedatectl set-timezone America/New_York
     ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
     echo "DEFAULT_TIMEZONE=\"US/Eastern\"" >> /etc/sysconfig/clock
+    rm /etc/adjtime
 
     # YaST Firstboot
     baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada-live.xml"
