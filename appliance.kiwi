@@ -277,6 +277,7 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#26 - GUI - System - Package updater -->
         <package name="gnome-packagekit-lang"/>
+        <package name="PackageKit-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager -->
         <package name="seahorse-lang"/>
