@@ -323,6 +323,10 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#48 - Time synchronization with NTP -->
         <package name="util-linux-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
+        <package name="evolution-ews-lang"/>
+        <package name="gnome-online-accounts-lang"/>
 
         <!-- Utilities for managing processes: pstree, killall and fuser -->
         <package name="psmisc-lang"/>
