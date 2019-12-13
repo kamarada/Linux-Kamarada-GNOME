@@ -14,6 +14,7 @@ BASEDIR=$(dirname $THIS_SCRIPT) # https://stackoverflow.com/a/55472432/1657502
 
 rm -rf /tmp/myimage
 kiwi-ng --type iso --profile=pt_BR system build --description $BASEDIR --target-dir /tmp/myimage
-chmod 777 /tmp/myimage/Linux_Kamarada*
-chown $USERNAME /tmp/myimage/Linux_Kamarada*
-mv /tmp/myimage/Linux_Kamarada* $BASEDIR
+kiwi-ng result bundle --target-dir /tmp/myimage --id pt_BR-Build1.1 --bundle-dir $BASEDIR
+chmod 777 ./Linux_Kamarada*
+chown $USERNAME ./Linux_Kamarada*
+rm -rf /tmp/myimage/Linux_Kamarada*

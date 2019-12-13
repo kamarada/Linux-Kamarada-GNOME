@@ -28,17 +28,17 @@
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
-    <repository type="rpm-md" alias="kiwi-next-generation" priority="1">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.1"/>
-    </repository>
-    <repository type="rpm-md" alias="kamarada" imageinclude="true" priority="2">
+    <repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
         <source path="obs://home:kamarada:15.1/openSUSE_Leap_15.1"/>
     </repository>
-    <repository alias="repo-oss" imageinclude="true" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.1/standard"/>
+    <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.1"/>
     </repository>
-    <repository alias="repo-update" imageinclude="true" type="rpm-md">
+    <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
         <source path="obs://openSUSE:Leap:15.1:Update/standard"/>
+    </repository>
+    <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
+        <source path="obs://openSUSE:Leap:15.1/standard"/>
     </repository>
 
     <packages type="bootstrap">
@@ -323,6 +323,10 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#48 - Time synchronization with NTP -->
         <package name="util-linux-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
+        <package name="evolution-ews-lang"/>
+        <package name="gnome-online-accounts-lang"/>
 
         <!-- Utilities for managing processes: pstree, killall and fuser -->
         <package name="psmisc-lang"/>
