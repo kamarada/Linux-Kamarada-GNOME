@@ -65,6 +65,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
         <package name="gnome-chess"/>
         <package name="gnuchess"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
+        <package name="gnome-hearts"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
         <package name="gnome-mahjongg"/>
@@ -262,6 +265,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
         <package name="gnome-chess-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
+        <package name="gnome-hearts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
         <package name="gnome-mahjongg-lang"/>
