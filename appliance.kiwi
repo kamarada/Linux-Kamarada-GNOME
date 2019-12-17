@@ -74,6 +74,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
         <package name="gnome-sudoku"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Iagno -->
+        <package name="iagno"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
         <package name="quadrapassel"/>
@@ -265,6 +268,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
         <package name="gnome-sudoku-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Iagno -->
+        <package name="iagno-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
         <package name="quadrapassel-lang"/>
