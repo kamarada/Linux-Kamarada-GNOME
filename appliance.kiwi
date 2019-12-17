@@ -71,6 +71,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
         <package name="gnome-mines"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Nibbles -->
+        <package name="gnome-nibbles"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
         <package name="gnome-sudoku"/>
@@ -265,6 +268,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
         <package name="gnome-mines-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Nibbles -->
+        <package name="gnome-nibbles-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
         <package name="gnome-sudoku-lang"/>
