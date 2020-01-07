@@ -358,6 +358,9 @@
 
     <!-- Translations for Brazilian Portuguese (pt_BR) -->
     <packages type="image" profiles="pt_BR">
+        <!-- kamarada/Linux-Kamarada-GNOME#55 - Certificado de segurança da AC raiz brasileira (ICP-Brasil) -->
+        <package name="ca-certificates-icpbrasil"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-lightproof-pt_BR"/>
