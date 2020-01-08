@@ -111,6 +111,9 @@ then
     mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
     rm -rf /usr/share/locale
     mv /usr/share/locale_keep /usr/share/locale
+    
+    # kamarada/Linux-Kamarada-GNOME#55 - Add the Brazilian root CA (ICP-Brasil) certificate to Chromium
+    su - linux -c "instalar-icpbrasil"
 else
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
     echo "YAST_KEYBOARD=\"english-us,pc104\"" >> /etc/sysconfig/keyboard
