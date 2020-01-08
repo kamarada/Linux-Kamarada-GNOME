@@ -349,11 +349,67 @@
         <package name="util-linux-lang"/>
         
         <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
+        <package name="evolution-data-server-lang"/>
         <package name="evolution-ews-lang"/>
         <package name="gnome-online-accounts-lang"/>
 
         <!-- Utilities for managing processes: pstree, killall and fuser -->
         <package name="psmisc-lang"/>
+        
+        <!-- Other translations (manually included because by default only required packages are being installed) -->
+        <package name="accountsservice-lang"/>
+        <package name="apparmor-parser-lang"/>
+        <package name="appstream-glib-lang"/>
+        <package name="at-spi2-core-lang"/>
+        <package name="bash-lang"/>
+        <package name="coreutils-lang"/>
+        <package name="cpio-lang"/>
+        <package name="dialog-lang"/>
+        <package name="diffutils-lang"/>
+        <package name="elfutils-lang"/>
+        <package name="findutils-lang"/>
+        <package name="fwupd-lang"/>
+        <package name="gcab-lang"/>
+        <package name="gconf2-lang"/>
+        <package name="gcr-lang"/>
+        <package name="gdm-lang"/>
+        <package name="gegl-0_3-lang"/>
+        <package name="glib2-lang"/>
+        <package name="glib-networking-lang"/>
+        <package name="gnome-control-center-lang"/>
+        <package name="gnome-keyring-lang"/>
+        <package name="gnome-session-lang"/>
+        <package name="gnome-settings-daemon-lang"/>
+        <package name="gnome-shell-lang"/>
+        <package name="gpg2-lang"/>
+        <package name="grep-lang"/>
+        <package name="gsettings-desktop-schemas-lang"/>
+        <package name="gstreamer-lang"/>
+        <package name="gstreamer-plugins-bad-lang"/>
+        <package name="gstreamer-plugins-base-lang"/>
+        <package name="gstreamer-plugins-good-lang"/>
+        <package name="gvfs-lang"/>
+        <package name="iso-codes-lang"/>
+        <package name="libgnomekbd-lang"/>
+        <package name="libgphoto2-6-lang"/>
+        <package name="libiptcdata-lang"/>
+        <package name="libosinfo-lang"/>
+        <package name="mutter-lang"/>
+        <package name="net-tools-lang"/>
+        <package name="NetworkManager-applet-lang"/>
+        <package name="NetworkManager-lang"/>
+        <package name="parted-lang"/>
+        <package name="pulseaudio-lang"/>
+        <package name="sed-lang"/>
+        <package name="shared-mime-info-lang"/>
+        <package name="tar-lang"/>
+        <package name="tracker-lang"/>
+        <package name="tracker-miners-lang"/>
+        <package name="udisks2-lang"/>
+        <package name="upower-lang"/>
+        <package name="xkeyboard-config-lang"/>
+        <package name="xz-lang"/>
+        <package name="zenity-lang"/>
     </packages>
 
     <!-- Translations for Brazilian Portuguese (pt_BR) -->
