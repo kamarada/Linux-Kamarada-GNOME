@@ -127,6 +127,9 @@
 
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
+        
+        <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
+        <package name="gnome-menus-branding-openSUSE"/>
 
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
@@ -349,15 +352,107 @@
         <package name="util-linux-lang"/>
         
         <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
+        <package name="evolution-data-server-lang"/>
         <package name="evolution-ews-lang"/>
         <package name="gnome-online-accounts-lang"/>
 
         <!-- Utilities for managing processes: pstree, killall and fuser -->
         <package name="psmisc-lang"/>
+        
+        <!-- GNOME Shell Extensions -->
+        <package name="gnome-shell-extensions-common-lang"/>
+        
+        <!-- Other translations (manually included because by default only required packages are being installed) -->
+        <package name="accountsservice-lang"/>
+        <package name="apparmor-parser-lang"/>
+        <package name="appstream-glib-lang"/>
+        <package name="atk-lang"/>
+        <package name="at-spi2-core-lang"/>
+        <package name="bash-lang"/>
+        <package name="clutter-gtk-lang"/>
+        <package name="clutter-lang"/>
+        <package name="cogl-lang"/>
+        <package name="colord-gtk-lang"/>
+        <package name="coreutils-lang"/>
+        <package name="cpio-lang"/>
+        <package name="dialog-lang"/>
+        <package name="diffutils-lang"/>
+        <package name="elfutils-lang"/>
+        <package name="findutils-lang"/>
+        <package name="folks-lang"/>
+        <package name="fwupd-lang"/>
+        <package name="gcab-lang"/>
+        <package name="gconf2-lang"/>
+        <package name="gcr-lang"/>
+        <package name="gdk-pixbuf-lang"/>
+        <package name="gdm-lang"/>
+        <package name="gegl-0_3-lang"/>
+        <package name="glib2-lang"/>
+        <package name="glib-networking-lang"/>
+        <package name="gnome-control-center-lang"/>
+        <package name="gnome-desktop-lang"/>
+        <package name="gnome-keyring-lang"/>
+        <package name="gnome-session-lang"/>
+        <package name="gnome-settings-daemon-lang"/>
+        <package name="gnome-shell-lang"/>
+        <package name="gpg2-lang"/>
+        <package name="grep-lang"/>
+        <package name="grilo-lang"/>
+        <package name="gsettings-desktop-schemas-lang"/>
+        <package name="gspell-lang"/>
+        <package name="gstreamer-lang"/>
+        <package name="gstreamer-plugins-bad-lang"/>
+        <package name="gstreamer-plugins-base-lang"/>
+        <package name="gstreamer-plugins-good-lang"/>
+        <package name="gtksourceview-lang"/>
+        <package name="gtkspell3-lang"/>
+        <package name="gtkspell-lang"/>
+        <package name="gtk-vnc-lang"/>
+        <package name="gvfs-lang"/>
+        <package name="iso-codes-lang"/>
+        <package name="json-glib-lang"/>
+        <package name="libcryptui-lang"/>
+        <package name="libgdata-lang"/>
+        <package name="libgnome-games-support-lang"/>
+        <package name="libgnomekbd-lang"/>
+        <package name="libgnome-keyring-lang"/>
+        <package name="libgphoto2-6-lang"/>
+        <package name="libgsf-lang"/>
+        <package name="libgtop-lang"/>
+        <package name="libgweather-lang"/>
+        <package name="libidn2-lang"/>
+        <package name="libiptcdata-lang"/>
+        <package name="libosinfo-lang"/>
+        <package name="libpeas-lang"/>
+        <package name="libpwquality-lang"/>
+        <package name="libsecret-lang"/>
+        <package name="libsoup-lang"/>
+        <package name="libstorage-ng-lang"/>
+        <package name="libwebkit2gtk3-lang"/>
+        <package name="mutter-lang"/>
+        <package name="net-tools-lang"/>
+        <package name="NetworkManager-applet-lang"/>
+        <package name="NetworkManager-lang"/>
+        <package name="parted-lang"/>
+        <package name="pulseaudio-lang"/>
+        <package name="sed-lang"/>
+        <package name="shared-mime-info-lang"/>
+        <package name="tar-lang"/>
+        <package name="tracker-lang"/>
+        <package name="tracker-miners-lang"/>
+        <package name="udisks2-lang"/>
+        <package name="upower-lang"/>
+        <package name="vte-lang"/>
+        <package name="xkeyboard-config-lang"/>
+        <package name="xz-lang"/>
+        <package name="zenity-lang"/>
     </packages>
 
     <!-- Translations for Brazilian Portuguese (pt_BR) -->
     <packages type="image" profiles="pt_BR">
+        <!-- kamarada/Linux-Kamarada-GNOME#55 - Certificado de segurança da AC raiz brasileira (ICP-Brasil) -->
+        <package name="ca-certificates-icpbrasil"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-lightproof-pt_BR"/>
