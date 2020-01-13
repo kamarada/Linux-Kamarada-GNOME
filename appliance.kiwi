@@ -356,6 +356,12 @@
         <package name="evolution-ews-lang"/>
         <package name="gnome-online-accounts-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#56 - VPN clients -->
+        <package name="NetworkManager-openconnect-lang"/>
+        <package name="NetworkManager-openvpn-lang"/>
+        <package name="NetworkManager-pptp-lang"/>
+        <package name="NetworkManager-vpnc-lang"/>
+
         <!-- Utilities for managing processes: pstree, killall and fuser -->
         <package name="psmisc-lang"/>
         
