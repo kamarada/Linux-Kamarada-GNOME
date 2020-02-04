@@ -1,0 +1,76 @@
+---
+componentName:  Kamarada
+
+# In comments there is alternative examples for openSUSE or your custom appliance variables
+
+strings:
+# $productName appears:
+#  in title of Calamares window as "$productName Installer",
+#  in welcome screen as "This program will ask you some questions and setup $productName on your computer."
+#    productName:         Generic GNU/Linux
+#    productName:         openSUSE Leap
+#    productName:         openSUSE Tumbleweed
+    productName:         Linux Kamarada
+
+# $shortProductName appears:
+#  in welcome screen as optional button "$shortProductName support",
+#  in summary before installation,
+#  in confirmation dialog for installation
+#    shortProductName:    Generic
+#    shortProductName:    openSUSE
+    shortProductName:    Kamarada
+
+# Uncomment to define full version
+#    version:             1.0 LTS
+#    version:             42.3
+    version:             15.1
+
+# Uncomment to define short version
+#    shortVersion:        1.0
+#    shortVersion:        42.3
+    shortVersion:        15.1
+
+# $versionedName appears
+#  in welcome screen header "Welcome to the $versionedName installer."
+#    versionedName:       Generic GNU/Linux 1.0 LTS "Rusty Trombone"
+#    versionedName:       openSUSE Leap 42.3
+    versionedName:       Linux Kamarada 15.1
+
+# $shortVersionedName appears:
+#  in partitioner,
+#  in summary before installation,
+#  in confirmation dialog for installation
+#    shortVersionedName:  Generic 1.0
+#    shortVersionedName:  openSUSE 42.3
+    shortVersionedName:  Kamarada 15.1
+
+# $bootloaderEntryName appears:
+#  in partitioner,
+#  in bootloader menu after installation
+#    bootloaderEntryName: openSUSE Leap 42.3
+    bootloaderEntryName: Linux Kamarada
+
+#    productUrl:          http://calamares.io/
+    productUrl:          https://kamarada.github.io/
+
+#    supportUrl:          http://calamares.io/bugs/
+#    knownIssuesUrl:      http://calamares.io/about/
+#    releaseNotesUrl:     http://calamares.io/about/
+
+images:
+    productLogo:         "logo.png"
+# $productIcon appears in left upper corner of installer
+    productIcon:         "logo.png"
+# $productWelcome appears in center of welcome screen
+    productWelcome:      "languages.jpg"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#424242"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#73BA25"
+   sidebarTextHighlight: "#212121"
+
+windowExpanding:         noexpand
+windowSize:              800px,640px
