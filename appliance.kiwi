@@ -176,6 +176,7 @@
 
         <!-- Calamares installer -->
       	<package name="calamares"/>
+      	<package name="calamares-settings-kamarada"/>
         <!-- </packages> -->
     </packages>
 
