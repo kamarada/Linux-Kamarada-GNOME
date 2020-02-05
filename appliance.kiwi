@@ -112,6 +112,7 @@
         <package name="wine-32bit"/>
         <package name="wine-gecko"/>
         <package name="wine-mono"/>
+        <package name="python3-icoextract"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
         <package name="rpcbind"/>
