@@ -316,6 +316,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#30 - GUI - Internet - BitTorrent client -->
         <package name="transmission-gtk-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#31 - GUI - Graphics - Drawing -->
+        <package name="kolourpaint-lang"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#33 - GUI - System - Power statistics -->
         <package name="gnome-power-manager-lang"/>
 
