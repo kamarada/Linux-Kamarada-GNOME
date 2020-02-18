@@ -178,6 +178,8 @@
         <!-- Calamares installer -->
       	<package name="calamares"/>
       	<package name="calamares-settings-kamarada"/>
+        <!-- kamarada/Linux-Kamarada-GNOME#57 - Starting Calamares with kdesu -->
+      	<package name="kde-cli-tools5"/>
         <!-- </packages> -->
     </packages>
 
