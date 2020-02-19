@@ -51,7 +51,13 @@ sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 chmod 0440 /etc/sudoers
 
 # Create LiveDVD user linux
-/usr/sbin/useradd -m -u 999 linux -c "LiveDVD User" -p ""
+LIVE_USER_NAME="Live User"
+if [[ "$kiwi_profiles" == *"pt_BR"* ]]
+then
+    LIVE_USER_NAME="Usuário da mídia Live"
+fi
+
+/usr/sbin/useradd -m -u 999 linux -c "$LIVE_USER_NAME" -p ""
 
 # delete passwords
 passwd -d root
@@ -88,7 +94,7 @@ zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositori
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
 # suseConfig has been kept for compatibility on latest KIWI
-if [[ "$kiwi_profiles" == *"pt_BR"* ]];
+if [[ "$kiwi_profiles" == *"pt_BR"* ]]
 then
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
     echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
