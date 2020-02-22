@@ -51,7 +51,13 @@ sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 chmod 0440 /etc/sudoers
 
 # Create LiveDVD user linux
-/usr/sbin/useradd -m -u 999 linux -c "LiveDVD User" -p ""
+LIVE_USER_NAME="Live User"
+if [[ "$kiwi_profiles" == *"pt_BR"* ]]
+then
+    LIVE_USER_NAME="Usuário da mídia Live"
+fi
+
+/usr/sbin/useradd -m -u 999 linux -c "$LIVE_USER_NAME" -p ""
 
 # delete passwords
 passwd -d root
@@ -78,7 +84,14 @@ zypper mr -r repo-non-oss
 zypper mr -r repo-update
 zypper mr -r repo-update-non-oss
 
-zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.1/openSUSE_Leap_15.1/ kamarada
+# Kamarada repository
+# See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
+KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/15.1/openSUSE_Leap_15.1/"
+if [[ "$kiwi_profiles" == *"pt_BR"* ]]
+then
+    KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/15.1/openSUSE_Leap_15.1/"
+fi
+zypper addrepo -f -K -n "Linux Kamarada" "$KAMARADA_MIRROR" kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
 # https://bugzilla.opensuse.org/show_bug.cgi?id=984330
@@ -88,7 +101,7 @@ zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositori
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
 # suseConfig has been kept for compatibility on latest KIWI
-if [[ "$kiwi_profiles" == *"pt_BR"* ]];
+if [[ "$kiwi_profiles" == *"pt_BR"* ]]
 then
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
     echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
