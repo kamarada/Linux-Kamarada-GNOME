@@ -91,7 +91,7 @@
         <package name="patterns-desktop-laptop"/>
 
         <!-- VirtualBox and VMware support -->
-      	<package name="virtualbox-guest-kmp-default"/>
+      	<package name="virtualbox-kmp-default"/>
         <package name="virtualbox-guest-x11"/>
         <package name="virtualbox-guest-tools"/>
         <package name="xf86-video-vmware"/>
