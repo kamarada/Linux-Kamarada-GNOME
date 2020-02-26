@@ -61,7 +61,10 @@
 
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
-        
+
+        <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
+        <package name="cdda2wav"/>
+
         <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
         <package name="gnome-menus-branding-openSUSE"/>
 
