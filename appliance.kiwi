@@ -59,8 +59,11 @@
         <!-- kamarada/Linux-Kamarada-GNOME#10 - GUI - Utilities - Screenshot -->
         <package name="gnome-screenshot-lang"/>
 
-        <!-- have choice for kernel-default needed by patterns-kamarada-gnome -->
+        <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
+        
+        <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
+        <package name="gnome-menus-branding-openSUSE"/>
 
         <package name="branding-openSUSE"/>
         <package name="gdm-branding-openSUSE"/>
