@@ -65,6 +65,9 @@
         <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
         <package name="cdda2wav"/>
 
+        <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
+        <package name="cdrecord"/>
+
         <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
         <package name="gnome-menus-branding-openSUSE"/>
 
