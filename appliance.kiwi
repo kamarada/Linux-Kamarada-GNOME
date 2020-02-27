@@ -59,6 +59,90 @@
         <!-- kamarada/Linux-Kamarada-GNOME#10 - GUI - Utilities - Screenshot -->
         <package name="gnome-screenshot-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#11 - GUI - Internet - E-mail client -->
+        <package name="evolution-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#12 - GUI - Office - Calendar -->
+        <package name="gnome-calendar-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#13 - GUI - Office - Address book -->
+        <package name="gnome-contacts-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#15 - GUI - Utilities - Document viewer -->
+        <package name="evince-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#16 - GUI - Graphics - Scanning -->
+        <package name="simple-scan-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#17 - GUI - Utilities - Image viewer -->
+        <package name="eog-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#19 - GUI - Sound & Video - Webcam application -->
+        <package name="cheese-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#20 - GUI - GNOME core apps -->
+        <package name="baobab-lang"/>
+        <package name="gnome-characters-lang"/>
+        <package name="gnome-clocks-lang"/>
+        <package name="gnome-disk-utility-lang"/>
+        <package name="gnome-documents-lang"/>
+        <package name="gnome-font-viewer-lang"/>
+        <package name="gnome-logs-lang"/>
+        <package name="gnome-photos-lang"/>
+        <package name="gnome-software-lang"/>
+        <package name="gnome-todo-lang"/>
+        <package name="gnome-weather-lang"/>
+        <package name="yelp-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#21 - GUI - Accessories - Notes -->
+        <package name="bijiben-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#22 - GUI - Utilities - Tweaks -->
+        <package name="gnome-tweak-tool-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Aisleriot -->
+        <package name="aisleriot"/>
+        <package name="aisleriot-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
+        <package name="gnome-chess"/>
+        <package name="gnome-chess-lang"/>
+        <package name="gnuchess"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
+        <package name="gnome-mahjongg"/>
+        <package name="gnome-mahjongg-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
+        <package name="gnome-mines"/>
+        <package name="gnome-mines-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
+        <package name="gnome-sudoku"/>
+        <package name="gnome-sudoku-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
+        <package name="quadrapassel"/>
+        <package name="quadrapassel-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#24 - Firewall -->
+        <package name="firewalld-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#25 - GUI - System - Partition manager -->
+        <package name="gparted-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#26 - GUI - System - Package updater -->
+        <package name="gnome-packagekit-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager -->
+        <package name="seahorse-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#29 - GUI - Sound & Video - CD/DVD burner -->
+        <package name="brasero-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#30 - GUI - Internet - BitTorrent client -->
+        <package name="transmission-gtk-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
 
@@ -77,7 +161,7 @@
         <package name="gtk3-branding-openSUSE"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
         <!--<package name="MozillaFirefox-branding-openSUSE"/>-->
-      
+
         <package name="dracut-kiwi-live"/>
       	<!-- KiwiKernelLookupError: No kernel found in /usr/src/packages/KIWI-iso/build/image-root/boot -->
       	<!--<package name="kernel-default"/>-->
@@ -86,7 +170,7 @@
       	<!-- https://build.opensuse.org/package/view_file/openSUSE:Leap:15.0:Images/livecd-leap-gnome/pre-checkin.sh?expand=1 -->
       	<!-- https://github.com/openSUSE/obs-build/issues/420 -->
       	<!--<ignore name="libzypp-plugin-appdata"/>-->
-      
+
       	<!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
 
