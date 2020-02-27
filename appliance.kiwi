@@ -98,7 +98,7 @@
         <package name="bijiben-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#22 - GUI - Utilities - Tweaks -->
-        <package name="gnome-tweak-tool-lang"/>
+        <package name="gnome-tweaks-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Aisleriot -->
         <package name="aisleriot"/>
