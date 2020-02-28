@@ -28,8 +28,9 @@ suseImportBuildKey
 
 # Activate services
 suseRemoveService wicked
+suseRemoveService SuSEfirewall2
 suseInsertService NetworkManager
-suseInsertService SuSEfirewall2
+suseInsertService firewalld
 
 # Setup default target, multi-user GUI
 baseSetRunlevel 5
@@ -73,6 +74,7 @@ zypper addrepo -d -K -n "Update Repository (Debug)" http://download.opensuse.org
 zypper addrepo -d -K -n "Update Repository (Debug, Non-OSS)" http://download.opensuse.org/debug/update/leap/15.2/non-oss/ repo-debug-update-non-oss
 zypper addrepo -d -K -n "Source Repository" http://download.opensuse.org/source/distribution/leap/15.2/repo/oss/ repo-source
 zypper addrepo -d -K -n "Source Repository (Non-OSS)" http://download.opensuse.org/source/distribution/leap/15.2/repo/non-oss/ repo-source-non-oss
+zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.2:/dev/openSUSE_Leap_15.2/ kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
 # https://bugzilla.opensuse.org/show_bug.cgi?id=984330
