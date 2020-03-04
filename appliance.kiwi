@@ -38,7 +38,7 @@
         <source path="obs://openSUSE:Leap:15.2:Update/standard"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.1/standard"/>
+        <source path="obs://openSUSE:Leap:15.2/standard"/>
     </repository>
 
     <packages type="bootstrap">
