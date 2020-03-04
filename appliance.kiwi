@@ -15,7 +15,7 @@
         <bootsplash-theme>Kamarada</bootsplash-theme>
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
-        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-excludedocs>false</rpm-excludedocs>
         <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.2"/>
         <version>15.2</version>
     </preferences>
@@ -28,17 +28,17 @@
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
-    <repository type="rpm-md" alias="kiwi-next-generation" priority="1">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
-    </repository>
-    <repository type="rpm-md" alias="kamarada" imageinclude="true" priority="2">
+    <repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
         <source path="obs://home:kamarada:15.2:dev/openSUSE_Leap_15.2"/>
     </repository>
-    <repository alias="repo-oss" imageinclude="true" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.2/standard"/>
+    <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
     </repository>
-    <repository alias="repo-update" imageinclude="true" type="rpm-md">
+    <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
         <source path="obs://openSUSE:Leap:15.2:Update/standard"/>
+    </repository>
+    <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
+        <source path="obs://openSUSE:Leap:15.1/standard"/>
     </repository>
 
     <packages type="bootstrap">
@@ -65,15 +65,27 @@
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
         <package name="gnome-chess"/>
         <package name="gnuchess"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Games -->
+        <package name="gnome-games"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
+        <package name="gnome-hearts"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
         <package name="gnome-mahjongg"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
         <package name="gnome-mines"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Nibbles -->
+        <package name="gnome-nibbles"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
         <package name="gnome-sudoku"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Iagno -->
+        <package name="iagno"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
         <package name="quadrapassel"/>
@@ -100,6 +112,10 @@
         <package name="wine-32bit"/>
         <package name="wine-gecko"/>
         <package name="wine-mono"/>
+        <package name="python3-icoextract"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
+        <package name="rpcbind"/>
 
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
@@ -112,6 +128,9 @@
 
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
+        
+        <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
+        <package name="gnome-menus-branding-openSUSE"/>
 
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
@@ -158,7 +177,9 @@
 
         <!-- Calamares installer -->
       	<package name="calamares"/>
-      	<package name="calamares-branding-kamarada"/>
+      	<package name="calamares-settings-kamarada"/>
+        <!-- kamarada/Linux-Kamarada-GNOME#57 - Starting Calamares with kdesu -->
+      	<package name="kde-cli-tools5"/>
         <!-- </packages> -->
     </packages>
 
@@ -253,15 +274,27 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
         <package name="gnome-chess-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Games -->
+        <package name="gnome-games-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
+        <package name="gnome-hearts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
         <package name="gnome-mahjongg-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
         <package name="gnome-mines-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Nibbles -->
+        <package name="gnome-nibbles-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
         <package name="gnome-sudoku-lang"/>
+        
+        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Iagno -->
+        <package name="iagno-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
         <package name="quadrapassel-lang"/>
@@ -274,6 +307,7 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#26 - GUI - System - Package updater -->
         <package name="gnome-packagekit-lang"/>
+        <package name="PackageKit-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager -->
         <package name="seahorse-lang"/>
@@ -283,6 +317,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#30 - GUI - Internet - BitTorrent client -->
         <package name="transmission-gtk-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#31 - GUI - Graphics - Drawing -->
+        <package name="kolourpaint-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#33 - GUI - System - Power statistics -->
         <package name="gnome-power-manager-lang"/>
@@ -316,13 +353,118 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
         <package name="liblinphone-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#48 - Time synchronization with NTP -->
+        <package name="util-linux-lang"/>
         
+        <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
+        <package name="evolution-data-server-lang"/>
+        <package name="evolution-ews-lang"/>
+        <package name="gnome-online-accounts-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#56 - VPN clients -->
+        <package name="NetworkManager-openconnect-lang"/>
+        <package name="NetworkManager-openvpn-lang"/>
+        <package name="NetworkManager-pptp-lang"/>
+        <package name="NetworkManager-vpnc-lang"/>
+
         <!-- Utilities for managing processes: pstree, killall and fuser -->
         <package name="psmisc-lang"/>
+        
+        <!-- GNOME Shell Extensions -->
+        <package name="gnome-shell-extensions-common-lang"/>
+        
+        <!-- Other translations (manually included because by default only required packages are being installed) -->
+        <package name="accountsservice-lang"/>
+        <package name="apparmor-parser-lang"/>
+        <package name="appstream-glib-lang"/>
+        <package name="atk-lang"/>
+        <package name="at-spi2-core-lang"/>
+        <package name="bash-lang"/>
+        <package name="clutter-gtk-lang"/>
+        <package name="clutter-lang"/>
+        <package name="cogl-lang"/>
+        <package name="colord-gtk-lang"/>
+        <package name="coreutils-lang"/>
+        <package name="cpio-lang"/>
+        <package name="dialog-lang"/>
+        <package name="diffutils-lang"/>
+        <package name="elfutils-lang"/>
+        <package name="findutils-lang"/>
+        <package name="folks-lang"/>
+        <package name="fwupd-lang"/>
+        <package name="gcab-lang"/>
+        <package name="gconf2-lang"/>
+        <package name="gcr-lang"/>
+        <package name="gdk-pixbuf-lang"/>
+        <package name="gdm-lang"/>
+        <package name="gegl-0_3-lang"/>
+        <package name="glib2-lang"/>
+        <package name="glib-networking-lang"/>
+        <package name="gnome-control-center-lang"/>
+        <package name="gnome-desktop-lang"/>
+        <package name="gnome-keyring-lang"/>
+        <package name="gnome-session-lang"/>
+        <package name="gnome-settings-daemon-lang"/>
+        <package name="gnome-shell-lang"/>
+        <package name="gpg2-lang"/>
+        <package name="grep-lang"/>
+        <package name="grilo-lang"/>
+        <package name="gsettings-desktop-schemas-lang"/>
+        <package name="gspell-lang"/>
+        <package name="gstreamer-lang"/>
+        <package name="gstreamer-plugins-bad-lang"/>
+        <package name="gstreamer-plugins-base-lang"/>
+        <package name="gstreamer-plugins-good-lang"/>
+        <package name="gtksourceview-lang"/>
+        <package name="gtkspell3-lang"/>
+        <package name="gtkspell-lang"/>
+        <package name="gtk-vnc-lang"/>
+        <package name="gvfs-lang"/>
+        <package name="iso-codes-lang"/>
+        <package name="json-glib-lang"/>
+        <package name="libcryptui-lang"/>
+        <package name="libgdata-lang"/>
+        <package name="libgnome-games-support-lang"/>
+        <package name="libgnomekbd-lang"/>
+        <package name="libgnome-keyring-lang"/>
+        <package name="libgphoto2-6-lang"/>
+        <package name="libgsf-lang"/>
+        <package name="libgtop-lang"/>
+        <package name="libgweather-lang"/>
+        <package name="libidn2-lang"/>
+        <package name="libiptcdata-lang"/>
+        <package name="libosinfo-lang"/>
+        <package name="libpeas-lang"/>
+        <package name="libpwquality-lang"/>
+        <package name="libsecret-lang"/>
+        <package name="libsoup-lang"/>
+        <package name="libstorage-ng-lang"/>
+        <package name="libwebkit2gtk3-lang"/>
+        <package name="mutter-lang"/>
+        <package name="net-tools-lang"/>
+        <package name="NetworkManager-applet-lang"/>
+        <package name="NetworkManager-lang"/>
+        <package name="parted-lang"/>
+        <package name="pulseaudio-lang"/>
+        <package name="sed-lang"/>
+        <package name="shared-mime-info-lang"/>
+        <package name="tar-lang"/>
+        <package name="tracker-lang"/>
+        <package name="tracker-miners-lang"/>
+        <package name="udisks2-lang"/>
+        <package name="upower-lang"/>
+        <package name="vte-lang"/>
+        <package name="xkeyboard-config-lang"/>
+        <package name="xz-lang"/>
+        <package name="zenity-lang"/>
     </packages>
 
     <!-- Translations for Brazilian Portuguese (pt_BR) -->
     <packages type="image" profiles="pt_BR">
+        <!-- kamarada/Linux-Kamarada-GNOME#55 - Certificado de segurança da AC raiz brasileira (ICP-Brasil) -->
+        <package name="ca-certificates-icpbrasil"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-lightproof-pt_BR"/>

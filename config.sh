@@ -34,6 +34,8 @@ suseRemoveService wicked
 suseRemoveService SuSEfirewall2
 suseInsertService NetworkManager
 suseInsertService firewalld
+suseInsertService chronyd
+suseInsertService pcscd
 
 # Setup default target, multi-user GUI
 baseSetRunlevel 5
@@ -49,7 +51,13 @@ sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 chmod 0440 /etc/sudoers
 
 # Create LiveDVD user linux
-/usr/sbin/useradd -m -u 999 linux -c "LiveDVD User" -p ""
+LIVE_USER_NAME="Live User"
+if [[ "$kiwi_profiles" == *"pt_BR"* ]]
+then
+    LIVE_USER_NAME="Usuário da mídia Live"
+fi
+
+/usr/sbin/useradd -m -u 999 linux -c "$LIVE_USER_NAME" -p ""
 
 # delete passwords
 passwd -d root
@@ -76,7 +84,15 @@ zypper mr -r repo-non-oss
 zypper mr -r repo-update
 zypper mr -r repo-update-non-oss
 
-zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.2:/dev/openSUSE_Leap_15.2/ kamarada
+# Kamarada repository
+# See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
+#KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/15.1/openSUSE_Leap_15.1/"
+#if [[ "$kiwi_profiles" == *"pt_BR"* ]]
+#then
+#    KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/15.1/openSUSE_Leap_15.1/"
+#fi
+KAMARADA_MIRROR="http://download.opensuse.org/repositories/home:/kamarada:/15.2:/dev/openSUSE_Leap_15.2/"
+zypper addrepo -f -K -n "Linux Kamarada" "$KAMARADA_MIRROR" kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
 # https://bugzilla.opensuse.org/show_bug.cgi?id=984330
@@ -86,7 +102,7 @@ zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositori
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
 # suseConfig has been kept for compatibility on latest KIWI
-if [[ "$kiwi_profiles" == *"pt_BR"* ]];
+if [[ "$kiwi_profiles" == *"pt_BR"* ]]
 then
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
     echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
@@ -95,9 +111,13 @@ then
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
     baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
     baseUpdateSysConfig /etc/sysconfig/language INSTALLED_LANGUAGES "pt_BR"
+    #timedatectl set-timezone America/Sao_Paulo
     ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
     echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
+    sed -i 's/2.opensuse.pool.ntp.org/pool.ntp.br/g' /etc/chrony.conf
+    #sed -i 's/UTC/LOCAL/g' /etc/adjtime
+    #timedatectl set-local-rtc 1
     echo "pt_BR" > /var/lib/zypp/RequestedLocales
 
     # Locale clean up
@@ -105,15 +125,20 @@ then
     mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
     rm -rf /usr/share/locale
     mv /usr/share/locale_keep /usr/share/locale
+    
+    # kamarada/Linux-Kamarada-GNOME#55 - Add the Brazilian root CA (ICP-Brasil) certificate to Chromium
+    su - linux -c "instalar-icpbrasil"
 else
     #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
     echo "YAST_KEYBOARD=\"english-us,pc104\"" >> /etc/sysconfig/keyboard
     #localectl set-keymap us
     sed -i -e 's/@KEYMAP_GOES_HERE@/us/g' /etc/vconsole.conf
     baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
+    #timedatectl set-timezone America/New_York
     ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
     #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
     echo "DEFAULT_TIMEZONE=\"US/Eastern\"" >> /etc/sysconfig/clock
+    rm /etc/adjtime
 
     # YaST Firstboot
     baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada-live.xml"
