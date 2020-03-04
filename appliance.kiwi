@@ -398,7 +398,7 @@
         <package name="gcr-lang"/>
         <package name="gdk-pixbuf-lang"/>
         <package name="gdm-lang"/>
-        <package name="gegl-0_3-lang"/>
+        <package name="gegl-0_4-lang"/>
         <package name="glib2-lang"/>
         <package name="glib-networking-lang"/>
         <package name="gnome-control-center-lang"/>
