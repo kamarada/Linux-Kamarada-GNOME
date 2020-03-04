@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install Linux Kamarada
+Name[pt_BR]=Instalar Linux Kamarada
+GenericName=System Installer
+GenericName[pt_BR]=Instalador do Sistema
+Keywords=calamares;system;installer;
+TryExec=calamares
+Exec=xdg-su -c /usr/bin/calamares
+Comment=Install the operating system to disk
+Comment[pt_BR]=Instala o sistema operacional no disco
+Icon=calamares
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;PackageManager;
+X-AppStream-Ignore=true

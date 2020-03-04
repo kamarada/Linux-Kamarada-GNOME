@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
 #======================================
 # Functions...
@@ -22,6 +23,8 @@ baseMount
 
 # Setup baseproduct link
 suseSetupProduct
+
+echo "kamarada-pc" > /etc/hostname
 
 # Add missing gpg keys to rpm
 suseImportBuildKey
@@ -62,18 +65,17 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
 # Official repositories
-# (as found in http://download.opensuse.org/distribution/leap/15.2/repo/oss/control.xml)
 rm /etc/zypp/repos.d/*.repo
-zypper addrepo -f -K -n "Main Update Repository" http://download.opensuse.org/update/leap/15.2/oss/ repo-update
-zypper addrepo -f -K -n "Update Repository (Non-Oss)" http://download.opensuse.org/update/leap/15.2/non-oss/ repo-update-non-oss
-zypper addrepo -f -K -n "Main Repository" http://download.opensuse.org/distribution/leap/15.2/repo/oss/ repo-oss
-zypper addrepo -f -K -n "Non-OSS Repository" http://download.opensuse.org/distribution/leap/15.2/repo/non-oss/ repo-non-oss
-zypper addrepo -d -K -n "Debug Repository" http://download.opensuse.org/debug/distribution/leap/15.2/repo/oss/ repo-debug
-zypper addrepo -d -K -n "Debug Repository (Non-OSS)" http://download.opensuse.org/debug/distribution/leap/15.2/repo/non-oss/ repo-debug-non-oss
-zypper addrepo -d -K -n "Update Repository (Debug)" http://download.opensuse.org/debug/update/leap/15.2/oss repo-debug-update
-zypper addrepo -d -K -n "Update Repository (Debug, Non-OSS)" http://download.opensuse.org/debug/update/leap/15.2/non-oss/ repo-debug-update-non-oss
-zypper addrepo -d -K -n "Source Repository" http://download.opensuse.org/source/distribution/leap/15.2/repo/oss/ repo-source
-zypper addrepo -d -K -n "Source Repository (Non-OSS)" http://download.opensuse.org/source/distribution/leap/15.2/repo/non-oss/ repo-source-non-oss
+
+# Add repos from /etc/YaST2/control.xml
+add-yast-repos
+zypper --non-interactive rm -u live-add-yast-repos
+# Enable autorefresh for some repos
+zypper mr -r repo-oss
+zypper mr -r repo-non-oss
+zypper mr -r repo-update
+zypper mr -r repo-update-non-oss
+
 zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositories/home:/kamarada:/15.2:/dev/openSUSE_Leap_15.2/ kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
@@ -83,13 +85,50 @@ zypper addrepo -f -K -n "Linux Kamarada" http://download.opensuse.org/repositori
 # https://github.com/kamarada/kiwi-config-Kamarada/issues/1
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
-# SuSEconfig
-suseConfig
+# suseConfig has been kept for compatibility on latest KIWI
+if [[ "$kiwi_profiles" == *"pt_BR"* ]];
+then
+    #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
+    echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
+    #localectl set-keymap br
+    sed -i -e 's/@KEYMAP_GOES_HERE@/br/g' /etc/vconsole.conf
+    baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
+    baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
+    baseUpdateSysConfig /etc/sysconfig/language INSTALLED_LANGUAGES "pt_BR"
+    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+    #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
+    echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
+    echo "pt_BR" > /var/lib/zypp/RequestedLocales
 
-# YaST Firstboot
-baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada.xml"
-baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_WELCOME_DIR "/usr/share/firstboot/"
-touch /var/lib/YaST2/reconfig_system
+    # Locale clean up
+    mkdir /usr/share/locale_keep
+    mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
+    rm -rf /usr/share/locale
+    mv /usr/share/locale_keep /usr/share/locale
+else
+    #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
+    echo "YAST_KEYBOARD=\"english-us,pc104\"" >> /etc/sysconfig/keyboard
+    #localectl set-keymap us
+    sed -i -e 's/@KEYMAP_GOES_HERE@/us/g' /etc/vconsole.conf
+    baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
+    ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+    #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
+    echo "DEFAULT_TIMEZONE=\"US/Eastern\"" >> /etc/sysconfig/clock
+
+    # YaST Firstboot
+    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada-live.xml"
+    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_WELCOME_DIR "/usr/share/firstboot/"
+    touch /var/lib/YaST2/reconfig_system
+fi
+
+# Disable journal write to disk in live mode, bug 950999
+echo "Storage=volatile" >> /etc/systemd/journald.conf
+
+# Remove generated files (boo#1098535)
+rm -rf /var/cache/zypp/* /var/lib/zypp/AnonymousUniqueId /var/lib/systemd/random-seed
+
+# Save 165MB by removing this, not very useful for lives
+rm -rf /lib/firmware/{liquidio,netronome}
 
 #======================================
 # Umount kernel filesystems
