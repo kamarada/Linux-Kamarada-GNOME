@@ -135,6 +135,7 @@
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
 
+        <package name="base16-shell"/>
         <package name="fifth-leg-font"/>
 
       	<package name="live-add-yast-repos"/>
