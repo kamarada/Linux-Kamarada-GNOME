@@ -12,7 +12,6 @@
     </profiles>
     <preferences>
         <bootloader-theme>Kamarada</bootloader-theme>
-        <bootsplash-theme>Kamarada</bootsplash-theme>
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>false</rpm-excludedocs>
