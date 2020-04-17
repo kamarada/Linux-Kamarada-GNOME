@@ -325,7 +325,7 @@
         <package name="gnome-power-manager-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#35 - GUI - Utilities - Remote desktop client -->
-        <package name="vinagre-lang"/>
+        <package name="remmina-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#37 - CLI - Text editor - GNU nano -->
         <package name="nano-lang"/>
