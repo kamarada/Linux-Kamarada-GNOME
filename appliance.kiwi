@@ -54,6 +54,9 @@
     <packages type="image">
         <package name="patterns-kamarada-gnome"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
+        <package name="MozillaFirefox-branding-openSUSE"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-branding-upstream"/>
         <package name="libreoffice-icon-theme-papirus"/>
@@ -212,6 +215,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#4 - GUI - Accessories - Text editor -->
         <package name="gedit-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
+        <package name="MozillaFirefox-translations"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#6 - GUI - Sound & Video - Media player -->
         <package name="vlc-lang"/>
