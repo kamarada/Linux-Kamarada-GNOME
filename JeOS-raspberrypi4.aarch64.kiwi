@@ -38,9 +38,12 @@
   <users group="root">
     <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root"/>
   </users>
-  <repository type="rpm-md">
-    <source path="obsrepositories:/"/>
-  </repository>
+    <repository type="rpm-md">
+        <source path="http://download.opensuse.org/ports/aarch64/tumbleweed/repo/oss/"/>
+    </repository>
+    <repository type="rpm-md">
+        <source path="http://download.opensuse.org/ports/aarch64/update/tumbleweed/"/>
+    </repository>
   <packages type="bootstrap">
     <package name="kernel-default" bootinclude="true"/>
     <package name="raspberrypi-firmware" bootinclude="true"/>
