@@ -193,10 +193,6 @@
         <package name="myspell-en_US"/>
         <package name="myspell-lightproof-en"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
-        <package name="yast2-trans-en"/>
-        <package name="yast2-trans-en_US"/>
-
         <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
         <package name="translation-update-en"/>
         <package name="translation-update-en_US"/>
