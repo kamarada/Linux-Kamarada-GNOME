@@ -306,8 +306,11 @@
         <package name="gnome-packagekit-lang"/>
         <package name="PackageKit-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager -->
+        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager - GNOME Passwords and Keys (Seahorse) -->
         <package name="seahorse-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager - KeePassXC -->
+        <package name="keepassxc-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#29 - GUI - Sound & Video - CD/DVD burner -->
         <package name="brasero-lang"/>
