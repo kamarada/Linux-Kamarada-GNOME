@@ -54,6 +54,9 @@
     <packages type="image">
         <package name="patterns-kamarada-gnome"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
+        <package name="MozillaFirefox-branding-openSUSE"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
         <package name="libreoffice-branding-upstream"/>
         <package name="libreoffice-icon-theme-papirus"/>
@@ -110,7 +113,6 @@
         <!-- kamarada/Linux-Kamarada-GNOME#44 - Wine -->
         <package name="wine-32bit"/>
         <package name="wine-gecko"/>
-        <package name="wine-mono"/>
         <package name="python3-icoextract"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
@@ -189,14 +191,6 @@
         <package name="myspell-en"/>
         <package name="myspell-en_US"/>
         <package name="myspell-lightproof-en"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
-        <package name="yast2-trans-en"/>
-        <package name="yast2-trans-en_US"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
-        <package name="translation-update-en"/>
-        <package name="translation-update-en_US"/>
     </packages>
 
     <!-- Common translations -->
@@ -212,6 +206,9 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#4 - GUI - Accessories - Text editor -->
         <package name="gedit-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
+        <package name="MozillaFirefox-translations"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#6 - GUI - Sound & Video - Media player -->
         <package name="vlc-lang"/>
@@ -309,8 +306,11 @@
         <package name="gnome-packagekit-lang"/>
         <package name="PackageKit-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager -->
+        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager - GNOME Passwords and Keys (Seahorse) -->
         <package name="seahorse-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager - KeePassXC -->
+        <package name="keepassxc-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#29 - GUI - Sound & Video - CD/DVD burner -->
         <package name="brasero-lang"/>
@@ -325,7 +325,7 @@
         <package name="gnome-power-manager-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#35 - GUI - Utilities - Remote desktop client -->
-        <package name="vinagre-lang"/>
+        <package name="remmina-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#37 - CLI - Text editor - GNU nano -->
         <package name="nano-lang"/>
@@ -473,9 +473,5 @@
         <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
         <package name="yast2-trans-pt"/>
         <package name="yast2-trans-pt_BR"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
-        <package name="translation-update-pt"/>
-        <package name="translation-update-pt_BR"/>
     </packages>
 </image>
