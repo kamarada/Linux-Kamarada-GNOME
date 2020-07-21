@@ -101,11 +101,6 @@ zypper addrepo -f -K -n "Linux Kamarada" "$KAMARADA_MIRROR" kamarada
 # https://github.com/kamarada/kiwi-config-Kamarada/issues/1
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
-# Bluetooth headset - changing the profile to A2DP is not possible
-# https://wiki.archlinux.org/index.php/Bluetooth_headset#Gnome_with_GDM
-sudo -ugdm mkdir -p /var/lib/gdm/.config/systemd/user
-sudo -ugdm ln -s /dev/null /var/lib/gdm/.config/systemd/user/pulseaudio.socket
-
 # suseConfig has been kept for compatibility on latest KIWI
 if [[ "$kiwi_profiles" == *"pt_BR"* ]]
 then
