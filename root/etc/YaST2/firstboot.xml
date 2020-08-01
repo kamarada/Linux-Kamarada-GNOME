@@ -170,5 +170,14 @@
 	-->
 	<ac_label_1><label>Configuring network...</label></ac_label_1>
 	<ac_label_2><label>Configuring hardware...</label></ac_label_2>
+        <congratulate>
+            <label>
+&lt;p&gt;&lt;b&gt;Congratulations!&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;The installation of Linux Kamarada on your machine is complete.
+After clicking &lt;b&gt;Finish&lt;/b&gt;, you can log in to the system.&lt;/p&gt;
+&lt;p&gt;Visit us at https://kamarada.github.io/.&lt;/p&gt;
+&lt;p&gt;Have a lot of fun!&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;&lt;p&gt;Antônio Vinícius Menezes Medeiros&lt;br&gt;The Linux Kamarada Project&lt;/p&gt;
+            </label>
+        </congratulate>
     </texts>
 </productDefines>
