@@ -73,14 +73,14 @@ module Yast
       @text = _("<p><b>Congratulations!</b></p>") +
         # congratulation text 2/4
         _(
-          "<p>The installation of &product; on your machine is complete.\nAfter clicking <b>Finish</b>, you can log in to the system.</p>\n"
+          "<p>The installation of Linux Kamarada on your machine is complete.\nAfter clicking <b>Finish</b>, you can log in to the system.</p>\n"
         ) +
         # congratulation text 3/4
         # Translators: If there exists a SUSE web-page for your language
         # change the address accordingly. If in doubt leave the original.
-        _("<p>Visit us at www.suse.com.</p>") +
+        _("<p>Visit us at https://kamarada.github.io/.</p>") +
         # congratulation text 4/4
-        _("<p>Have a lot of fun!<br>Your SUSE Development Team</p>")
+        _("<p>Have a lot of fun!</p><p>&nbsp;</p><p>Antônio Vinícius Menezes Medeiros<br>The Linux Kamarada Project</p>")
 
 
       # If text exists, read it from file instead; it is expected to be richtext.

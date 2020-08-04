@@ -185,24 +185,24 @@ msgstr "<p><b>Parabéns!</b></p>"
 #. congratulation text 2/4
 #: src/clients/firstboot_finish.rb:75
 msgid ""
-"<p>The installation of &product; on your machine is complete.\n"
+"<p>The installation of Linux Kamarada on your machine is complete.\n"
 "After clicking <b>Finish</b>, you can log in to the system.</p>\n"
 msgstr ""
-"<p>A instalação de &product; na máquina está concluída.\n"
-"Depois de clicar em <b>Concluir</b>, você poderá efetuar login no sistema.</"
+"<p>A instalação do Linux Kamarada na máquina está concluída.\n"
+"Depois de clicar em <b>Concluir</b>, você poderá efetuar <i>login</i> no sistema.</"
 "p>\n"
 
 #. congratulation text 3/4
 #. Translators: If there exists a SUSE web-page for your language
 #. change the address accordingly. If in doubt leave the original.
 #: src/clients/firstboot_finish.rb:81
-msgid "<p>Visit us at www.suse.com.</p>"
-msgstr "<p>Visite-nos em www.suse.com/pt-br/.</p>"
+msgid "<p>Visit us at https://kamarada.github.io/.</p>"
+msgstr "<p>Visite o <i>site</i> do projeto em https://kamarada.github.io/.</p>"
 
 #. congratulation text 4/4
 #: src/clients/firstboot_finish.rb:83
-msgid "<p>Have a lot of fun!<br>Your SUSE Development Team</p>"
-msgstr "<p>Divirta-se!<br>Sua equipe de desenvolvimento do SUSE</p>"
+msgid "<p>Have a lot of fun!</p><p>&nbsp;</p><p>Antônio Vinícius Menezes Medeiros<br>The Linux Kamarada Project</p>"
+msgstr "<p>Divirta-se!</p><p>&nbsp;</p><p>Antônio Vinícius Menezes Medeiros<br>Projeto Linux Kamarada</p>"
 
 #. help 1/4 for dialog "Congratulation Dialog"
 #: src/clients/firstboot_finish.rb:112
