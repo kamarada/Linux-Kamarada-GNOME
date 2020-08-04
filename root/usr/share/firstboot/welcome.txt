@@ -1,6 +1,6 @@
 <p><b>Bem vindo!</b></p>
 
-<p>Há algumas ações que precisam ser executadas antes que seu sistema esteja pronto para uso. Este assistente o orientará por algumas configurações básicas. Você deverá selecionar seu Idioma e Layout de Teclado, ler o Contrato de Licença e, por fim, configurar seu Relógio e Fuso Horário. Então, você será direcionado à Área de Trabalho.</p>
+<p>Há algumas ações que precisam ser executadas antes que seu sistema esteja pronto para uso. Este assistente o orientará por algumas configurações básicas. Você deverá selecionar seu Idioma e Layout de Teclado, ler o Contrato de Licença e, por fim, configurar seu Relógio e Fuso Horário. Então, você será direcionado ao Ambiente de Trabalho.</p>
 
 <p>Clique em <b>Avançar</b> para continuar.</p>
 
