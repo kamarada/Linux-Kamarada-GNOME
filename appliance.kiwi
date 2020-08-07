@@ -58,7 +58,7 @@
         <package name="MozillaFirefox-branding-openSUSE"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
-        <package name="libreoffice-branding-upstream"/>
+        <package name="libreoffice-branding-kamarada"/>
         <package name="libreoffice-icon-theme-papirus"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Aisleriot -->
