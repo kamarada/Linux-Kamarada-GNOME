@@ -90,12 +90,12 @@ zypper mr -r repo-update-non-oss
 
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
-#KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/15.1/openSUSE_Leap_15.1/"
+#KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
 #if [[ "$kiwi_profiles" == *"pt_BR"* ]]
 #then
-#    KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/15.1/openSUSE_Leap_15.1/"
+#    KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
 #fi
-KAMARADA_MIRROR="http://download.opensuse.org/repositories/home:/kamarada:/15.2:/dev/openSUSE_Leap_15.2/"
+KAMARADA_MIRROR="http://download.opensuse.org/repositories/home:/kamarada:/\$releasever:/dev/openSUSE_Leap_\$releasever/"
 zypper addrepo -f -K -n "Linux Kamarada" "$KAMARADA_MIRROR" kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
