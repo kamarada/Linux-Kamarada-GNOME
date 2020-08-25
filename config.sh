@@ -90,10 +90,10 @@ zypper mr -r repo-update-non-oss
 
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
-KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/15.2/openSUSE_Leap_15.2/"
+KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
 if [[ "$kiwi_profiles" == *"pt_BR"* ]]
 then
-    KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/15.2/openSUSE_Leap_15.2/"
+    KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
 fi
 zypper addrepo -f -K -n "Linux Kamarada" "$KAMARADA_MIRROR" kamarada
 
@@ -128,7 +128,7 @@ then
     mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
     rm -rf /usr/share/locale
     mv /usr/share/locale_keep /usr/share/locale
-    
+
     # kamarada/Linux-Kamarada-GNOME#55 - Add the Brazilian root CA (ICP-Brasil) certificate to Chromium
     su - linux -c "instalar-icpbrasil"
 else
