@@ -54,6 +54,10 @@
     <packages type="image">
         <package name="patterns-kamarada-gnome"/>
 
+        <!-- Temporarily downgrading some packages because of some bugs -->
+        <package name="gdm-3.34.1-lp152.5.2"/><!-- https://lists.opensuse.org/opensuse-factory/2020-09/msg00074.html -->
+        <package name="MozillaFirefox-68.9.0"/><!-- https://bugzilla.opensuse.org/show_bug.cgi?id=1173991 -->
+
         <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
         <package name="MozillaFirefox-branding-openSUSE"/>
 
@@ -208,7 +212,7 @@
         <package name="gedit-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
-        <package name="MozillaFirefox-translations"/>
+        <package name="MozillaFirefox-translations-common-68.9.0"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#6 - GUI - Sound & Video - Media player -->
         <package name="vlc-lang"/>
