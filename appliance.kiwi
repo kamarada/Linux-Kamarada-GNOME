@@ -33,9 +33,9 @@
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
         <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
     </repository>
-    <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
+    <!--<repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
         <source path="obs://openSUSE:Leap:15.2:Update/standard"/>
-    </repository>
+    </repository>-->
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
         <source path="obs://openSUSE:Leap:15.2/standard"/>
     </repository>
