@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- OBS-Profiles: @BUILD_FLAVOR@ -->
-<image displayname="Linux Kamarada 15.2" name="Linux_Kamarada_15.2" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.3" name="Linux_Kamarada_15.3" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -15,8 +15,8 @@
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>false</rpm-excludedocs>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.2"/>
-        <version>15.2</version>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.3"/>
+        <version>15.3</version>
     </preferences>
     <preferences profiles="en_US">
         <locale>en_US</locale>
@@ -28,16 +28,16 @@
         <user name="root" groups="root" password="" home="/root"/>
     </users>
     <repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
-        <source path="obs://home:kamarada:15.2:dev/openSUSE_Leap_15.2"/>
+        <source path="obs://home:kamarada:15.3:dev/openSUSE_Leap_15.3"/>
     </repository>
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.3"/>
     </repository>
     <!--<repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.2:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.3:Update/standard"/>
     </repository>-->
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.2/standard"/>
+        <source path="obs://openSUSE:Leap:15.3/standard"/>
     </repository>
 
     <packages type="bootstrap">
