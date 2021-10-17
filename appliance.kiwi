@@ -340,8 +340,8 @@
         <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
         <package name="dconf-editor-lang"/>
         <package name="desktop-translations"/>
+        <package name="gnome-shell-extension-appindicator-lang"/>
         <package name="gnome-shell-extension-dash-to-dock-lang"/>
-        <package name="gnome-shell-extension-topicons-plus-lang"/>
         <package name="gtk2-lang"/>
         <package name="gtk3-lang"/>
 
