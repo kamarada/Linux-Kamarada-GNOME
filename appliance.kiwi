@@ -27,7 +27,7 @@
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
-    <repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
+    <!--<repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
         <source path="obs://home:kamarada:15.3:dev/openSUSE_Leap_15.3"/>
     </repository>
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
@@ -38,6 +38,9 @@
     </repository>
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
         <source path="obs://openSUSE:Leap:15.3/standard"/>
+    </repository>-->
+    <repository type="rpm-md">
+        <source path="obsrepositories:/"/>
     </repository>
 
     <packages type="bootstrap">
