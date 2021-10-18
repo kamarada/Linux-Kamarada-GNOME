@@ -136,6 +136,10 @@
         <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
         <package name="gnome-menus-branding-openSUSE"/>
 
+        <!-- OBS: have choice for librpm.so.8 needed by libsnmp30-32bit -->
+        <!-- OBS: have choice for librpmio.so.8 needed by libsnmp30-32bit -->
+        <package name="rpm-32bit"/>
+
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
 
