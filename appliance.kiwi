@@ -130,6 +130,9 @@
         <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
         <package name="cdrecord"/>
 
+        <!-- OBS: nothing provides /usr/bin/mkisofs needed by brasero -->
+        <package name="mkisofs"/>
+
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
         
