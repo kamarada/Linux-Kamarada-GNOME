@@ -155,11 +155,6 @@ rm -rf /var/cache/zypp/* /var/lib/zypp/AnonymousUniqueId /var/lib/systemd/random
 rm -rf /lib/firmware/{liquidio,netronome}
 
 #======================================
-# Umount kernel filesystems
-#--------------------------------------
-baseCleanMount
-
-#======================================
 # Exit safely
 #--------------------------------------
 exit 0
