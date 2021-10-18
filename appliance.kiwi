@@ -140,6 +140,9 @@
         <!-- OBS: have choice for librpmio.so.8 needed by libsnmp30-32bit -->
         <package name="rpm-32bit"/>
 
+        <!-- OBS: have choice for libnssckbi.so needed by mozilla-nss-32bit -->
+        <package name="mozilla-nss-certs-32bit"/>
+
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
 
