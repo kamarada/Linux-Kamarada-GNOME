@@ -11,7 +11,7 @@
         <profile name="pt_BR" description="Linux Kamarada with translations for Brazilian Portuguese" arch="x86_64"/>
     </profiles>
     <preferences>
-        <bootloader-theme>Kamarada</bootloader-theme>
+        <bootloader-theme>kamarada</bootloader-theme>
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>false</rpm-excludedocs>
