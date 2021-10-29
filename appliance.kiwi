@@ -486,6 +486,8 @@
         <package name="myspell-lightproof-pt_BR"/>
         <package name="myspell-pt_BR"/>
 
+        <package name="man-pages-pt_BR"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
         <package name="yast2-trans-en"/>
         <package name="yast2-trans-pt"/>
