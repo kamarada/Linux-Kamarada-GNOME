@@ -487,6 +487,7 @@
         <package name="myspell-pt_BR"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
+        <package name="yast2-trans-en"/>
         <package name="yast2-trans-pt"/>
         <package name="yast2-trans-pt_BR"/>
     </packages>
