@@ -37,7 +37,7 @@ baseSetRunlevel 5
 
 # Sysconfig update
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER gdm
-baseUpdateSysConfig /etc/sysconfig/windowmanager DEFAULT_WM gnome
+baseUpdateSysConfig /etc/sysconfig/windowmanager DEFAULT_WM openbox
 
 # /etc/sudoers hack to fix #297695
 # (Installation Live DVD: no need to ask for password of root)
@@ -66,6 +66,11 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 
 # Automatically log in user linux
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
+
+# Kamarada Firstboot
+mkdir -p /home/linux/.config/openbox/
+cp /usr/share/kamarada-firstboot/autostart.template /home/linux/.config/openbox/autostart
+chown -R linux /home/linux/
 
 # GNOME Logs does not display anything, unless the user belongs to the systemd-journal group
 # https://tracker.pureos.net/w/troubleshooting/gnome_logs_can_t_see_any_logs/
