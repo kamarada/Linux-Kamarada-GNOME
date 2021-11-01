@@ -122,6 +122,9 @@
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
+        <!-- OBS: nothing provides '/usr/bin/gjs' needed by gnome-shell-extension-desktop-icons -->
+        <package name="gjs"/>
+
       	<package name="live-add-yast-repos"/>
 
       	<!-- Laptop pattern -->
