@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- OBS-Profiles: @BUILD_FLAVOR@ -->
 <image displayname="Linux Kamarada 15.3" name="Linux_Kamarada_15.3" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
