@@ -46,13 +46,7 @@ sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 chmod 0440 /etc/sudoers
 
 # Create LiveDVD user linux
-LIVE_USER_NAME="Live User"
-if [[ "$kiwi_profiles" == *"pt_BR"* ]]
-then
-    LIVE_USER_NAME="Usuário da mídia Live"
-fi
-
-/usr/sbin/useradd -m -u 999 linux -c "$LIVE_USER_NAME" -p ""
+/usr/sbin/useradd -m -u 999 linux -c "Live User" -p ""
 
 # delete passwords
 passwd -d root
@@ -68,6 +62,7 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
 # Kamarada Firstboot
+kamarada-setup en_US
 kamarada-firstboot --prepare
 
 # GNOME Logs does not display anything, unless the user belongs to the systemd-journal group
@@ -89,10 +84,7 @@ zypper mr -r repo-update-non-oss
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
 #KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
-#if [[ "$kiwi_profiles" == *"pt_BR"* ]]
-#then
-#    KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
-#fi
+#KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
 KAMARADA_MIRROR="http://download.opensuse.org/repositories/home:/kamarada:/\$releasever:/dev/openSUSE_Leap_\$releasever/"
 zypper addrepo -f -K -n "Linux Kamarada" -p 95 "$KAMARADA_MIRROR" kamarada
 
@@ -103,50 +95,11 @@ zypper addrepo -f -K -n "Linux Kamarada" -p 95 "$KAMARADA_MIRROR" kamarada
 # https://github.com/kamarada/kiwi-config-Kamarada/issues/1
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
 
-# suseConfig has been kept for compatibility on latest KIWI
-if [[ "$kiwi_profiles" == *"pt_BR"* ]]
-then
-    #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
-    echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
-    #localectl set-keymap br
-    sed -i -e 's/@KEYMAP_GOES_HERE@/br/g' /etc/vconsole.conf
-    baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
-    baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
-    baseUpdateSysConfig /etc/sysconfig/language INSTALLED_LANGUAGES "pt_BR"
-    #timedatectl set-timezone America/Sao_Paulo
-    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-    #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
-    echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
-    sed -i 's/2.opensuse.pool.ntp.org/pool.ntp.br/g' /etc/chrony.conf
-    #sed -i 's/UTC/LOCAL/g' /etc/adjtime
-    #timedatectl set-local-rtc 1
-    echo "pt_BR" > /var/lib/zypp/RequestedLocales
-
-    # Locale clean up
-    mkdir /usr/share/locale_keep
-    mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
-    rm -rf /usr/share/locale
-    mv /usr/share/locale_keep /usr/share/locale
-    
-    # kamarada/Linux-Kamarada-GNOME#55 - Add the Brazilian root CA (ICP-Brasil) certificate to Chromium
-    su - linux -c "instalar-icpbrasil"
-else
-    #baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "english-us,pc104"
-    echo "YAST_KEYBOARD=\"english-us,pc104\"" >> /etc/sysconfig/keyboard
-    #localectl set-keymap us
-    sed -i -e 's/@KEYMAP_GOES_HERE@/us/g' /etc/vconsole.conf
-    baseUpdateSysConfig /etc/sysconfig/language RC_LANG "en_US.UTF-8"
-    #timedatectl set-timezone America/New_York
-    ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
-    #baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "US/Eastern"
-    echo "DEFAULT_TIMEZONE=\"US/Eastern\"" >> /etc/sysconfig/clock
-    rm /etc/adjtime
-
-    # YaST Firstboot
-    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_CONTROL_FILE "/etc/YaST2/firstboot-kamarada-live.xml"
-    baseUpdateSysConfig /etc/sysconfig/firstboot FIRSTBOOT_WELCOME_DIR "/usr/share/firstboot/"
-    touch /var/lib/YaST2/reconfig_system
-fi
+# Locale clean up
+mkdir /usr/share/locale_keep
+mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
+rm -rf /usr/share/locale
+mv /usr/share/locale_keep /usr/share/locale
 
 # Disable journal write to disk in live mode, bug 950999
 echo "Storage=volatile" >> /etc/systemd/journald.conf
