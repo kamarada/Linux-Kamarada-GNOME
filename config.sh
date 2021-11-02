@@ -43,7 +43,7 @@ sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 chmod 0440 /etc/sudoers
 
 # Create LiveDVD user linux
-/usr/sbin/useradd -m -u 999 linux -c "Usuário da mídia Live" -p ""
+/usr/sbin/useradd -m -u 999 linux -c "Live User" -p ""
 
 # delete passwords
 passwd -d root
@@ -59,6 +59,7 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
 # Kamarada Firstboot
+kamarada-setup en_US
 kamarada-firstboot --prepare
 
 # Official repositories
@@ -75,6 +76,7 @@ zypper mr -r repo-update-non-oss
 
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
+#KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
 #KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
 KAMARADA_MIRROR="http://download.opensuse.org/repositories/home:/kamarada:/\$releasever:/dev/openSUSE_Leap_\$releasever/"
 zypper addrepo -f -K -n "Linux Kamarada" -p 95 "$KAMARADA_MIRROR" kamarada
@@ -85,23 +87,6 @@ zypper addrepo -f -K -n "Linux Kamarada" -p 95 "$KAMARADA_MIRROR" kamarada
 # Linux Kamarada issue #1 unable to ping
 # https://github.com/kamarada/kiwi-config-Kamarada/issues/1
 sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
-
-# suseConfig has been kept for compatibility on latest KIWI
-#baseUpdateSysConfig /etc/sysconfig/keyboard YAST_KEYBOARD "portugese-br,pc104"
-echo "YAST_KEYBOARD=\"portugese-br,pc104\"" >> /etc/sysconfig/keyboard
-#localectl set-keymap br
-sed -i -e 's/@KEYMAP_GOES_HERE@/br/g' /etc/vconsole.conf
-baseUpdateSysConfig /etc/sysconfig/language RC_LANG "pt_BR.UTF-8"
-baseUpdateSysConfig /etc/sysconfig/language ROOT_USES_LANG "yes"
-baseUpdateSysConfig /etc/sysconfig/language INSTALLED_LANGUAGES "pt_BR"
-#timedatectl set-timezone America/Sao_Paulo
-ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-#baseUpdateSysConfig /etc/sysconfig/clock DEFAULT_TIMEZONE "Brazil/East"
-echo "DEFAULT_TIMEZONE=\"Brazil/East\"" >> /etc/sysconfig/clock
-sed -i 's/2.opensuse.pool.ntp.org/pool.ntp.br/g' /etc/chrony.conf
-#sed -i 's/UTC/LOCAL/g' /etc/adjtime
-#timedatectl set-local-rtc 1
-echo "pt_BR" > /var/lib/zypp/RequestedLocales
 
 # Locale clean up
 mkdir /usr/share/locale_keep
