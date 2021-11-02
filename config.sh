@@ -67,15 +67,6 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 # Automatically log in user linux
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
-# Openbox settings
-mkdir -p /home/linux/.config/openbox/
-cat <<EOT >> /home/linux/.config/openbox/autostart
-xsetroot -solid "#1b5e20"
-
-feh --bg-fill /usr/share/wallpapers/Praia-de-Itaguacu/contents/images/3840x2160.jpg
-EOT
-chown -R linux /home/linux/
-
 # Kamarada Firstboot
 kamarada-firstboot --prepare
 

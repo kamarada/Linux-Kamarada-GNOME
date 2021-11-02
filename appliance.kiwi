@@ -176,6 +176,9 @@
 
         <!-- Kamarada Firstboot -->
         <package name="kamarada-firstboot"/>
+        <package name="openbox"/>
+        <package name="feh"/>
+        <package name="xsetroot"/>
 
         <!-- Enable support for UEFI secure boot -->
         <package name="shim"/>
