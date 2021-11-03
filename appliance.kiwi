@@ -140,6 +140,31 @@
         <package name="open-vm-tools"/>
         <package name="open-vm-tools-desktop"/>
 
+        <!-- Video drivers -->
+      	<package name="xf86-video-amdgpu"/>
+      	<package name="xf86-video-ark"/>
+      	<package name="xf86-video-ati"/>
+      	<package name="xf86-video-chips"/>
+      	<package name="xf86-video-glint"/>
+      	<package name="xf86-video-i128"/>
+      	<package name="xf86-video-intel"/>
+      	<package name="xf86-video-mach64"/>
+      	<package name="xf86-video-mga"/>
+      	<package name="xf86-video-neomagic"/>
+      	<package name="xf86-video-nouveau"/>
+      	<package name="xf86-video-nv"/>
+      	<package name="xf86-video-qxl"/>
+      	<package name="xf86-video-r128"/>
+      	<package name="xf86-video-savage"/>
+      	<package name="xf86-video-siliconmotion"/>
+      	<package name="xf86-video-sis"/>
+      	<package name="xf86-video-sisusb"/>
+      	<package name="xf86-video-tdfx"/>
+      	<package name="xf86-video-tga"/>
+      	<package name="xf86-video-v4l"/>
+      	<package name="xf86-video-vmware"/>
+      	<package name="xf86-video-voodoo"/>
+
         <!-- Kamarada Firstboot -->
         <package name="kamarada-firstboot"/>
         <package name="openbox"/>
