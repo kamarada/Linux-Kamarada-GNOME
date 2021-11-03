@@ -363,6 +363,9 @@
 
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
+        <!-- On Leap 15.3, the kernel package was split to three sub-packages -->
+        <package name="kernel-default-extra"/>
+        <package name="kernel-default-optional"/>
 
         <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
         <package name="cdda2wav"/>
