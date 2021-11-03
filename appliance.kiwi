@@ -101,6 +101,9 @@
 
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
+        <!-- On Leap 15.3, the kernel package was split to three sub-packages -->
+        <package name="kernel-default-extra"/>
+        <package name="kernel-default-optional"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#36 - GUI - Artwork for 15.2 -->
         <package name="branding-openSUSE"/>
