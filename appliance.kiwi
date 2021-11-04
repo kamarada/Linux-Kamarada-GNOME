@@ -120,6 +120,10 @@
         <package name="yast2-trans-pt"/>
         <package name="yast2-trans-pt_BR"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#39 - XDG user directories -->
+        <package name="xdg-user-dirs-lang"/>
+        <package name="xdg-user-dirs-gtk-lang"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
         <package name="rpcbind"/>
 
