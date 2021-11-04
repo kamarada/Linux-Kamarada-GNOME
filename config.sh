@@ -62,10 +62,6 @@ baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 kamarada-setup en_US
 kamarada-firstboot --prepare
 
-# Installer icon on desktop
-mkdir -p /etc/skel/Desktop
-cp /usr/share/applications/calamares.desktop /etc/skel/Desktop/
-
 # Official repositories
 rm /etc/zypp/repos.d/*.repo
 
