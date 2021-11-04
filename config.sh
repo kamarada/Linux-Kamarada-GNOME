@@ -65,6 +65,10 @@ baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 kamarada-setup en_US
 kamarada-firstboot --prepare
 
+# Installer icon on desktop
+mkdir -p /etc/skel/Desktop
+cp /usr/share/applications/calamares.desktop /etc/skel/Desktop/
+
 # GNOME Logs does not display anything, unless the user belongs to the systemd-journal group
 # https://tracker.pureos.net/w/troubleshooting/gnome_logs_can_t_see_any_logs/
 usermod -aG systemd-journal linux
