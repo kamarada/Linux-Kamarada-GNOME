@@ -271,6 +271,7 @@
         <package name="NetworkManager-openvpn-lang"/>
         <package name="NetworkManager-pptp-lang"/>
         <package name="NetworkManager-vpnc-lang"/>
+        <package name="NetworkManager-l2tp-lang"/>
 
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <package name="accountsservice-lang"/>
