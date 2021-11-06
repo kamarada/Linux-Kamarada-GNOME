@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Exec=/usr/bin/copy_installer_icon.sh
-Name=Copy installer icon
-Comment=Copy installer icon to the desktop
-Terminal=false
-OnlyShowIn=GNOME
-Type=Application
-X-GNOME-Autostart-enabled=true
