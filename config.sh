@@ -101,6 +101,9 @@ mv /usr/share/locale/{en*,pt*} /usr/share/locale_keep/
 rm -rf /usr/share/locale
 mv /usr/share/locale_keep /usr/share/locale
 
+# kamarada/Linux-Kamarada-GNOME#55 - Add the Brazilian root CA (ICP-Brasil) certificate to Chromium
+su - linux -c "instalar-icpbrasil"
+
 # Disable journal write to disk in live mode, bug 950999
 echo "Storage=volatile" >> /etc/systemd/journald.conf
 
