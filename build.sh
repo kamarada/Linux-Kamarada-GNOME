@@ -15,8 +15,8 @@ USERHOME=$2
 BASEDIR=$(dirname $THIS_SCRIPT) # https://stackoverflow.com/a/55472432/1657502
 
 rm -rf $USERHOME/tmp-kamarada
-kiwi-ng --type iso --profile=pt_BR system build --description $BASEDIR --target-dir $USERHOME/tmp-kamarada
-kiwi-ng result bundle --target-dir $USERHOME/tmp-kamarada --id pt_BR-Build1.1 --bundle-dir $BASEDIR
+kiwi-ng --type iso system build --description $BASEDIR --target-dir $USERHOME/tmp-kamarada
+kiwi-ng result bundle --target-dir $USERHOME/tmp-kamarada --id Build1.1 --bundle-dir $BASEDIR
 chmod 777 ./Linux_Kamarada*
 chown $USERNAME ./Linux_Kamarada*
 rm -rf $USERHOME/tmp-kamarada/Linux_Kamarada*

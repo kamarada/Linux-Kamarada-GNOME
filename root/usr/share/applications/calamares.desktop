@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Install Linux Kamarada
-Name[pt_BR]=Instalar Linux Kamarada
+Name=Install
+Name[pt_BR]=Instalar
 GenericName=System Installer
 GenericName[pt_BR]=Instalador do Sistema
 Keywords=calamares;system;installer;

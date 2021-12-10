@@ -1,43 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- OBS-Profiles: @BUILD_FLAVOR@ -->
-<image displayname="Linux Kamarada 15.2" name="Linux_Kamarada_15.2" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.3" name="Linux_Kamarada_15.3" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
         <specification>Linux Kamarada Live system</specification>
     </description>
-    <profiles>
-        <profile name="en_US" description="Linux Kamarada without translations" arch="x86_64"/>
-        <profile name="pt_BR" description="Linux Kamarada with translations for Brazilian Portuguese" arch="x86_64"/>
-    </profiles>
     <preferences>
-        <bootloader-theme>Kamarada</bootloader-theme>
+        <bootloader-theme>kamarada</bootloader-theme>
+        <locale>en_US</locale>
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>false</rpm-excludedocs>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.2"/>
-        <version>15.2</version>
-    </preferences>
-    <preferences profiles="en_US">
-        <locale>en_US</locale>
-    </preferences>
-    <preferences profiles="pt_BR">
-        <locale>pt_BR</locale>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.3"/>
+        <version>15.3</version>
     </preferences>
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
-    <repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
-        <source path="obs://home:kamarada:15.2/openSUSE_Leap_15.2"/>
+    <!--<repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
+        <source path="obs://home:kamarada:15.3/openSUSE_Leap_15.3"/>
     </repository>
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.3"/>
     </repository>
-    <!--<repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.2:Update/standard"/>
-    </repository>-->
+    <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
+        <source path="obs://openSUSE:Leap:15.3:Update/standard"/>
+    </repository>
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.2/standard"/>
+        <source path="obs://openSUSE:Leap:15.3/standard"/>
+    </repository>-->
+    <repository type="rpm-md">
+        <source path="obsrepositories:/"/>
     </repository>
 
     <packages type="bootstrap">
@@ -54,147 +47,6 @@
     <packages type="image">
         <package name="patterns-kamarada-gnome"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
-        <package name="MozillaFirefox-branding-openSUSE"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
-        <package name="libreoffice-branding-kamarada"/>
-        <package name="libreoffice-icon-theme-papirus"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Aisleriot -->
-        <package name="aisleriot"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
-        <package name="gnome-chess"/>
-        <package name="gnuchess"/>
-        
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Games -->
-        <package name="gnome-games"/>
-        
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
-        <package name="gnome-hearts"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
-        <package name="gnome-mahjongg"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
-        <package name="gnome-mines"/>
-        
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Nibbles -->
-        <package name="gnome-nibbles"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
-        <package name="gnome-sudoku"/>
-        
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Iagno -->
-        <package name="iagno"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
-        <package name="quadrapassel"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#32 - GUI - Office - PDFsam -->
-        <package name="pdfsam-basic"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#36 - GUI - Artwork for 15.2 -->
-        <package name="branding-openSUSE"/>
-        <package name="gdm-branding-kamarada"/>
-        <package name="gio-branding-kamarada"/>
-        <package name="gtk2-branding-kamarada"/>
-        <package name="gtk3-branding-kamarada"/>
-        <package name="hicolor-icon-theme-branding-openSUSE"/>
-        <package name="plymouth-branding-kamarada"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
-        <package name="yast2-qt-branding-kamarada"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
-        <package name="hplip"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#44 - Wine -->
-        <package name="wine-32bit"/>
-        <package name="wine-gecko"/>
-        <package name="python3-icoextract"/>
-
-        <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
-        <package name="rpcbind"/>
-
-        <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
-        <package name="kernel-default"/>
-
-        <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
-        <package name="cdda2wav"/>
-
-        <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
-        <package name="cdrecord"/>
-
-        <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
-        <package name="paper-icon-theme-cursors"/>
-        
-        <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
-        <package name="gnome-menus-branding-openSUSE"/>
-
-        <package name="ucode-amd"/>
-        <package name="ucode-intel"/>
-
-        <package name="base16-shell"/>
-        <package name="fifth-leg-font"/>
-
-      	<package name="live-add-yast-repos"/>
-
-      	<!-- Laptop pattern -->
-        <package name="patterns-desktop-laptop"/>
-
-        <!-- VirtualBox and VMware support -->
-      	<package name="virtualbox-kmp-default"/>
-        <package name="virtualbox-guest-x11"/>
-        <package name="virtualbox-guest-tools"/>
-        <package name="xf86-video-vmware"/>
-        <package name="xf86-input-vmmouse"/>
-        <package name="open-vm-tools"/>
-        <package name="open-vm-tools-desktop"/>
-
-        <!-- YaST Firstboot -->
-        <package name="yast2-firstboot"/>
-
-        <!-- YaST Firstboot asks to install those packages -->
-        <package name="libmariadb3"/>
-        <package name="star-rmt"/>
-        <package name="libQt5Sql5-mysql"/>
-
-        <!-- Enable support for UEFI secure boot -->
-        <package name="shim"/>
-        <package name="grub2-x86_64-efi" arch="x86_64"/>
-
-        <!-- Bootsplash and graphics boot related packages -->
-        <package name="grub2-branding-kamarada" bootinclude="true"/>
-
-        <!-- KiwiIsoLoaderError: No isolinux loader %s found -->
-        <package name="syslinux"/>
-
-        <!-- OBS don't find them if I use <packages type="iso"> -->
-        <package name="dracut-kiwi-live"/>
-
-        <!-- Check Installation Media -->
-        <package name="checkmedia"/>
-
-        <!-- Calamares installer -->
-      	<package name="calamares"/>
-      	<package name="calamares-settings-kamarada"/>
-        <!-- kamarada/Linux-Kamarada-GNOME#57 - Starting Calamares with kdesu -->
-      	<package name="kde-cli-tools5"/>
-        <!-- </packages> -->
-    </packages>
-
-    <packages type="image" profiles="en_US,pt_BR">
-        <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
-        <package name="libreoffice-l10n-en"/>
-        <package name="myspell-en"/>
-        <package name="myspell-en_US"/>
-        <package name="myspell-lightproof-en"/>
-    </packages>
-
-    <!-- Common translations -->
-    <packages type="image" profiles="pt_BR">
         <!-- kamarada/Linux-Kamarada-GNOME#1 - GUI - System - Terminal -->
         <package name="gnome-terminal-lang"/>
 
@@ -208,6 +60,7 @@
         <package name="gedit-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser -->
+        <package name="MozillaFirefox-branding-openSUSE"/>
         <package name="MozillaFirefox-translations"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#6 - GUI - Sound & Video - Media player -->
@@ -230,6 +83,17 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#13 - GUI - Office - Address book -->
         <package name="gnome-contacts-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
+        <package name="libreoffice-branding-kamarada"/>
+        <package name="libreoffice-icon-theme-papirus"/>
+        <package name="libreoffice-l10n-en"/>
+        <package name="libreoffice-l10n-pt_BR"/>
+        <package name="myspell-en"/>
+        <package name="myspell-en_US"/>
+        <package name="myspell-lightproof-en"/>
+        <package name="myspell-pt_BR"/>
+        <package name="myspell-lightproof-pt_BR"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#15 - GUI - Utilities - Document viewer -->
         <package name="evince-lang"/>
@@ -267,33 +131,44 @@
         <package name="gnome-tweaks-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Aisleriot -->
+        <package name="aisleriot"/>
         <package name="aisleriot-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Chess -->
+        <package name="gnome-chess"/>
         <package name="gnome-chess-lang"/>
+        <package name="gnuchess"/>
         
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Games -->
+        <package name="gnome-games"/>
         <package name="gnome-games-lang"/>
         
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
+        <package name="gnome-hearts"/>
         <package name="gnome-hearts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
+        <package name="gnome-mahjongg"/>
         <package name="gnome-mahjongg-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mines -->
+        <package name="gnome-mines"/>
         <package name="gnome-mines-lang"/>
         
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Nibbles -->
+        <package name="gnome-nibbles"/>
         <package name="gnome-nibbles-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Sudoku -->
+        <package name="gnome-sudoku"/>
         <package name="gnome-sudoku-lang"/>
         
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Iagno -->
+        <package name="iagno"/>
         <package name="iagno-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Quadrapassel -->
+        <package name="quadrapassel"/>
         <package name="quadrapassel-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#24 - Firewall -->
@@ -321,17 +196,32 @@
         <!-- kamarada/Linux-Kamarada-GNOME#31 - GUI - Graphics - Drawing -->
         <package name="kolourpaint-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#32 - GUI - Office - PDFsam -->
+        <package name="pdfsam-basic"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#33 - GUI - System - Power statistics -->
         <package name="gnome-power-manager-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#35 - GUI - Utilities - Remote desktop client -->
         <package name="remmina-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#36 - GUI - Artwork for 15.2 -->
+        <package name="branding-openSUSE"/>
+        <package name="gdm-branding-kamarada"/>
+        <package name="gio-branding-kamarada"/>
+        <package name="gtk2-branding-kamarada"/>
+        <package name="gtk3-branding-kamarada"/>
+        <package name="hicolor-icon-theme-branding-openSUSE"/>
+        <package name="plymouth-branding-kamarada"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#37 - CLI - Text editor - GNU nano -->
         <package name="nano-lang"/>
 
-        <!-- libgnomesu -->
-        <package name="libgnomesu-lang"/>
+        <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
+        <package name="yast2-qt-branding-kamarada"/>
+        <package name="yast2-trans-en"/>
+        <package name="yast2-trans-pt"/>
+        <package name="yast2-trans-pt_BR"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#39 - XDG user directories -->
         <package name="xdg-user-dirs-lang"/>
@@ -340,13 +230,21 @@
         <!-- kamarada/Linux-Kamarada-GNOME#40 - Translations for Brazilian Portuguese (pt_BR) -->
         <package name="dconf-editor-lang"/>
         <package name="desktop-translations"/>
+        <package name="gnome-shell-extension-appindicator-lang"/>
         <package name="gnome-shell-extension-dash-to-dock-lang"/>
-        <package name="gnome-shell-extension-topicons-plus-lang"/>
         <package name="gtk2-lang"/>
         <package name="gtk3-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
+        <package name="hplip"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#42 - Bluetooth support -->
         <package name="gnome-bluetooth-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#44 - Wine -->
+        <package name="wine-32bit"/>
+        <package name="wine-gecko"/>
+        <package name="python3-icoextract"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#45 - GUI - Internet - Instant messaging client -->
         <package name="libpurple-lang"/>
@@ -357,23 +255,24 @@
         <!-- kamarada/Linux-Kamarada-GNOME#48 - Time synchronization with NTP -->
         <package name="util-linux-lang"/>
         
+        <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
+        <package name="rpcbind"/>
+
         <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
         <package name="evolution-data-server-lang"/>
         <package name="evolution-ews-lang"/>
         <package name="gnome-online-accounts-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#55 - Certificado de segurança da AC raiz brasileira (ICP-Brasil) -->
+        <package name="ca-certificates-icpbrasil"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#56 - VPN clients -->
         <package name="NetworkManager-openconnect-lang"/>
         <package name="NetworkManager-openvpn-lang"/>
         <package name="NetworkManager-pptp-lang"/>
         <package name="NetworkManager-vpnc-lang"/>
+        <package name="NetworkManager-l2tp-lang"/>
 
-        <!-- Utilities for managing processes: pstree, killall and fuser -->
-        <package name="psmisc-lang"/>
-        
-        <!-- GNOME Shell Extensions -->
-        <package name="gnome-shell-extensions-common-lang"/>
-        
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <package name="accountsservice-lang"/>
         <package name="apparmor-parser-lang"/>
@@ -407,6 +306,7 @@
         <package name="gnome-session-lang"/>
         <package name="gnome-settings-daemon-lang"/>
         <package name="gnome-shell-lang"/>
+        <package name="gnome-shell-extensions-common-lang"/>
         <package name="gpg2-lang"/>
         <package name="grep-lang"/>
         <package name="grilo-lang"/>
@@ -428,6 +328,7 @@
         <package name="libgnome-games-support-lang"/>
         <package name="libgnomekbd-lang"/>
         <package name="libgnome-keyring-lang"/>
+        <package name="libgnomesu-lang"/>
         <package name="libgphoto2-6-lang"/>
         <package name="libgsf-lang"/>
         <package name="libgtop-lang"/>
@@ -441,11 +342,13 @@
         <package name="libsoup-lang"/>
         <package name="libstorage-ng-lang"/>
         <package name="libwebkit2gtk3-lang"/>
+        <package name="man-pages-pt_BR"/>
         <package name="mutter-lang"/>
         <package name="net-tools-lang"/>
         <package name="NetworkManager-applet-lang"/>
         <package name="NetworkManager-lang"/>
         <package name="parted-lang"/>
+        <package name="psmisc-lang"/>
         <package name="pulseaudio-lang"/>
         <package name="sed-lang"/>
         <package name="shared-mime-info-lang"/>
@@ -458,20 +361,107 @@
         <package name="xkeyboard-config-lang"/>
         <package name="xz-lang"/>
         <package name="zenity-lang"/>
-    </packages>
 
-    <!-- Translations for Brazilian Portuguese (pt_BR) -->
-    <packages type="image" profiles="pt_BR">
-        <!-- kamarada/Linux-Kamarada-GNOME#55 - Certificado de segurança da AC raiz brasileira (ICP-Brasil) -->
-        <package name="ca-certificates-icpbrasil"/>
+        <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
+        <package name="kernel-default"/>
+        <!-- On Leap 15.3, the kernel package was split to three sub-packages -->
+        <package name="kernel-default-extra"/>
+        <package name="kernel-default-optional"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
-        <package name="libreoffice-l10n-pt_BR"/>
-        <package name="myspell-lightproof-pt_BR"/>
-        <package name="myspell-pt_BR"/>
+        <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
+        <package name="cdda2wav"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
-        <package name="yast2-trans-pt"/>
-        <package name="yast2-trans-pt_BR"/>
+        <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
+        <package name="cdrecord"/>
+
+        <!-- OBS: nothing provides /usr/bin/mkisofs needed by brasero -->
+        <package name="mkisofs"/>
+
+        <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
+        <package name="paper-icon-theme-cursors"/>
+        
+        <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
+        <package name="gnome-menus-branding-openSUSE"/>
+
+        <!-- OBS: have choice for librpm.so.8 needed by libsnmp30-32bit -->
+        <!-- OBS: have choice for librpmio.so.8 needed by libsnmp30-32bit -->
+        <package name="rpm-32bit"/>
+
+        <!-- OBS: have choice for libnssckbi.so needed by mozilla-nss-32bit -->
+        <package name="mozilla-nss-certs-32bit"/>
+
+        <package name="ucode-amd"/>
+        <package name="ucode-intel"/>
+
+        <package name="base16-shell"/>
+        <package name="fifth-leg-font"/>
+
+      	<package name="live-add-yast-repos"/>
+
+      	<!-- Laptop pattern -->
+        <package name="patterns-desktop-laptop"/>
+
+        <!-- VirtualBox and VMware support -->
+      	<package name="virtualbox-kmp-default"/>
+        <package name="virtualbox-guest-x11"/>
+        <package name="virtualbox-guest-tools"/>
+        <package name="xf86-video-vmware"/>
+        <package name="xf86-input-vmmouse"/>
+        <package name="open-vm-tools"/>
+        <package name="open-vm-tools-desktop"/>
+
+        <!-- Video drivers -->
+      	<package name="xf86-video-amdgpu"/>
+      	<package name="xf86-video-ark"/>
+      	<package name="xf86-video-ati"/>
+      	<package name="xf86-video-chips"/>
+      	<package name="xf86-video-glint"/>
+      	<package name="xf86-video-i128"/>
+      	<package name="xf86-video-intel"/>
+      	<package name="xf86-video-mach64"/>
+      	<package name="xf86-video-mga"/>
+      	<package name="xf86-video-neomagic"/>
+      	<package name="xf86-video-nouveau"/>
+      	<package name="xf86-video-nv"/>
+      	<package name="xf86-video-qxl"/>
+      	<package name="xf86-video-r128"/>
+      	<package name="xf86-video-savage"/>
+      	<package name="xf86-video-siliconmotion"/>
+      	<package name="xf86-video-sis"/>
+      	<package name="xf86-video-sisusb"/>
+      	<package name="xf86-video-tdfx"/>
+      	<package name="xf86-video-tga"/>
+      	<package name="xf86-video-v4l"/>
+      	<package name="xf86-video-vmware"/>
+      	<package name="xf86-video-voodoo"/>
+
+        <!-- Kamarada Firstboot -->
+        <package name="kamarada-firstboot"/>
+        <package name="openbox"/>
+        <package name="feh"/>
+        <package name="xsetroot"/>
+
+        <!-- Enable support for UEFI secure boot -->
+        <package name="shim"/>
+        <package name="grub2-x86_64-efi" arch="x86_64"/>
+
+        <!-- Bootsplash and graphics boot related packages -->
+        <package name="grub2-branding-kamarada" bootinclude="true"/>
+
+        <!-- KiwiIsoLoaderError: No isolinux loader %s found -->
+        <package name="syslinux"/>
+
+        <!-- OBS don't find them if I use <packages type="iso"> -->
+        <package name="dracut-kiwi-live"/>
+
+        <!-- Check Installation Media -->
+        <package name="checkmedia"/>
+
+        <!-- Calamares installer -->
+      	<package name="calamares"/>
+      	<package name="calamares-settings-kamarada"/>
+        <!-- kamarada/Linux-Kamarada-GNOME#57 - Starting Calamares with kdesu -->
+      	<package name="kde-cli-tools5"/>
+        <!-- </packages> -->
     </packages>
 </image>
