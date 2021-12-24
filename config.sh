@@ -75,11 +75,6 @@ rm /etc/zypp/repos.d/*.repo
 # Add repos from /etc/YaST2/control.xml
 add-yast-repos
 zypper --non-interactive rm -u live-add-yast-repos
-# Enable autorefresh for some repos
-zypper mr -r repo-oss
-zypper mr -r repo-non-oss
-zypper mr -r repo-update
-zypper mr -r repo-update-non-oss
 
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
