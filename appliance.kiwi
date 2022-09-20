@@ -341,7 +341,6 @@
         <package name="libsecret-lang"/>
         <package name="libsoup-lang"/>
         <package name="libstorage-ng-lang"/>
-        <package name="libwebkit2gtk3-lang"/>
         <package name="lshw-lang"/>
         <package name="man-pages-pt_BR"/>
         <package name="mutter-lang"/>
