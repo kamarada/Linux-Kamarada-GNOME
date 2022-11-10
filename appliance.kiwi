@@ -215,7 +215,7 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
         <package name="yast2-qt-branding-kamarada"/>
-        <package name="yast2-trans-en"/>
+        <package name="yast2-trans"/>
         <package name="yast2-trans-pt"/>
         <package name="yast2-trans-pt_BR"/>
 
