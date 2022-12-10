@@ -118,6 +118,7 @@
         <package name="gnome-documents-lang"/>
         <package name="gnome-font-viewer-lang"/>
         <package name="gnome-logs-lang"/>
+        <package name="gnome-maps-lang"/>
         <package name="gnome-photos-lang"/>
         <package name="gnome-software-lang"/>
         <package name="gnome-todo-lang"/>
