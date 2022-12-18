@@ -191,7 +191,7 @@
         <package name="transmission-gtk-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#31 - GUI - Graphics - Drawing -->
-        <package name="kolourpaint-lang"/>
+        <package name="drawing-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#32 - GUI - Office - PDFsam -->
         <package name="pdfsam-basic"/>
