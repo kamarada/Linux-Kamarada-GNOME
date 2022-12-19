@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="Linux Kamarada 15.3" name="Linux_Kamarada_15.3" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.4" name="Linux_Kamarada_15.4" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -11,23 +11,23 @@
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>false</rpm-excludedocs>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.3"/>
-        <version>15.3</version>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.4"/>
+        <version>15.4</version>
     </preferences>
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
     <!--<repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
-        <source path="obs://home:kamarada:15.3/openSUSE_Leap_15.3"/>
+        <source path="obs://home:kamarada:15.4/openSUSE_Leap_15.4"/>
     </repository>
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.3"/>
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.4"/>
     </repository>
     <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.3:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.4:Update/standard"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.3/standard"/>
+        <source path="obs://openSUSE:Leap:15.4/standard"/>
     </repository>-->
     <repository type="rpm-md">
         <source path="obsrepositories:/"/>
@@ -118,6 +118,7 @@
         <package name="gnome-documents-lang"/>
         <package name="gnome-font-viewer-lang"/>
         <package name="gnome-logs-lang"/>
+        <package name="gnome-maps-lang"/>
         <package name="gnome-photos-lang"/>
         <package name="gnome-software-lang"/>
         <package name="gnome-todo-lang"/>
@@ -138,10 +139,6 @@
         <package name="gnome-chess"/>
         <package name="gnome-chess-lang"/>
         <package name="gnuchess"/>
-        
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Games -->
-        <package name="gnome-games"/>
-        <package name="gnome-games-lang"/>
         
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
         <package name="gnome-hearts"/>
@@ -194,7 +191,7 @@
         <package name="transmission-gtk-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#31 - GUI - Graphics - Drawing -->
-        <package name="kolourpaint-lang"/>
+        <package name="drawing-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#32 - GUI - Office - PDFsam -->
         <package name="pdfsam-basic"/>
@@ -219,7 +216,7 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST -->
         <package name="yast2-qt-branding-kamarada"/>
-        <package name="yast2-trans-en"/>
+        <package name="yast2-trans"/>
         <package name="yast2-trans-pt"/>
         <package name="yast2-trans-pt_BR"/>
 
@@ -341,7 +338,6 @@
         <package name="libsecret-lang"/>
         <package name="libsoup-lang"/>
         <package name="libstorage-ng-lang"/>
-        <package name="libwebkit2gtk3-lang"/>
         <package name="lshw-lang"/>
         <package name="man-pages-pt_BR"/>
         <package name="mutter-lang"/>
@@ -404,7 +400,6 @@
 
         <!-- VirtualBox and VMware support -->
       	<package name="virtualbox-kmp-default"/>
-        <package name="virtualbox-guest-x11"/>
         <package name="virtualbox-guest-tools"/>
         <package name="xf86-video-vmware"/>
         <package name="xf86-input-vmmouse"/>
