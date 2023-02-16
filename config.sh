@@ -78,9 +78,9 @@ zypper --non-interactive rm -u live-add-yast-repos
 
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
-#KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
-KAMARADA_MIRROR="http://c3sl.dl.osdn.jp/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
+# https://linuxkamarada.com/en/2023/02/15/changes-to-the-linux-kamarada-infrastructure/
 #KAMARADA_MIRROR="http://download.opensuse.org/repositories/home:/kamarada:/\$releasever:/dev/openSUSE_Leap_\$releasever/"
+KAMARADA_MIRROR="https://packages.linuxkamarada.com/\$releasever/openSUSE_Leap_\$releasever/"
 zypper addrepo -f -K -n "Linux Kamarada" -p 95 "$KAMARADA_MIRROR" kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
