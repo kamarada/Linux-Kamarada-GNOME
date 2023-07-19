@@ -424,7 +424,6 @@
       	<package name="xf86-video-sis"/>
       	<package name="xf86-video-sisusb"/>
       	<package name="xf86-video-tdfx"/>
-      	<package name="xf86-video-tga"/>
       	<package name="xf86-video-v4l"/>
       	<package name="xf86-video-vmware"/>
       	<package name="xf86-video-voodoo"/>
