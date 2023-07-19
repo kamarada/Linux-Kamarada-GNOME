@@ -410,7 +410,6 @@
       	<package name="xf86-video-ark"/>
       	<package name="xf86-video-ati"/>
       	<package name="xf86-video-chips"/>
-      	<package name="xf86-video-glint"/>
       	<package name="xf86-video-i128"/>
       	<package name="xf86-video-intel"/>
       	<package name="xf86-video-mach64"/>
