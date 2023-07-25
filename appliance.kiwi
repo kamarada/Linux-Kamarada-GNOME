@@ -394,8 +394,8 @@
 
       	<package name="live-add-yast-repos"/>
 
-      	<!-- Laptop pattern -->
-        <package name="patterns-desktop-laptop"/>
+      	<!-- Tools designed specifically for laptop computers -->
+        <package name="patterns-desktop-mobile"/>
 
         <!-- VirtualBox and VMware support -->
       	<package name="virtualbox-kmp-default"/>
