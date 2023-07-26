@@ -138,10 +138,6 @@
         <package name="gnome-chess"/>
         <package name="gnome-chess-lang"/>
         <package name="gnuchess"/>
-        
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
-        <package name="gnome-hearts"/>
-        <package name="gnome-hearts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
         <package name="gnome-mahjongg"/>
