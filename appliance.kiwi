@@ -136,6 +136,9 @@
         <!-- OBS: nothing provides '/usr/bin/gjs' needed by gnome-shell-extension-desktop-icons -->
         <package name="gjs"/>
 
+        <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
+        <package name="fuse3"/>
+
       	<package name="live-add-yast-repos"/>
 
       	<!-- Tools designed specifically for laptop computers -->
