@@ -382,6 +382,9 @@
         <!-- OBS: have choice for libnssckbi.so needed by mozilla-nss-32bit -->
         <package name="mozilla-nss-certs-32bit"/>
 
+        <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
+        <package name="fuse3"/>
+
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
 
