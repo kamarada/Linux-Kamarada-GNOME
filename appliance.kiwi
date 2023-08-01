@@ -226,6 +226,7 @@
         <package name="gnome-shell-extension-dash-to-dock-lang"/>
         <package name="gtk2-lang"/>
         <package name="gtk3-lang"/>
+        <package name="translation-update"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
         <package name="hplip"/>
@@ -244,14 +245,10 @@
         <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
         <package name="liblinphone-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#48 - Time synchronization with NTP -->
-        <package name="util-linux-lang"/>
-        
         <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
         <package name="rpcbind"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
-        <package name="evolution-data-server-lang"/>
         <package name="evolution-ews-lang"/>
         <package name="gnome-online-accounts-lang"/>
 
@@ -259,11 +256,11 @@
         <package name="ca-certificates-icpbrasil"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#56 - VPN clients -->
+        <package name="NetworkManager-l2tp-lang"/>
         <package name="NetworkManager-openconnect-lang"/>
         <package name="NetworkManager-openvpn-lang"/>
         <package name="NetworkManager-pptp-lang"/>
         <package name="NetworkManager-vpnc-lang"/>
-        <package name="NetworkManager-l2tp-lang"/>
 
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <package name="accountsservice-lang"/>
@@ -281,6 +278,7 @@
         <package name="dialog-lang"/>
         <package name="diffutils-lang"/>
         <package name="elfutils-lang"/>
+        <package name="evolution-data-server-lang"/>
         <package name="findutils-lang"/>
         <package name="folks-lang"/>
         <package name="fwupd-lang"/>
@@ -290,6 +288,7 @@
         <package name="gdk-pixbuf-lang"/>
         <package name="gdm-lang"/>
         <package name="gegl-0_4-lang"/>
+        <package name="glibc-lang"/>
         <package name="glib2-lang"/>
         <package name="glib-networking-lang"/>
         <package name="gnome-control-center-lang"/>
@@ -349,7 +348,9 @@
         <package name="tracker-miners-lang"/>
         <package name="udisks2-lang"/>
         <package name="upower-lang"/>
+        <package name="util-linux-lang"/>
         <package name="vte-lang"/>
+        <package name="wget-lang"/>
         <package name="xkeyboard-config-lang"/>
         <package name="xz-lang"/>
         <package name="zenity-lang"/>
