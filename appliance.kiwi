@@ -130,6 +130,11 @@
         <!-- kamarada/Linux-Kamarada-GNOME#61 - Flatpak support -->
         <package name="flatpak"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#62 - Wayland -->
+        <package name="gnome-session-wayland"/>
+        <package name="xlsclients"/>
+        <package name="xwayland"/>
+
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
