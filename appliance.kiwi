@@ -129,6 +129,7 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#61 - Flatpak support -->
         <package name="flatpak"/>
+        <package name="flatpak-remote-flathub"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#62 - Wayland -->
         <package name="gnome-session-wayland"/>
