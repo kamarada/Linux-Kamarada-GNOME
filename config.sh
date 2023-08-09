@@ -69,13 +69,6 @@ kamarada-firstboot --prepare
 # https://tracker.pureos.net/w/troubleshooting/gnome_logs_can_t_see_any_logs/
 usermod -aG systemd-journal linux
 
-# Official repositories
-rm /etc/zypp/repos.d/*.repo
-
-# Add repos from /etc/YaST2/control.xml
-add-yast-repos
-zypper --non-interactive rm -u live-add-yast-repos
-
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
 #KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"

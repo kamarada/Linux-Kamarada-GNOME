@@ -392,8 +392,6 @@
         <package name="base16-shell"/>
         <package name="fifth-leg-font"/>
 
-      	<package name="live-add-yast-repos"/>
-
       	<!-- Tools designed specifically for laptop computers -->
         <package name="patterns-desktop-mobile"/>
 
