@@ -136,6 +136,8 @@
         <package name="xlsclients"/>
         <package name="xwayland"/>
 
+        <package name="openSUSE-repos-Leap"/>
+
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
