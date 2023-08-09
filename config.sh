@@ -62,6 +62,11 @@ baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 kamarada-setup en_US
 kamarada-firstboot --prepare
 
+# kamarada/Linux-Kamarada-GNOME#63 - openSUSE-repos for repository management
+# Add the repositories listed in the openSUSE service
+# https://doc.opensuse.org/projects/libzypp/HEAD/zypp-services.html
+zypper refs
+
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors
 #KAMARADA_MIRROR="https://osdn.mirror.constant.com/storage/g/k/ka/kamarada/\$releasever/openSUSE_Leap_\$releasever/"
