@@ -203,6 +203,7 @@
         <package name="gio-branding-kamarada"/>
         <package name="gtk2-branding-kamarada"/>
         <package name="gtk3-branding-kamarada"/>
+        <package name="gtk4-branding-kamarada"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
         <package name="plymouth-branding-kamarada"/>
 
