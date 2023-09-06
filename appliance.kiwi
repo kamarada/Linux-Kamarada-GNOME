@@ -430,6 +430,7 @@
         <!-- Kamarada Firstboot -->
         <package name="kamarada-firstboot"/>
         <package name="openbox"/>
+        <package name="openbox-theme-adapta"/>
         <package name="obconf"/>
         <package name="feh"/>
         <package name="xsetroot"/>
