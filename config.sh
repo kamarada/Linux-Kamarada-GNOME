@@ -58,9 +58,9 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 # Automatically log in user linux
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
-# Kamarada Firstboot
+# Kamarada FirstBoot
 kamarada-setup en_US
-kamarada-firstboot --prepare
+systemctl enable kamarada-firstboot
 
 # kamarada/Linux-Kamarada-GNOME#63 - openSUSE-repos for repository management
 # Add the repositories listed in the openSUSE service
