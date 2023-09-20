@@ -60,7 +60,7 @@ baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
 # Kamarada FirstBoot
 kamarada-setup en_US
-systemctl enable kamarada-firstboot
+suseInsertService kamarada-firstboot
 
 # kamarada/Linux-Kamarada-GNOME#63 - openSUSE-repos for repository management
 # Add the repositories listed in the openSUSE service
