@@ -61,9 +61,9 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 # Automatically log in user linux
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
-# Kamarada Firstboot
+# Kamarada FirstBoot
 kamarada-setup en_US
-kamarada-firstboot --prepare
+suseInsertService kamarada-firstboot
 
 # GNOME Logs does not display anything, unless the user belongs to the systemd-journal group
 # https://tracker.pureos.net/w/troubleshooting/gnome_logs_can_t_see_any_logs/
