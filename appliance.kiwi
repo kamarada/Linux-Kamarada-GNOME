@@ -85,8 +85,7 @@
         <package name="gnome-contacts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
-        <package name="libreoffice-branding-kamarada"/>
-        <package name="libreoffice-icon-theme-papirus"/>
+        <package name="libreoffice-branding-openSUSE"/>
         <package name="libreoffice-l10n-en"/>
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-en"/>
