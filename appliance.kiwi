@@ -273,6 +273,9 @@
         <!-- OBS: nothing provides '/usr/bin/cdda2wav' needed by the to be installed brasero -->
         <package name="cdda2wav"/>
 
+        <!-- OBS: nothing provides '/usr/bin/cdrecord' needed by the to be installed brasero -->
+        <package name="cdrecord"/>
+
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
