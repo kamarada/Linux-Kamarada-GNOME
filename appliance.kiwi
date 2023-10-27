@@ -270,6 +270,9 @@
         <package name="kernel-default-extra"/>
         <package name="kernel-default-optional"/>
 
+        <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
+        <package name="paper-icon-theme-cursors"/>
+
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
 
