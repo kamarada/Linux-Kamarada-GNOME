@@ -273,6 +273,9 @@
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
+        <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
+        <package name="fuse3"/>
+
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
 
