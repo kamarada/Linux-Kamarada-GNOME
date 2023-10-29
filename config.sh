@@ -61,20 +61,18 @@ sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
 # Automatically log in user linux
 baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
-# Kamarada Firstboot
+# Kamarada FirstBoot
 kamarada-setup en_US
-kamarada-firstboot --prepare
+suseInsertService kamarada-firstboot
 
 # GNOME Logs does not display anything, unless the user belongs to the systemd-journal group
 # https://tracker.pureos.net/w/troubleshooting/gnome_logs_can_t_see_any_logs/
 usermod -aG systemd-journal linux
 
-# Official repositories
-rm /etc/zypp/repos.d/*.repo
-
-# Add repos from /etc/YaST2/control.xml
-add-yast-repos
-zypper --non-interactive rm -u live-add-yast-repos
+# kamarada/Linux-Kamarada-GNOME#63 - openSUSE-repos for repository management
+# Add the repositories listed in the openSUSE service
+# https://doc.opensuse.org/projects/libzypp/HEAD/zypp-services.html
+zypper refs
 
 # Kamarada repository
 # See: https://github.com/kamarada/Linux-Kamarada-GNOME/wiki/Mirrors

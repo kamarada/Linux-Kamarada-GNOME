@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="Linux Kamarada 15.4" name="Linux_Kamarada_15.4" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.5" name="Linux_Kamarada_15.5" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -11,23 +11,23 @@
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>false</rpm-excludedocs>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.4"/>
-        <version>15.4</version>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.5"/>
+        <version>15.5</version>
     </preferences>
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
     <!--<repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
-        <source path="obs://home:kamarada:15.4/openSUSE_Leap_15.4"/>
+        <source path="obs://home:kamarada:15.5/openSUSE_Leap_15.5"/>
     </repository>
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.4"/>
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.5"/>
     </repository>
     <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.4:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.5:Update/standard"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.4/standard"/>
+        <source path="obs://openSUSE:Leap:15.5/standard"/>
     </repository>-->
     <repository type="rpm-md">
         <source path="obsrepositories:/"/>
@@ -85,8 +85,7 @@
         <package name="gnome-contacts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
-        <package name="libreoffice-branding-kamarada"/>
-        <package name="libreoffice-icon-theme-papirus"/>
+        <package name="libreoffice-branding-openSUSE"/>
         <package name="libreoffice-l10n-en"/>
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-en"/>
@@ -121,7 +120,6 @@
         <package name="gnome-maps-lang"/>
         <package name="gnome-photos-lang"/>
         <package name="gnome-software-lang"/>
-        <package name="gnome-todo-lang"/>
         <package name="gnome-weather-lang"/>
         <package name="yelp-lang"/>
 
@@ -139,10 +137,6 @@
         <package name="gnome-chess"/>
         <package name="gnome-chess-lang"/>
         <package name="gnuchess"/>
-        
-        <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Hearts -->
-        <package name="gnome-hearts"/>
-        <package name="gnome-hearts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#23 - GUI - Games - Mahjongg -->
         <package name="gnome-mahjongg"/>
@@ -208,6 +202,7 @@
         <package name="gio-branding-kamarada"/>
         <package name="gtk2-branding-kamarada"/>
         <package name="gtk3-branding-kamarada"/>
+        <package name="gtk4-branding-kamarada"/>
         <package name="hicolor-icon-theme-branding-openSUSE"/>
         <package name="plymouth-branding-kamarada"/>
 
@@ -231,6 +226,7 @@
         <package name="gnome-shell-extension-dash-to-dock-lang"/>
         <package name="gtk2-lang"/>
         <package name="gtk3-lang"/>
+        <package name="translation-update"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
         <package name="hplip"/>
@@ -249,14 +245,10 @@
         <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
         <package name="liblinphone-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#48 - Time synchronization with NTP -->
-        <package name="util-linux-lang"/>
-        
         <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
         <package name="rpcbind"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#53 - GNOME Online Accounts -->
-        <package name="evolution-data-server-lang"/>
         <package name="evolution-ews-lang"/>
         <package name="gnome-online-accounts-lang"/>
 
@@ -264,97 +256,112 @@
         <package name="ca-certificates-icpbrasil"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#56 - VPN clients -->
+        <package name="NetworkManager-l2tp-lang"/>
         <package name="NetworkManager-openconnect-lang"/>
         <package name="NetworkManager-openvpn-lang"/>
         <package name="NetworkManager-pptp-lang"/>
         <package name="NetworkManager-vpnc-lang"/>
-        <package name="NetworkManager-l2tp-lang"/>
 
         <!-- Other translations (manually included because by default only required packages are being installed) -->
+        <!-- Packages found with the help of scripts/find-missing-lang-packages.sh -->
         <package name="accountsservice-lang"/>
         <package name="apparmor-parser-lang"/>
         <package name="appstream-glib-lang"/>
-        <package name="atk-lang"/>
         <package name="at-spi2-core-lang"/>
         <package name="bash-lang"/>
-        <package name="clutter-gtk-lang"/>
-        <package name="clutter-lang"/>
-        <package name="cogl-lang"/>
-        <package name="colord-gtk-lang"/>
         <package name="coreutils-lang"/>
         <package name="cpio-lang"/>
+        <package name="cryptsetup-lang"/>
         <package name="dialog-lang"/>
         <package name="diffutils-lang"/>
         <package name="elfutils-lang"/>
+        <package name="evolution-data-server-lang"/>
         <package name="findutils-lang"/>
-        <package name="folks-lang"/>
+        <package name="fontconfig-lang"/>
         <package name="fwupd-lang"/>
         <package name="gcab-lang"/>
         <package name="gconf2-lang"/>
-        <package name="gcr-lang"/>
-        <package name="gdk-pixbuf-lang"/>
         <package name="gdm-lang"/>
         <package name="gegl-0_4-lang"/>
-        <package name="glib2-lang"/>
+        <package name="glibc-lang"/>
         <package name="glib-networking-lang"/>
         <package name="gnome-control-center-lang"/>
-        <package name="gnome-desktop-lang"/>
         <package name="gnome-keyring-lang"/>
+        <package name="gnome-menus-lang"/>
         <package name="gnome-session-lang"/>
         <package name="gnome-settings-daemon-lang"/>
         <package name="gnome-shell-lang"/>
         <package name="gnome-shell-extensions-common-lang"/>
+        <package name="gnome-themes-lang"/>
         <package name="gpg2-lang"/>
         <package name="grep-lang"/>
-        <package name="grilo-lang"/>
         <package name="gsettings-desktop-schemas-lang"/>
-        <package name="gspell-lang"/>
         <package name="gstreamer-lang"/>
         <package name="gstreamer-plugins-bad-lang"/>
         <package name="gstreamer-plugins-base-lang"/>
         <package name="gstreamer-plugins-good-lang"/>
-        <package name="gtksourceview-lang"/>
-        <package name="gtkspell3-lang"/>
-        <package name="gtkspell-lang"/>
-        <package name="gtk-vnc-lang"/>
         <package name="gvfs-lang"/>
-        <package name="iso-codes-lang"/>
-        <package name="json-glib-lang"/>
-        <package name="libcryptui-lang"/>
-        <package name="libgdata-lang"/>
-        <package name="libgnome-games-support-lang"/>
-        <package name="libgnomekbd-lang"/>
-        <package name="libgnome-keyring-lang"/>
+        <package name="kde-cli-tools5-lang"/>
+        <package name="kded-lang"/>
+        <package name="kio-lang"/>
+        <package name="kirigami2-lang"/>
+        <package name="kpackage-lang"/>
+        <package name="kpmcore-lang"/>
+        <package name="kservice-lang"/>
         <package name="libgnomesu-lang"/>
         <package name="libgphoto2-6-lang"/>
-        <package name="libgsf-lang"/>
-        <package name="libgtop-lang"/>
-        <package name="libgweather-lang"/>
-        <package name="libidn2-lang"/>
         <package name="libiptcdata-lang"/>
+        <package name="libKF5Archive5-lang"/>
+        <package name="libKF5Auth5-lang"/>
+        <package name="libKF5Bookmarks5-lang"/>
+        <package name="libKF5Codecs5-lang"/>
+        <package name="libKF5Completion5-lang"/>
+        <package name="libKF5ConfigCore5-lang"/>
+        <package name="libKF5ConfigWidgets5-lang"/>
+        <package name="libKF5DBusAddons5-lang"/>
+        <package name="libKF5Declarative5-lang"/>
+        <package name="libKF5GlobalAccel5-lang"/>
+        <package name="libKF5I18n5-lang"/>
+        <package name="libKF5IconThemes5-lang"/>
+        <package name="libKF5ItemViews5-lang"/>
+        <package name="libKF5JobWidgets5-lang"/>
+        <package name="libKF5KCMUtils5-lang"/>
+        <package name="libKF5Notifications5-lang"/>
+        <package name="libKF5Parts5-lang"/>
+        <package name="libKF5Pty5-lang"/>
+        <package name="libKF5Screen8-lang"/>
+        <package name="libKF5Solid5-lang"/>
+        <package name="libKF5SonnetCore5-lang"/>
+        <package name="libKF5Su5-lang"/>
+        <package name="libKF5TextWidgets5-lang"/>
+        <package name="libKF5WidgetsAddons5-lang"/>
+        <package name="libKF5WindowSystem5-lang"/>
+        <package name="libKF5XmlGui5-lang"/>
+        <package name="libksysguard5-lang"/>
         <package name="libosinfo-lang"/>
-        <package name="libpeas-lang"/>
-        <package name="libpwquality-lang"/>
-        <package name="libsecret-lang"/>
-        <package name="libsoup-lang"/>
-        <package name="libstorage-ng-lang"/>
         <package name="lshw-lang"/>
-        <package name="man-pages-pt_BR"/>
+        <package name="malcontent-lang"/>
         <package name="mutter-lang"/>
         <package name="net-tools-lang"/>
-        <package name="NetworkManager-applet-lang"/>
         <package name="NetworkManager-lang"/>
-        <package name="parted-lang"/>
+        <package name="NetworkManager-applet-lang"/>
+        <package name="plasma-framework-lang"/>
+        <package name="plymouth-lang"/>
         <package name="psmisc-lang"/>
         <package name="pulseaudio-lang"/>
         <package name="sed-lang"/>
         <package name="shared-mime-info-lang"/>
+        <package name="systemd-lang"/>
         <package name="tar-lang"/>
+        <package name="totem-pl-parser-lang"/>
         <package name="tracker-lang"/>
         <package name="tracker-miners-lang"/>
         <package name="udisks2-lang"/>
         <package name="upower-lang"/>
-        <package name="vte-lang"/>
+        <package name="util-linux-lang"/>
+        <package name="wget-lang"/>
+        <package name="xdg-desktop-portal-lang"/>
+        <package name="xdg-desktop-portal-gtk-lang"/>
         <package name="xkeyboard-config-lang"/>
         <package name="xz-lang"/>
         <package name="zenity-lang"/>
@@ -365,27 +372,20 @@
         <package name="kernel-default-extra"/>
         <package name="kernel-default-optional"/>
 
-        <!-- OBS: nothing provides /usr/bin/cdda2wav needed by brasero -->
+        <!-- OBS: nothing provides '/usr/bin/cdda2wav' needed by the to be installed brasero -->
         <package name="cdda2wav"/>
 
-        <!-- OBS: nothing provides /usr/bin/cdrecord needed by brasero -->
+        <!-- OBS: nothing provides '/usr/bin/cdrecord' needed by the to be installed brasero -->
         <package name="cdrecord"/>
 
-        <!-- OBS: nothing provides /usr/bin/mkisofs needed by brasero -->
+        <!-- OBS: nothing provides '/usr/bin/mkisofs' needed by the to be installed brasero -->
         <package name="mkisofs"/>
 
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
-        
-        <!-- OBS: have choice for gnome-menus-branding needed by gnome-menus -->
-        <package name="gnome-menus-branding-openSUSE"/>
 
-        <!-- OBS: have choice for librpm.so.8 needed by libsnmp30-32bit -->
-        <!-- OBS: have choice for librpmio.so.8 needed by libsnmp30-32bit -->
-        <package name="rpm-32bit"/>
-
-        <!-- OBS: have choice for libnssckbi.so needed by mozilla-nss-32bit -->
-        <package name="mozilla-nss-certs-32bit"/>
+        <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
+        <package name="fuse3"/>
 
         <package name="ucode-amd"/>
         <package name="ucode-intel"/>
@@ -393,10 +393,8 @@
         <package name="base16-shell"/>
         <package name="fifth-leg-font"/>
 
-      	<package name="live-add-yast-repos"/>
-
-      	<!-- Laptop pattern -->
-        <package name="patterns-desktop-laptop"/>
+      	<!-- Tools designed specifically for laptop computers -->
+        <package name="patterns-desktop-mobile"/>
 
         <!-- VirtualBox and VMware support -->
       	<package name="virtualbox-kmp-default"/>
@@ -411,7 +409,6 @@
       	<package name="xf86-video-ark"/>
       	<package name="xf86-video-ati"/>
       	<package name="xf86-video-chips"/>
-      	<package name="xf86-video-glint"/>
       	<package name="xf86-video-i128"/>
       	<package name="xf86-video-intel"/>
       	<package name="xf86-video-mach64"/>
@@ -426,16 +423,12 @@
       	<package name="xf86-video-sis"/>
       	<package name="xf86-video-sisusb"/>
       	<package name="xf86-video-tdfx"/>
-      	<package name="xf86-video-tga"/>
       	<package name="xf86-video-v4l"/>
       	<package name="xf86-video-vmware"/>
       	<package name="xf86-video-voodoo"/>
 
         <!-- Kamarada Firstboot -->
         <package name="kamarada-firstboot"/>
-        <package name="openbox"/>
-        <package name="feh"/>
-        <package name="xsetroot"/>
 
         <!-- Enable support for UEFI secure boot -->
         <package name="shim"/>
