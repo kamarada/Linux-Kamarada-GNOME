@@ -198,6 +198,8 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#36 - GUI - Artwork for 15.2 -->
         <package name="branding-openSUSE"/>
+        <package name="distribution-icons-kamarada"/>
+        <package name="distribution-logos-kamarada"/>
         <package name="gdm-branding-kamarada"/>
         <package name="gio-branding-kamarada"/>
         <package name="gtk2-branding-kamarada"/>
