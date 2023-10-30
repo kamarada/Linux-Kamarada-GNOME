@@ -85,7 +85,7 @@
         <package name="gnome-contacts-lang"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite -->
-        <package name="libreoffice-branding-openSUSE"/>
+        <package name="libreoffice-branding-upstream"/>
         <package name="libreoffice-l10n-en"/>
         <package name="libreoffice-l10n-pt_BR"/>
         <package name="myspell-en"/>
@@ -198,6 +198,8 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#36 - GUI - Artwork for 15.2 -->
         <package name="branding-openSUSE"/>
+        <package name="distribution-icons-kamarada"/>
+        <package name="distribution-logos-kamarada"/>
         <package name="gdm-branding-kamarada"/>
         <package name="gio-branding-kamarada"/>
         <package name="gtk2-branding-kamarada"/>
@@ -226,6 +228,7 @@
         <package name="gnome-shell-extension-dash-to-dock-lang"/>
         <package name="gtk2-lang"/>
         <package name="gtk3-lang"/>
+        <package name="man-pages-pt_BR"/>
         <package name="translation-update"/>
 
         <!-- kamarada/Linux-Kamarada-GNOME#41 - Printing support - HPLIP -->
