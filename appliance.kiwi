@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="Linux Kamarada 15.5" name="Linux_Kamarada_15.5" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.6" name="Linux_Kamarada_15.6" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -11,23 +11,23 @@
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>true</rpm-excludedocs>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.5"/>
-        <version>15.5</version>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.6"/>
+        <version>15.6</version>
     </preferences>
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
     <!--<repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
-        <source path="obs://home:kamarada:15.5:dev/openSUSE_Leap_15.5"/>
+        <source path="obs://home:kamarada:15.6:dev/openSUSE_Leap_15.6"/>
     </repository>
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.5"/>
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.6"/>
     </repository>
     <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.5:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.6:Update/standard"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.5/standard"/>
+        <source path="obs://openSUSE:Leap:15.6/standard"/>
     </repository>-->
     <repository type="rpm-md">
         <source path="obsrepositories:/"/>
@@ -107,6 +107,8 @@
 
         <!-- kamarada/Linux-Kamarada-GNOME#36 - GUI - Artwork for 15.2 -->
         <package name="branding-openSUSE"/>
+        <package name="distribution-icons-kamarada"/>
+        <package name="distribution-logos-kamarada"/>
         <package name="gdm-branding-kamarada"/>
         <package name="gio-branding-kamarada"/>
         <package name="gtk2-branding-kamarada"/>
