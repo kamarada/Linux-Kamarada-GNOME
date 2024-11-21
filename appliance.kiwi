@@ -245,9 +245,6 @@
         <!-- kamarada/Linux-Kamarada-GNOME#45 - GUI - Internet - Instant messaging client -->
         <package name="libpurple-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
-        <package name="liblinphone-lang"/>
-
         <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
         <package name="rpcbind"/>
 
