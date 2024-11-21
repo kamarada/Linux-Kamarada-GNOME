@@ -385,7 +385,7 @@
         <package name="paper-icon-theme-cursors"/>
 
         <!-- OBS: conflict for providers of gnome-browser-connector needed by patterns-kamarada-gnome -->
-        <package name="gnome-browser-connector"/>
+        <package name="gnome-browser-connector" replaces="chrome-gnome-shell"/>
 
         <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
         <package name="fuse3"/>
