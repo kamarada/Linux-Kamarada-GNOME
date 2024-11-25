@@ -384,6 +384,9 @@
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
+        <!-- OBS: have choice for gcr-viewer needed by patterns-kamarada-gnome: gcr-viewer gcr3-viewer -->
+        <package name="gcr-viewer"/>
+
         <!-- OBS: conflict for providers of gnome-browser-connector needed by patterns-kamarada-gnome -->
         <!-- TODO Let's comment this for a while, remember to come back to it later... -->
         <!--<package name="gnome-browser-connector" replaces="chrome-gnome-shell"/>
