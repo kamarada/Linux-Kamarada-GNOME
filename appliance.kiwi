@@ -99,6 +99,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#10 - GUI - Utilities - Screenshot -->
         <package name="gnome-screenshot-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#22 - GUI - Utilities - Tweaks -->
+        <package name="gnome-tweaks-lang"/>
+
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
         <!-- On Leap 15.3, the kernel package was split to three sub-packages -->
