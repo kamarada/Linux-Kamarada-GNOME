@@ -262,6 +262,9 @@
         <package name="NetworkManager-pptp-lang"/>
         <package name="NetworkManager-vpnc-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#66 - GSConnect -->
+        <package name="gnome-shell-extension-gsconnect-lang"/>
+
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <!-- Packages found with the help of scripts/find-missing-lang-packages.sh -->
         <package name="accountsservice-lang"/>
