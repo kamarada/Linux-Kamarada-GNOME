@@ -1,0 +1,25 @@
+#!/bin/bash
+
+check_command() {
+    # https://stackoverflow.com/a/677212
+    return $(command -v "$1" 2>&1 >/dev/null)
+}
+
+COMMANDS=()
+COMMANDS+=('ping')
+COMMANDS+=('testing')
+
+COMMAND_NOT_FOUND=false
+for COMMAND in "${COMMANDS[@]}"
+do
+    if ! check_command "$COMMAND"
+    then
+        echo "Error: $COMMAND could not be found"
+        COMMAND_NOT_FOUND=true
+    fi
+done
+
+if [[ "${COMMAND_NOT_FOUND}" == "true" ]]
+then
+    exit 1
+fi

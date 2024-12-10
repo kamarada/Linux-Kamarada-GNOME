@@ -96,6 +96,10 @@ rm -rf /var/cache/zypp/* /var/lib/zypp/AnonymousUniqueId /var/lib/systemd/random
 # Save 165MB by removing this, not very useful for lives
 rm -rf /lib/firmware/{liquidio,netronome}
 
+# Check if everything is in place
+check-commands
+rm /usr/local/bin/check-commands
+
 #======================================
 # Exit safely
 #--------------------------------------

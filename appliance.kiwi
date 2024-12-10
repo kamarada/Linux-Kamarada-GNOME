@@ -144,6 +144,8 @@
 
         <package name="openSUSE-repos-Leap"/>
 
+        <package name="iputils"/>
+
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
