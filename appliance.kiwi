@@ -387,6 +387,8 @@
         <!-- OBS: nothing provides '/usr/bin/python3.11' needed by the to be installed drawing-1.0.2-bp156.1.2.noarch -->
         <package name="python311"/>
 
+        <package name="iputils"/>
+
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
