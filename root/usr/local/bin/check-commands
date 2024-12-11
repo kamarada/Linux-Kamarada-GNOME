@@ -7,7 +7,6 @@ check_command() {
 
 COMMANDS=()
 COMMANDS+=('ping')
-COMMANDS+=('testing')
 
 COMMAND_NOT_FOUND=false
 for COMMAND in "${COMMANDS[@]}"
