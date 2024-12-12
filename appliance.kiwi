@@ -269,6 +269,12 @@
         <package name="mutt-lang"/>
         <package name="wget-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#68 - CLI - Hardware utilities -->
+        <package name="coreutils-lang"/>
+        <package name="lshw-lang"/>
+        <package name="procps-lang"/>
+        <package name="util-linux-lang"/>
+
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <!-- Packages found with the help of scripts/find-missing-lang-packages.sh -->
         <package name="accountsservice-lang"/>
@@ -276,7 +282,6 @@
         <package name="appstream-glib-lang"/>
         <package name="at-spi2-core-lang"/>
         <package name="bash-lang"/>
-        <package name="coreutils-lang"/>
         <package name="cpio-lang"/>
         <package name="cryptsetup-lang"/>
         <package name="dialog-lang"/>
@@ -346,7 +351,6 @@
         <package name="libKF5XmlGui5-lang"/>
         <package name="libksysguard5-lang"/>
         <package name="libosinfo-lang"/>
-        <package name="lshw-lang"/>
         <package name="malcontent-lang"/>
         <package name="mutter-lang"/>
         <package name="net-tools-lang"/>
@@ -365,7 +369,6 @@
         <package name="tracker-miners-lang"/>
         <package name="udisks2-lang"/>
         <package name="upower-lang"/>
-        <package name="util-linux-lang"/>
         <package name="xdg-desktop-portal-lang"/>
         <package name="xdg-desktop-portal-gtk-lang"/>
         <package name="xkeyboard-config-lang"/>

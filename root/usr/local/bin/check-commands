@@ -31,6 +31,23 @@ COMMANDS+=('traceroute')
 COMMANDS+=('wget')
 COMMANDS+=('whois')
 
+# kamarada/Linux-Kamarada-GNOME#68 - CLI - Hardware utilities
+COMMANDS+=('blkid')
+COMMANDS+=('df')
+COMMANDS+=('dmidecode')
+COMMANDS+=('fdisk')
+COMMANDS+=('free')
+COMMANDS+=('hdparm')
+COMMANDS+=('hwinfo')
+COMMANDS+=('inxi')
+COMMANDS+=('lsblk')
+COMMANDS+=('lscpu')
+COMMANDS+=('lshw')
+COMMANDS+=('lspci')
+COMMANDS+=('lsusb')
+COMMANDS+=('sensors')
+COMMANDS+=('top')
+
 ################################################################################
 # Now the script
 
