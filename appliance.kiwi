@@ -265,7 +265,7 @@
         <!-- kamarada/Linux-Kamarada-GNOME#66 - GSConnect -->
         <package name="gnome-shell-extension-gsconnect-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#67 - Network utilities -->
+        <!-- kamarada/Linux-Kamarada-GNOME#67 - CLI - Network utilities -->
         <package name="mutt-lang"/>
         <package name="wget-lang"/>
 

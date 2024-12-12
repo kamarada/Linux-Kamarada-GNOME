@@ -7,7 +7,7 @@ COMMANDS=()
 
 COMMANDS+=('cnf')
 
-# kamarada/Linux-Kamarada-GNOME#67 - Network utilities
+# kamarada/Linux-Kamarada-GNOME#67 - CLI - Network utilities
 COMMANDS+=('curl')
 COMMANDS+=('dig')
 COMMANDS+=('ftp')
