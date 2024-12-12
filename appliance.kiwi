@@ -403,9 +403,6 @@
         <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
         <package name="fuse3"/>
 
-        <package name="ucode-amd"/>
-        <package name="ucode-intel"/>
-
         <package name="base16-shell"/>
         <package name="fifth-leg-font"/>
 
