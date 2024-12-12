@@ -1,12 +1,43 @@
 #!/bin/bash
 
+COMMANDS=()
+
+################################################################################
+# Configuration goes first
+
+COMMANDS+=('cnf')
+
+# kamarada/Linux-Kamarada-GNOME#67 - Network utilities
+COMMANDS+=('curl')
+COMMANDS+=('dig')
+COMMANDS+=('ftp')
+COMMANDS+=('host')
+COMMANDS+=('hostname')
+COMMANDS+=('ip')
+COMMANDS+=('mailx')
+COMMANDS+=('mutt')
+COMMANDS+=('nc')
+COMMANDS+=('netcat')
+COMMANDS+=('nmap')
+COMMANDS+=('nslookup')
+COMMANDS+=('ping')
+COMMANDS+=('rsync')
+COMMANDS+=('screen')
+COMMANDS+=('ss')
+COMMANDS+=('tcpdump')
+COMMANDS+=('telnet')
+COMMANDS+=('tracepath')
+COMMANDS+=('traceroute')
+COMMANDS+=('wget')
+COMMANDS+=('whois')
+
+################################################################################
+# Now the script
+
 check_command() {
     # https://stackoverflow.com/a/677212
     return $(command -v "$1" 2>&1 >/dev/null)
 }
-
-COMMANDS=()
-COMMANDS+=('ping')
 
 COMMAND_NOT_FOUND=false
 for COMMAND in "${COMMANDS[@]}"

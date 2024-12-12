@@ -265,6 +265,10 @@
         <!-- kamarada/Linux-Kamarada-GNOME#66 - GSConnect -->
         <package name="gnome-shell-extension-gsconnect-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#67 - Network utilities -->
+        <package name="mutt-lang"/>
+        <package name="wget-lang"/>
+
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <!-- Packages found with the help of scripts/find-missing-lang-packages.sh -->
         <package name="accountsservice-lang"/>
@@ -362,7 +366,6 @@
         <package name="udisks2-lang"/>
         <package name="upower-lang"/>
         <package name="util-linux-lang"/>
-        <package name="wget-lang"/>
         <package name="xdg-desktop-portal-lang"/>
         <package name="xdg-desktop-portal-gtk-lang"/>
         <package name="xkeyboard-config-lang"/>
