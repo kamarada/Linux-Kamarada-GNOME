@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="Linux Kamarada 15.5" name="Linux_Kamarada_15.5" schemaversion="6.9">
+<image displayname="Linux Kamarada 15.6" name="Linux_Kamarada_15.6" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -11,23 +11,23 @@
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>false</rpm-excludedocs>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.5"/>
-        <version>15.5</version>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" volid="Linux_Kamarada_15.6"/>
+        <version>15.6</version>
     </preferences>
     <users>
         <user name="root" groups="root" password="" home="/root"/>
     </users>
     <!--<repository alias="kamarada" imageinclude="true" priority="1" type="rpm-md">
-        <source path="obs://home:kamarada:15.5/openSUSE_Leap_15.5"/>
+        <source path="obs://home:kamarada:15.6/openSUSE_Leap_15.6"/>
     </repository>
     <repository alias="kiwi-next-generation" priority="2" type="rpm-md">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.5"/>
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.6"/>
     </repository>
     <repository alias="repo-update" imageinclude="true" priority="3" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.5:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.6:Update/standard"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" priority="4" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.5/standard"/>
+        <source path="obs://openSUSE:Leap:15.6/standard"/>
     </repository>-->
     <repository type="rpm-md">
         <source path="obsrepositories:/"/>
@@ -245,9 +245,6 @@
         <!-- kamarada/Linux-Kamarada-GNOME#45 - GUI - Internet - Instant messaging client -->
         <package name="libpurple-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone -->
-        <package name="liblinphone-lang"/>
-
         <!-- kamarada/Linux-Kamarada-GNOME#49 - during installation, dracut needs rpcbind on the target -->
         <package name="rpcbind"/>
 
@@ -265,6 +262,19 @@
         <package name="NetworkManager-pptp-lang"/>
         <package name="NetworkManager-vpnc-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#66 - GSConnect -->
+        <package name="gnome-shell-extension-gsconnect-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#67 - CLI - Network utilities -->
+        <package name="mutt-lang"/>
+        <package name="wget-lang"/>
+
+        <!-- kamarada/Linux-Kamarada-GNOME#68 - CLI - Hardware utilities -->
+        <package name="coreutils-lang"/>
+        <package name="lshw-lang"/>
+        <package name="procps-lang"/>
+        <package name="util-linux-lang"/>
+
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <!-- Packages found with the help of scripts/find-missing-lang-packages.sh -->
         <package name="accountsservice-lang"/>
@@ -272,7 +282,6 @@
         <package name="appstream-glib-lang"/>
         <package name="at-spi2-core-lang"/>
         <package name="bash-lang"/>
-        <package name="coreutils-lang"/>
         <package name="cpio-lang"/>
         <package name="cryptsetup-lang"/>
         <package name="dialog-lang"/>
@@ -342,7 +351,6 @@
         <package name="libKF5XmlGui5-lang"/>
         <package name="libksysguard5-lang"/>
         <package name="libosinfo-lang"/>
-        <package name="lshw-lang"/>
         <package name="malcontent-lang"/>
         <package name="mutter-lang"/>
         <package name="net-tools-lang"/>
@@ -361,8 +369,6 @@
         <package name="tracker-miners-lang"/>
         <package name="udisks2-lang"/>
         <package name="upower-lang"/>
-        <package name="util-linux-lang"/>
-        <package name="wget-lang"/>
         <package name="xdg-desktop-portal-lang"/>
         <package name="xdg-desktop-portal-gtk-lang"/>
         <package name="xkeyboard-config-lang"/>
@@ -384,14 +390,24 @@
         <!-- OBS: nothing provides '/usr/bin/mkisofs' needed by the to be installed brasero -->
         <package name="mkisofs"/>
 
+        <!-- OBS: nothing provides '/usr/bin/python3.11' needed by the to be installed drawing-1.0.2-bp156.1.2.noarch -->
+        <package name="python311"/>
+
+        <package name="iputils"/>
+
         <!-- OBS: have choice for (paper-icon-theme or paper-icon-theme-cursors) needed by gio-branding-kamarada -->
         <package name="paper-icon-theme-cursors"/>
 
+        <!-- OBS: have choice for gcr-viewer needed by patterns-kamarada-gnome: gcr-viewer gcr3-viewer -->
+        <package name="gcr-viewer"/>
+
+        <!-- OBS: conflict for providers of gnome-browser-connector needed by patterns-kamarada-gnome -->
+        <!-- TODO Let's comment this for a while, remember to come back to it later... -->
+        <!--<package name="gnome-browser-connector" replaces="chrome-gnome-shell"/>
+        <ignore name="chrome-gnome-shell"/>-->
+
         <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
         <package name="fuse3"/>
-
-        <package name="ucode-amd"/>
-        <package name="ucode-intel"/>
 
         <package name="base16-shell"/>
         <package name="fifth-leg-font"/>
