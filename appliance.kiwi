@@ -397,6 +397,9 @@
 
         <!-- OBS: have choice for gcr-viewer needed by patterns-kamarada-gnome: gcr-viewer gcr3-viewer -->
         <package name="gcr-viewer"/>
+        
+        <!-- OBS: have choice for openvpn needed by NetworkManager-openvpn: openvpn openvpn-dco -->
+        <package name="openvpn"/>
 
         <!-- OBS: conflict for providers of gnome-browser-connector needed by patterns-kamarada-gnome -->
         <!-- TODO Let's comment this for a while, remember to come back to it later... -->
