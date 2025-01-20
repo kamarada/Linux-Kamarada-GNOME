@@ -72,9 +72,6 @@
         <!-- kamarada/Linux-Kamarada-GNOME#9 - GUI - Utilities - System monitor -->
         <package name="gnome-system-monitor-lang"/>
 
-        <!-- kamarada/Linux-Kamarada-GNOME#10 - GUI - Utilities - Screenshot -->
-        <package name="gnome-screenshot-lang"/>
-
         <!-- kamarada/Linux-Kamarada-GNOME#11 - GUI - Internet - E-mail client -->
         <package name="evolution-lang"/>
 
