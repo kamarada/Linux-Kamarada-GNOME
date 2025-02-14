@@ -308,9 +308,8 @@
         <package name="openvpn"/>
 
         <!-- OBS: conflict for providers of gnome-browser-connector needed by patterns-kamarada-gnome -->
-        <!-- TODO Let's comment this for a while, remember to come back to it later... -->
-        <!--<package name="gnome-browser-connector" replaces="chrome-gnome-shell"/>
-        <ignore name="chrome-gnome-shell"/>-->
+        <package name="gnome-browser-connector" replaces="chrome-gnome-shell"/>
+        <ignore name="chrome-gnome-shell"/>
 
         <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
         <package name="fuse3"/>
