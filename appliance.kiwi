@@ -402,11 +402,6 @@
         <!-- OBS: have choice for openvpn needed by NetworkManager-openvpn: openvpn openvpn-dco -->
         <package name="openvpn"/>
 
-        <!-- OBS: conflict for providers of gnome-browser-connector needed by patterns-kamarada-gnome -->
-        <!-- OBS-IgnorePackage: chrome-gnome-shell -->
-        <ignore name="chrome-gnome-shell"/>
-        <package name="gnome-browser-connector"/>
-
         <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
         <package name="fuse3"/>
 
