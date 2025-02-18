@@ -275,6 +275,11 @@
         <!-- kamarada/Linux-Kamarada-GNOME#69 - Lock Keys -->
         <package name="gnome-shell-extension-lock-keys-lang"/>
 
+        <!-- JDK 21 is the latest Long-Term Support (LTS) release of the Java SE Platform. -->
+        <!-- https://www.oracle.com/java/technologies/downloads/ -->
+        <!-- Java is required by LibreOffice Base, PDFsam Basic and java-jar-launcher -->
+        <package name="java-21-openjdk"/>
+
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <!-- Packages found with the help of scripts/find-missing-lang-packages.sh -->
         <package name="accountsservice-lang"/>
