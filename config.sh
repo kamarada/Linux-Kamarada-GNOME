@@ -109,7 +109,7 @@ rm -rf /var/cache/zypp/* /var/lib/zypp/AnonymousUniqueId /var/lib/systemd/random
 rm -rf /lib/firmware/{liquidio,netronome}
 
 # Check if everything is in place
-check-commands
+/usr/local/bin/check-commands
 rm /usr/local/bin/check-commands
 
 #======================================
