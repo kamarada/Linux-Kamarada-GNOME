@@ -79,6 +79,8 @@ zypper refs
 # https://linuxkamarada.com/en/2023/02/15/changes-to-the-linux-kamarada-infrastructure/
 #KAMARADA_MIRROR="http://download.opensuse.org/repositories/home:/kamarada:/\$releasever:/dev/openSUSE_Leap_\$releasever/"
 KAMARADA_MIRROR="https://packages.linuxkamarada.com/\$releasever/openSUSE_Leap_\$releasever/"
+# Remove the Kamarada repo in case it already exists (for some reason, needed to build locally, but not on OBS)
+[ -f "/etc/zypp/repos.d/kamarada.repo" ] && zypper removerepo kamarada
 zypper addrepo -f -K -n "Linux Kamarada" -p 95 "$KAMARADA_MIRROR" kamarada
 
 # openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
@@ -107,7 +109,7 @@ rm -rf /var/cache/zypp/* /var/lib/zypp/AnonymousUniqueId /var/lib/systemd/random
 rm -rf /lib/firmware/{liquidio,netronome}
 
 # Check if everything is in place
-check-commands
+/usr/local/bin/check-commands
 rm /usr/local/bin/check-commands
 
 #======================================

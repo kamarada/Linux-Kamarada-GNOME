@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="Linux Kamarada 15.6" name="Linux_Kamarada_15.6" schemaversion="6.9">
+<image schemaversion="7.4" displayname="Linux Kamarada 15.6" name="Linux_Kamarada_15.6">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -272,11 +272,18 @@
         <package name="procps-lang"/>
         <package name="util-linux-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#69 - Lock Keys -->
+        <package name="gnome-shell-extension-lock-keys-lang"/>
+
+        <!-- JDK 21 is the latest Long-Term Support (LTS) release of the Java SE Platform. -->
+        <!-- https://www.oracle.com/java/technologies/downloads/ -->
+        <!-- Java is required by LibreOffice Base, PDFsam Basic and java-jar-launcher -->
+        <package name="java-21-openjdk"/>
+
         <!-- Other translations (manually included because by default only required packages are being installed) -->
         <!-- Packages found with the help of scripts/find-missing-lang-packages.sh -->
         <package name="accountsservice-lang"/>
         <package name="apparmor-parser-lang"/>
-        <package name="appstream-glib-lang"/>
         <package name="at-spi2-core-lang"/>
         <package name="bash-lang"/>
         <package name="cpio-lang"/>
@@ -288,7 +295,6 @@
         <package name="findutils-lang"/>
         <package name="fontconfig-lang"/>
         <package name="fwupd-lang"/>
-        <package name="gcab-lang"/>
         <package name="gconf2-lang"/>
         <package name="gdm-lang"/>
         <package name="gegl-0_4-lang"/>
@@ -317,6 +323,7 @@
         <package name="kpackage-lang"/>
         <package name="kpmcore-lang"/>
         <package name="kservice-lang"/>
+        <package name="libgedit-gtksourceview-lang"/>
         <package name="libgnomesu-lang"/>
         <package name="libgphoto2-6-lang"/>
         <package name="libiptcdata-lang"/>
@@ -352,7 +359,7 @@
         <package name="mutter-lang"/>
         <package name="net-tools-lang"/>
         <package name="NetworkManager-lang"/>
-        <package name="NetworkManager-applet-lang"/>
+        <package name="NetworkManager-connection-editor-lang"/>
         <package name="plasma-framework-lang"/>
         <package name="plymouth-lang"/>
         <package name="psmisc-lang"/>
@@ -361,16 +368,15 @@
         <package name="shared-mime-info-lang"/>
         <package name="systemd-lang"/>
         <package name="tar-lang"/>
+        <package name="tecla-keyboard-layout-viewer-lang"/>
         <package name="totem-pl-parser-lang"/>
         <package name="tracker-lang"/>
         <package name="tracker-miners-lang"/>
         <package name="udisks2-lang"/>
         <package name="upower-lang"/>
         <package name="xdg-desktop-portal-lang"/>
-        <package name="xdg-desktop-portal-gtk-lang"/>
         <package name="xkeyboard-config-lang"/>
         <package name="xz-lang"/>
-        <package name="zenity-lang"/>
 
         <!-- OBS: have choice for kernel-default needed by patterns-kamarada-gnome -->
         <package name="kernel-default"/>
@@ -397,11 +403,9 @@
 
         <!-- OBS: have choice for gcr-viewer needed by patterns-kamarada-gnome: gcr-viewer gcr3-viewer -->
         <package name="gcr-viewer"/>
-
-        <!-- OBS: conflict for providers of gnome-browser-connector needed by patterns-kamarada-gnome -->
-        <!-- TODO Let's comment this for a while, remember to come back to it later... -->
-        <!--<package name="gnome-browser-connector" replaces="chrome-gnome-shell"/>
-        <ignore name="chrome-gnome-shell"/>-->
+        
+        <!-- OBS: have choice for openvpn needed by NetworkManager-openvpn: openvpn openvpn-dco -->
+        <package name="openvpn"/>
 
         <!-- OBS: nothing provides '/usr/bin/fusermount3' needed by the to be installed xdg-desktop-portal -->
         <package name="fuse3"/>
