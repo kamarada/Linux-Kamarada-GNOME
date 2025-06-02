@@ -21,12 +21,13 @@ drawing
 firewalld
 gparted
 hplip
-java-11-openjdk
+java-21-openjdk
 keepassxc
 linphone
 pdfsam-basic
 pidgin
 python3
+python311
 samba
 tor
 transmission
