@@ -275,6 +275,9 @@
         <!-- kamarada/Linux-Kamarada-GNOME#69 - Lock Keys -->
         <package name="gnome-shell-extension-lock-keys-lang"/>
 
+        <!-- kamarada/Linux-Kamarada-GNOME#70 - CLI - Filesystem utilities -->
+        <package name="cryptsetup-lang"/>
+
         <!-- JDK 21 is the latest Long-Term Support (LTS) release of the Java SE Platform. -->
         <!-- https://www.oracle.com/java/technologies/downloads/ -->
         <!-- Java is required by LibreOffice Base, PDFsam Basic and java-jar-launcher -->
@@ -286,8 +289,7 @@
         <package name="apparmor-parser-lang"/>
         <package name="at-spi2-core-lang"/>
         <package name="bash-lang"/>
-        <package name="cpio-lang"/>
-        <package name="cryptsetup-lang"/>
+        <package name="cpio-lang"/>        
         <package name="dialog-lang"/>
         <package name="diffutils-lang"/>
         <package name="elfutils-lang"/>
