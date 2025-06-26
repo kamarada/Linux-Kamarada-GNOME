@@ -7,6 +7,180 @@ COMMANDS=()
 
 COMMANDS+=('cnf')
 
+# kamarada/Linux-Kamarada-GNOME#1 - GUI - System - Terminal
+COMMANDS+=('gnome-terminal')
+
+# kamarada/Linux-Kamarada-GNOME#2 - GUI - Accessories - File manager
+COMMANDS+=('nautilus')
+
+# kamarada/Linux-Kamarada-GNOME#3 - GUI - Accessories - Calculator
+COMMANDS+=('gnome-calculator')
+
+# kamarada/Linux-Kamarada-GNOME#4 - GUI - Accessories - Text editor
+COMMANDS+=('gedit')
+
+# kamarada/Linux-Kamarada-GNOME#5 - GUI - Internet - Web browser
+COMMANDS+=('chromium')
+COMMANDS+=('firefox')
+
+# kamarada/Linux-Kamarada-GNOME#6 - GUI - Sound & Video - Media player
+COMMANDS+=('vlc')
+
+# kamarada/Linux-Kamarada-GNOME#7 - GUI - Utilities - Archive manager
+COMMANDS+=('file-roller')
+
+# kamarada/Linux-Kamarada-GNOME#8 - CLI - Archiving programs
+COMMANDS+=('7z')
+COMMANDS+=('tar')
+COMMANDS+=('unrar')
+COMMANDS+=('unzip')
+COMMANDS+=('zip')
+
+# kamarada/Linux-Kamarada-GNOME#9 - GUI - Utilities - System monitor
+COMMANDS+=('gnome-system-monitor')
+
+# kamarada/Linux-Kamarada-GNOME#10 - GUI - Utilities - Screenshot
+# GNOME has a new built-in Screenshot tool since version 42
+
+# kamarada/Linux-Kamarada-GNOME#11 - GUI - Internet - E-mail client
+COMMANDS+=('evolution')
+
+# kamarada/Linux-Kamarada-GNOME#12 - GUI - Office - Calendar
+COMMANDS+=('gnome-calendar')
+
+# kamarada/Linux-Kamarada-GNOME#13 - GUI - Office - Address book
+COMMANDS+=('gnome-contacts')
+
+# kamarada/Linux-Kamarada-GNOME#14 - GUI - Office - Office suite
+COMMANDS+=('libreoffice')
+
+# kamarada/Linux-Kamarada-GNOME#15 - GUI - Utilities - Document viewer
+COMMANDS+=('evince')
+
+# kamarada/Linux-Kamarada-GNOME#16 - GUI - Graphics - Scanning
+COMMANDS+=('simple-scan')
+
+# kamarada/Linux-Kamarada-GNOME#17 - GUI - Utilities - Image viewer
+COMMANDS+=('eog')
+
+# kamarada/Linux-Kamarada-GNOME#18 - GUI - Sound & Video - Sound recorder
+COMMANDS+=('gnome-sound-recorder')
+
+# kamarada/Linux-Kamarada-GNOME#19 - GUI - Sound & Video - Webcam application
+COMMANDS+=('cheese')
+
+# kamarada/Linux-Kamarada-GNOME#20 - GUI - GNOME Core Apps
+COMMANDS+=('gnome-clocks')
+COMMANDS+=('gnome-characters')
+COMMANDS+=('baobab')
+COMMANDS+=('gnome-disks')
+COMMANDS+=('gnome-documents')
+COMMANDS+=('gnome-font-viewer')
+COMMANDS+=('yelp')
+COMMANDS+=('gnome-logs')
+COMMANDS+=('gnome-photos')
+COMMANDS+=('gnome-software')
+COMMANDS+=('gnome-weather')
+COMMANDS+=('gnome-extensions')
+COMMANDS+=('gnome-maps')
+
+# kamarada/Linux-Kamarada-GNOME#21 - GUI - Accessories - Notes
+COMMANDS+=('bijiben')
+
+# kamarada/Linux-Kamarada-GNOME#22 - GUI - Utilities - Tweaks
+COMMANDS+=('gnome-tweaks')
+
+# kamarada/Linux-Kamarada-GNOME#23 - GUI - Games
+COMMANDS+=('sol')
+COMMANDS+=('gnome-mines')
+COMMANDS+=('gnome-mahjongg')
+COMMANDS+=('gnome-sudoku')
+COMMANDS+=('gnome-chess')
+COMMANDS+=('quadrapassel')
+COMMANDS+=('iagno')
+COMMANDS+=('gnome-nibbles')
+
+# kamarada/Linux-Kamarada-GNOME#24 - Firewall
+COMMANDS+=('firewalld')
+
+# kamarada/Linux-Kamarada-GNOME#25 - GUI - System - Partition manager
+COMMANDS+=('gparted')
+
+# kamarada/Linux-Kamarada-GNOME#26 - GUI - System - Package updater
+COMMANDS+=('gpk-update-viewer')
+
+# kamarada/Linux-Kamarada-GNOME#27 - GUI - System - Image writer
+COMMANDS+=('imagewriter')
+
+# kamarada/Linux-Kamarada-GNOME#28 - GUI - Utilities - Password manager
+COMMANDS+=('seahorse')
+COMMANDS+=('keepassxc')
+
+# kamarada/Linux-Kamarada-GNOME#29 - GUI - Sound & Video - CD/DVD burner
+COMMANDS+=('brasero')
+
+# kamarada/Linux-Kamarada-GNOME#30 - GUI - Internet - BitTorrent client
+COMMANDS+=('transmission-gtk')
+
+# kamarada/Linux-Kamarada-GNOME#31 - GUI - Graphics - Drawing
+COMMANDS+=('drawing')
+
+# kamarada/Linux-Kamarada-GNOME#33 - GUI - System - Power statistics
+COMMANDS+=('gnome-power-statistics')
+
+# kamarada/Linux-Kamarada-GNOME#34 - GUI - System - System recovery
+COMMANDS+=('snapper')
+
+# kamarada/Linux-Kamarada-GNOME#35 - GUI - Utilities - Remote desktop client
+COMMANDS+=('remmina')
+
+# kamarada/Linux-Kamarada-GNOME#37 - CLI - Text editor
+COMMANDS+=('joe')
+COMMANDS+=('nano')
+COMMANDS+=('vim')
+
+# kamarada/Linux-Kamarada-GNOME#38 - GUI - System - YaST
+COMMANDS+=('yast2')
+
+# kamarada/Linux-Kamarada-GNOME#39 - XDG user directories
+COMMANDS+=('xdg-user-dirs-gtk-update')
+COMMANDS+=('xdg-user-dirs-update')
+
+# kamarada/Linux-Kamarada-GNOME#41 - Printing support
+COMMANDS+=('hp-setup')
+
+# kamarada/Linux-Kamarada-GNOME#43 - Smart card support
+COMMANDS+=('pcsc_scan')
+COMMANDS+=('opensc-tool')
+COMMANDS+=('pkcs15-tool')
+
+# kamarada/Linux-Kamarada-GNOME#44 - Wine
+COMMANDS+=('wine')
+
+# kamarada/Linux-Kamarada-GNOME#45 - GUI - Internet - Instant messaging client
+COMMANDS+=('pidgin')
+
+# kamarada/Linux-Kamarada-GNOME#47 - GUI - Internet - VoIP softphone
+COMMANDS+=('linphone')
+
+# kamarada/Linux-Kamarada-GNOME#55 - Certificado de segurança da AC raiz brasileira (ICP-Brasil)
+COMMANDS+=('instalar-icpbrasil')
+
+# kamarada/Linux-Kamarada-GNOME#59 - CLI - Web browser
+COMMANDS+=('links')
+
+# kamarada/Linux-Kamarada-GNOME#60 - Tor support
+COMMANDS+=('tor')
+
+# kamarada/Linux-Kamarada-GNOME#61 - Flatpak support
+COMMANDS+=('flatpak')
+
+# kamarada/Linux-Kamarada-GNOME#62 - Wayland
+COMMANDS+=('Xwayland')
+
+# kamarada/Linux-Kamarada-GNOME#65 - GUI - Utilities - Advanced Network Configuration
+COMMANDS+=('nm-connection-editor')
+
 # kamarada/Linux-Kamarada-GNOME#67 - CLI - Network utilities
 COMMANDS+=('curl')
 COMMANDS+=('dig')
@@ -47,6 +221,60 @@ COMMANDS+=('lspci')
 COMMANDS+=('lsusb')
 COMMANDS+=('sensors')
 COMMANDS+=('top')
+
+# kamarada/Linux-Kamarada-GNOME#70 - CLI - Filesystem utilities
+
+# btrfsprogs
+COMMANDS+=('btrfs')
+COMMANDS+=('fsck.btrfs')
+COMMANDS+=('mkfs.btrfs')
+
+# exfatprogs
+COMMANDS+=('fsck.exfat')
+COMMANDS+=('mkfs.exfat')
+
+# e2fsprogs
+COMMANDS+=('fsck.ext2')
+COMMANDS+=('fsck.ext3')
+COMMANDS+=('fsck.ext4')
+COMMANDS+=('mkfs.ext2')
+COMMANDS+=('mkfs.ext3')
+COMMANDS+=('mkfs.ext4')
+
+# dosfstools
+COMMANDS+=('fsck.fat')
+COMMANDS+=('fsck.msdos')
+COMMANDS+=('fsck.vfat')
+COMMANDS+=('mkfs.fat')
+COMMANDS+=('mkfs.msdos')
+COMMANDS+=('mkfs.vfat')
+
+# util-linux
+COMMANDS+=('mount')
+COMMANDS+=('umount')
+
+# nilfs-utils
+COMMANDS+=('mkfs.nilfs2')
+COMMANDS+=('mount.nilfs2')
+
+# reiser4progs
+COMMANDS+=('fsck.reiser4')
+COMMANDS+=('mkfs.reiser4')
+
+# reiserfs
+COMMANDS+=('fsck.reiserfs')
+COMMANDS+=('mkfs.reiserfs')
+
+# udftools
+COMMANDS+=('cdrwtool')
+COMMANDS+=('mkfs.udf')
+
+# xfsdump
+COMMANDS+=('xfsdump')
+
+# xfsprogs
+COMMANDS+=('fsck.xfs')
+COMMANDS+=('mkfs.xfs')
 
 ################################################################################
 # Now the script
