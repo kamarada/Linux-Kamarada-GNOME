@@ -257,6 +257,12 @@ COMMANDS+=('umount')
 COMMANDS+=('mkfs.nilfs2')
 COMMANDS+=('mount.nilfs2')
 
+# ntfs-3g
+COMMANDS+=('mount.ntfs')
+
+# ntfsprogs
+COMMANDS+=('mkfs.ntfs')
+
 # reiser4progs
 COMMANDS+=('fsck.reiser4')
 COMMANDS+=('mkfs.reiser4')
